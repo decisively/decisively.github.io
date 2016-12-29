@@ -16,6 +16,23 @@ page '/*.txt', layout: false
 # proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
 #  which_fake_page: "Rendering a fake page with a local variable" }
 
+# List of examples
+activate :blog do |blog|
+	blog.name = 'examples'
+	blog.prefix = 'examples'
+
+	# Don't need date-wise archives for these
+	blog.generate_day_pages = false
+	blog.generate_month_pages = false
+	blog.generate_year_pages = false
+
+	# Don't need date in the permalink...
+	blog.permalink = '{title}.html'
+
+	# ... or in the file name we maintain
+	blog.sources = '{title}.html'
+end
+
 # General configuration
 
 # Reload the browser automatically whenever files change
