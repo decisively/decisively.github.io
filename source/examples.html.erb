@@ -3,6 +3,17 @@ pageable: true
 per_page: 10
 ---
 
-lololol
+<div class="container">
+<div class="row">
 
-<%= blog('examples').articles.size %>
+<% blog('examples').articles.each do |example| %>
+	<div class="col-md-4">
+		<h1><%= link_to example.title, example %></h1>
+		<p><%= example.data.subtitle %></p>
+		<p><%= link_to(image_tag(example.data.thumb), example) %></p>
+	</div>
+<% end %>
+
+
+</div >
+</div >
