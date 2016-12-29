@@ -1,0 +1,17 @@
+---
+pageable: true
+per_page: 10
+---
+
+<div class="container">
+<div class="row">
+
+<% blog('post').articles.each do |post| %>
+	<div class="col-md-12">
+		<h1><%= link_to post.title, post %></h1>
+		<p><%= post.body %></p>
+	</div>
+<% end %>
+
+</div >
+</div >

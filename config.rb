@@ -33,6 +33,16 @@ activate :blog do |blog|
 	blog.sources = '{title}.html'
 end
 
+# Discover6Sigma
+activate :blog do |blog|
+	blog.name = 'post'
+	blog.prefix = 'post'
+
+	# Match d6s
+	blog.permalink = '{year}/{month}/{title}.html'
+	blog.sources = '{year}-{month}-{title}.html'
+end
+
 # General configuration
 
 # Reload the browser automatically whenever files change
