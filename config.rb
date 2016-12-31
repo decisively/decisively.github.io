@@ -16,6 +16,10 @@ page '/*.txt', layout: false
 # proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
 #  which_fake_page: "Rendering a fake page with a local variable" }
 
+# To get /post/2014/01/scales-of-measurements/ instead of
+#        /post/2014/01/scales-of-measurements.html
+activate :directory_indexes
+
 # List of examples
 activate :blog do |blog|
 	blog.name = 'examples'
