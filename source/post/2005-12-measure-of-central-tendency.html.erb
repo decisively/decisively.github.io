@@ -1,0 +1,100 @@
+---
+title: Measure of central tendency
+date: 2005/12/01
+---
+
+<p>
+Simply stated, central tendency is a kind of middle point of a distribution and dispersion is the degree of scatter or spread of the data. There are several measures of central tendency. We will explore three such measures - median, mode, and mean. We will continue with our pizza shop example to develop a clear understanding of these characteristics.
+</p>
+
+<h2 class="h2small">Median</h2>
+<p>
+It is the middle most data item in the entire ordered or sorted data set. Finding middle point in data set with odd number of items is easy; it is simply (n + 1)/2 th item. In case of even number of items, the median is the sum of the two middle points divided by "2". In our pizza shop example, median is (14.0 + 14.4)/2 or 14.2, because in this case number of data items are even.
+</p>
+
+<h2 class="h2small">Mode</h2>
+<p>
+It is the data value that is found or repeated most often in the data set. In our pizza shop example, it is 14.0 as it is found four times i.e. the maximum in the data set.
+</p>
+
+<h2 class="h2small">Mean</h2>
+<p>
+Often referred as average, it is the sum of all data values divided by total number of data items. In our pizza shop example, mean is 14.4. Following table illustrates the mathematical formula for mean.
+</p>
+
+<img src="/post/2005/12/measure-of-central-tendency/moct-mean.jpg" alt="Mean" class="img-center" />
+<br />
+
+<p>
+If we only have a frequency table, then we assume that the mean value of each range (or class) appears in the data set "its frequency" times. The mean value of range is computed by adding the upper &amp; lower value and by dividing it by "2". The formula to arrive at mean becomes:
+</p>
+
+<img src="/post/2005/12/measure-of-central-tendency/moct-mean-using-freq.jpg" alt="Mean Using Frequency" class="img-center" />
+<br />
+
+<p>
+Here "n" is the number of classes (or ranges), "f" represents the frequency of data item "x". Note ith "x" is mean value of ith class (or range).
+</p>
+<p>
+Very simple, isn't it? Looks like that we have understood all about mean, mode and median. No, not really! We need to develop a deeper and clearer understanding of these concepts, as they are the founding principles of Statistics (also Six Sigma). To do that, let us go back to our childhood and recall seesaw.
+</p>
+
+<img src="/post/2005/12/measure-of-central-tendency/moct-see-saw.jpg" alt="Seesaw Example" class="img-center" />
+<br />
+
+<p>
+As long as we had a partner of similar (ideally identical) weight, we could easily sit equidistant from the center and enjoy. If there was a significant difference in our weight, we needed to adjust our respective distances from the center. The heavier child sat closer to the center compared to the lighter child. Recall, if heavy and light child sat equidistant from the center, the lighter child always remain hung in the air!
+</p>
+<p>
+We understood all these tricks in our childhood by simple common sense. We later also learned the physics behind it. The 2 key concepts involved are center of gravity (or center of mass) and moment of mass.
+</p>
+<p>
+Center of gravity is the position at which the mass "balances" without loosing balance or tilting to the left or right.
+</p>
+<p>
+Moment of mass is always determined about a point. It is the tendency of the mass to contribute a torque or in other words make the object rotate (about a point).
+</p>
+<p>
+Putting it formally, in this seesaw to play perfectly we needed "m1.x1 = m2.x2". Here "m" denotes mass and "x" denotes distance of child from center. The suffix 1 &amp; 2 are identifying child-1 and child-2. The center point in the above picture is the "center of gravity" and "m1.x1" and "m2.x2" are the "moment of mass" for children.
+</p>
+<p>
+These principals hold good if there are multiple children sitting on each side of the seesaw. Look at the following figure.
+</p>
+
+<img src="/post/2005/12/measure-of-central-tendency/moct-see-saw-multi.jpg" alt="Example - Seesaw with multiple children" class="img-center" />
+<br />
+
+<p>
+This time "x" is denoting the coordinates instead of the distances. Therefore, for balance it is important that the following holds true:
+</p>
+
+<img src="/post/2005/12/measure-of-central-tendency/moct-see-saw-multi-eqn.jpg" alt="Seesaw in balance - Equations" class="img-center" />
+<br />
+
+<p>
+Now, it is time to build a formal picture. Imagine that there are 1 to n masses distributed across our seesaw. We can now easily understand the following sequence of equations.
+</p>
+
+
+
+<div class="blocktext">
+Notice, that the last equation is exactly like the equation for finding mean from a frequency table or distribution. There is a striking similarity between "center of gravity" and "mean". The "frequency" is just like the "mass" and "distance" is like "data item". At center of gravity, the "moment of mass" on left is same as that of right. In context of a frequency diagram, this becomes the area under the curve (or histogram). The median is the middle point of the seesaw. The mode is the point where there is maximum weight (i.e. frequency or maximum repetition).
+</div>
+<p>
+With this conceptual background, it should now become easy for us to visualize the following facts. In any symmetrical frequency distribution, mean, mode and median are always at the same point. However, if there is a skew scenario changes. Look at the following figure:
+</p>
+
+<img src="/post/2005/12/measure-of-central-tendency/moct-skew.jpg" alt="Skew in frequency distribution" class="img-center" />
+<br />
+
+<p>
+In case of positive skew (as shown in first figure), the mode is at the peak of the distribution, the median is to the right of mode, and the mean is to the right of both - mode &amp; median. In case of negative skew, scenario reverses.
+</p>
+
+<h2 class="h2small">Important Observations about Mean, Mode, and Median</h2>
+<ol class="normal-li">
+<li>Median is usually not applicable to qualitative data.</li>
+<li>Mode is useful for a) qualitative data, b) quantitative data having skewed distribution where considering all data points (or observations) is not important and focus is on the "typical value". In a multi-modal data situation, it may begin to loose meaning.</li>
+<li>Mean is useful wherever it is important to consider all data points or observations (total is important).</li>
+<li>Therefore, the extreme values in the data set impact the mean. Weighted mean should be considered, if relative importance of each data point or observation has to be accounted.</li>
+</ol>
