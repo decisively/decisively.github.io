@@ -45,6 +45,12 @@ activate :blog do |blog|
 	# Match d6s
 	blog.permalink = '{year}/{month}/{title}.html'
 	blog.sources = '{year}-{month}-{title}.html'
+
+	# Enable pagination
+	blog.paginate = true
+	blog.per_page = 10
+	blog.page_link = "page/{num}"
+
 end
 
 # General configuration
