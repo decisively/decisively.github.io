@@ -1,0 +1,51 @@
+---
+title: Distribution in real life
+date: 2006/10/01
+---
+
+<p>
+Equipped with basic knowledge of distribution, let us now explore the applications of distribution in our lives. A closer look will reveal that it has been used in cosmic world to quantum world to our daily lives. For example, astronomers studied the distribution of gamma ray bursts to predict the shape of our galaxy and the presence of stellar nurseries. In quantum physics, the Heisenberg's uncertainty principle also talks about the distribution of position of a particle or "delta x" - the uncertainty in position for a given uncertainty in momentum. A simpler example is heights of people - it follows a normal distribution - a natural phenomenon.
+</p>
+
+
+<h2 class="h2large">Real Life Applications</h2>
+<p>
+Let us look at some more real life applications.
+</p>
+<h3>Data Compression</h3>
+<p>
+A very common and easy to understand application is data compression. Almost all of us have used ZIP software at some point in time - right? Such software compresses the data by leveraging the distribution of letters or words contained in the data. Normally if you were to encode a message consisting of only English alphabets, you would assign a fixed 5-bits code to each alphabet irrespective of its distribution in the message to be encoded. The trick is to find out the distribution pattern of the alphabets and assign the shortest code to alphabet with highest frequency of occurrence and the longest to smallest frequency of occurrence. You can easily observe that this variable length encoding would lead to a compression compared to a fixed length encoding approach.
+</p>
+<h3>Reliability</h3>
+<p>
+In engineering world, reliability is defined as the probability that a system will function within its specified limits for a specified period of time under stated environmental conditions. We can easily visualize that reliability is all about studying the failure-time distribution under the given environmental conditions.
+</p>
+<p>
+A quick and simple mathematical overview will add further clarity. Let us assume p(x) is the probability distribution function (PDF) of time to failure of a given component. The probability that the component will fail between a time interval of "0" and "t" will therefore be given by:
+</p>
+<img src="/post/2006/10/distribution-in-real-life/dir-reliability1.png" alt="Probability of failure between a time interval of 0 and t" class="img-center" />
+<br />
+<p>
+The reliability or the probability that the component will survive up to time t can easily be determined from the following equation.
+</p>
+<img src="/post/2006/10/distribution-in-real-life/dir-reliability2.png" alt="Reliability" class="img-center" />
+<br />
+<h3>Project Planning</h3>
+<p>
+Most common way of project planning is to identify the tasks required to complete the project, estimate their completion time, and determine their interdependencies followed by development of the network diagram (or graph) to compute project completion time along with other parameters. This methodology works well if (point) estimates of task completion time are highly accurate. In other words the actual completion time experiences negligible variation.
+</p>
+<p>
+In real world that is full of variations, PERT methodology of project planning comes to our rescue. The 2 key differences in this methodology are (a) understanding the distribution of task completion time (from past data) and (b) application of Central Limit Theorem (CLT) to compute the project completion time with a defined confidence level.
+</p>
+
+<div class="blocktext">
+For a quick reference, CLT states that irrespective of the distribution of the population, the sampling distribution of mean will tend to be distributed normally, as long as your sample size is big enough (about 30 or more). Note sampling distribution is the distribution pattern of a given statistic found by repeated sampling of the population.
+</div>
+
+<p>
+The distribution of completion times provides us the minimum, maximum, and the most likely (mode) completion time, which allows us to compute the mean and variance of completion time. On the critical path of the project, the mean and variance are added to find out the mean project completion time and the corresponding variance. And this follows a normal distribution according to the CLT. With this information, we can now easily compute the project completion time with required confidence level. Imagine in case of point estimates equal to average task completion time value, the project completion time will have a confidence level of just about 50% only.
+</p>
+<h3>Quality Management</h3>
+<p>
+Conceptual understanding of distribution along with its practical applications is the foundation of several quality management techniques. These are discussed in detailed separately. Let us take a quick glimpse of its application. Let us say we receive a large shipment of certain part into our warehouse from the vendor. Vendor claims that there are no more than 2% defective parts in the shipment. If we sampled 150 parts randomly, what will be the probability of detecting at least one defective part? Simple application of binomial distribution will help us determine the answer. It will be 1 - P(n=0) and the value will be 0.95 approximately. For exact formula, please refer to binomial distribution in post on <a href="http://www.discover6sigma.org/post/2006/01/distribution/" title="Distribution">Distribution</a>.
+</p>
