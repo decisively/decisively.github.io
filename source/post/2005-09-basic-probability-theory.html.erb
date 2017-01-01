@@ -1,0 +1,178 @@
+---
+title: Basic Probability Theory
+date: 2005/09/01
+---
+
+<h2 class="h2small">What is Probability?</h2>
+<p>
+Probability is the chance of something happening. For example, this chance could be getting a heads when we toss a coin. Here something is "getting a heads". Probability is expressed as a fractional value between "0" and "1". A "0" probability means something can never happen whereas a "1" probability indicates something always happens.
+</p>
+<p>
+Probability theory has a very close relationship with statistics and therefore with six sigma. It has been used in areas like gambling, physics, business management, quality management, to our every day lives.
+</p>
+<p>
+Statistical thermodynamics helps in modeling molecular forces and their behavior where probability facilitates understanding of entropy - something that describes the tendency of matter toward disorder.
+</p>
+<p>
+In business management, for example, insurance industry uses probability theory to determine premium rates. It is indeed an important decision making tool.
+</p>
+<p>
+Basic Terminology Lets introduce a few formal terms to develop understanding of probability theory. When we toss a coin or roll a die, it is called an experiment. An event is one or more possible outcomes of an experiment. In coin toss experiment there are 2 possible outcomes - heads and tails (assuming the coin will never stand on its circumferential edge!). Similarly, in a roll a die experiment there are 6 possible outcomes. Such a collection of all possible outcomes of an experiment is called sample space. Mathematical notation of toss a coin experiment is given below:
+</p>
+<p>
+S = {head, tail} ... ... ... ... (I)
+</p>
+
+<h3>Basic Definitions</h3>
+
+<h4>Probability of an event</h4>
+<p>
+Probability theory defines the probability of an event occurrence as
+</p>
+<p>
+Probability of an event P(E) =<br />
+Number of event outcomes (nE) /Total number of outcomes in the sample space (N) ... ... ... ... (II)
+</p>
+<p>
+Therefore if we roll a die, probability of getting a six is
+</p>
+<p>
+P(6) = 1/6 or 0.167
+</p>
+<p>
+Because there is only "1" outcome of one roll of die that will produce a "6" and the sample space S = {1, 2, 3, 4, 5, 6} has "6" possible outcomes.
+</p>
+
+<h4>Mutually Exclusive Events</h4>
+<p>
+In an experiment, events are said to be mutually exclusive if the occurrence of each one of them precludes the occurrence of all the others; or in other words if one and only one of them can occur at a time. Consider our roll a die example again. On a single die roll, 1 and 2 and 3 and 4 and 5 and 6 are mutually exclusive because one and only one number from the sample space can appear face up.
+</p>
+
+<h4>Collectively Exhaustive Events</h4>
+<p>
+Events are collectively exhaustive if they constitute the entire set of possibilities from the sample space, and no other outcomes are possible. For example, {heads, tails} is a collectively exhaustive set of outcomes for a toss a coin experiment.
+</p>
+
+<h4>Independent Events</h4>
+<p>
+Events are independent if the occurrence of one does not affect the occurrence of any other subsequent event. If we roll a die twice, it results in independent events as in the first roll getting a specific number face up does not in any manner affects which number will come face up on the second roll.
+</p>
+
+<h4>Dependent Events</h4>
+<p>
+Events are dependent when occurrence of one event affects the occurrence of any other subsequent event. For example, if have a deck of cards and we draw 2 cards one after another and compute probability of getting 2 clubs, without replacing the card drawn first, it will make the second event dependent on the first.
+</p>
+
+<h3>Rules of Probability</h3>
+
+<h4>Addition Rule for Mutually Exclusive Events</h4>
+<p>
+Let us say that there are A, and B mutually exclusive events with individual probabilities as P(A) = n A/N, P(B) = n B/N, then the probability of occurrence of either A or B is the sum of their individual probability of occurrence:
+</p>
+<p>
+P(A or B) = P(A) + P(B) ... ... ... ... (III)<br />
+= (n A + n B)/N
+</p>
+
+<h4>Multiplication Rule for Independent Events</h4>
+<p>
+Let us say there are A and B independent events then the possibility of A and B occurring together is the product of their individual probabilities:
+</p>
+<p>
+P(AB) or P(A and B) = P(A) x P(B) ... ... ... ... (IV)<br />
+= (n A/N) x (n B/N)
+</p>
+
+<h4>Addition Rule for Non-mutually Exclusive Events</h4>
+<p>
+Let us say that there are A, and B events that are not mutually exclusive with individual probabilities as P(A) = n A/N, P(B) = n B/N, then the probability of occurrence of either A or B is given as:
+</p>
+<p>
+P(A or B) = P(A) + P(B) - P(AB) ... ... ... ... (V)
+</p>
+<p>
+The subtraction of P(AB) is to avoid double counting. To get a better understanding, consider an example - drawing a jack or a club from a deck of cards. In this experiment, we can draw either a club or a jack or a jack of club. The both individual probabilities P(J) and P(C) include "1" count of event JC i.e. there is a double counting of that event in the sum. And that is why, we need to subtract P(JC) from the sum P(J) + P(C).
+</p>
+<p>
+<b>Note</b>: If A precludes B or vice versa, then clearly P(AB) is equal to "0" converting the above equation into a normal addition rule for mutually exclusive events.
+</p>
+<p>
+Another way to build better understanding is to compute the probability of not drawing a jack or a club and then subtract it from 1 to arrive at the desired probability:
+</p>
+<p>
+1 - (1 - P(J)) x (1 - P(C)) = P(J) + P(C) - P(JC)
+</p>
+<p>
+Notice, this is identical to equation (V) above.
+</p>
+
+<h4>Counting Events - Combination &amp; Permutation</h4>
+<p>
+To understand the concept let us begin with questions. What is the probability of a specific sequence of four coin tosses, "heads-tails-heads-heads"? And what is the probability of observing 3 "heads" and 1 "tails" in any order? Clearly the answer to the first question is (1/2) x (1/2) x (1/2) x (1/2) = 1/16 because we are talking about a specific combination. Whereas in the second case there are 4 possible ways in which we can get 3 "head" and 1 "tails" i.e. "heads-heads-heads-tails", "heads- heads-tails- heads", "heads-tails- heads- heads", and "tails- heads- heads- heads". Therefore the probability becomes 4/16 = 1/4.
+</p>
+<p>
+Permutation and combination help you to count events using simple mathematical formulas.
+</p>
+
+<h4>Permutation</h4>
+<p>
+Permutation formula allows you to count all possible different sequence of "n" objects:
+</p>
+<p>
+n x (n - 1) x (n - 2) x ... 3 x 2 x 1 = n! ... ... ... ... (VI)
+</p>
+<p>
+<b>Note</b>: n! is read as n factorial.
+</p>
+<p>
+To understand this, let us take an example - how many different sequences can we create from letters "A", "B", "C", and "D"? The first letter of a sequence can be any one of the four. After drawing one, the second letter of the sequence can be any of the remaining three letters. The third letter can be any of the remaining two letters, and the fourth must be the one remaining letter. Therefore, the count is
+</p>
+<p>
+4 x 3 x 2 x 1 = 4! = 24
+</p>
+<p>
+The generalized way of obtaining a count of "ordered subsets" of "k" objects from a set of "n" objects is given by:
+</p>
+<p>
+nPk = n!/(n - k)! ... ... ... ... (VII)
+</p>
+<p>
+Going back to our previous example, this time let us enumerate sequences for 2 letters from the set of 4 letters:
+</p>
+<p>
+Count = 4P2 = 4!/(4-2)! = (4 x 3 x 2 x 1)/(2 x 1) = 12
+</p>
+<p>
+The list of these 12 sequences is AB, AC, AD, BA, BC, BD, CA, CB, CD, DA, DB, DC.
+</p>
+
+<h4>Combination</h4>
+<p>
+It is all about ways of choosing, choosing "n" objects from a set of "k" objects. Imagine if we choose 2 letter combinations from the set of 4 letters in the last example. Notice, in the list of 12 sequences listed above AB and BA, AC and CA, AD and DA, BC and CB, BD and DB, CD and DC pairs are identical provided we ignore the sequence. Our interest is in choosing and not in all possible sequence. Therefore, we can choose in 6 different ways. These are AB, AC, AD, BC, BD, and CD.
+</p>
+<p>
+To sum up formally, the number of ways of choosing "n unordered" objects from "k" objects is given by:
+</p>
+<p>
+nCk = n!/(k! x (n - k)!) ... ... ... ... (VIII)
+</p>
+<p>
+We can now easily compute the value, calculated imperially in the current example, using the above formula as 6.
+</p>
+<p>
+Armed with this knowledge, let us go back to our original question that we asked in the beginning of "counting events". Let us look at the question number 1. The probability is:
+</p>
+<p>
+P(HTHH) = P(H) x P(T) x P(H) x P(H)<br />
+= (1/2) x (1/2) x (1/2) x (1/2) = 1/16
+</p>
+<p>
+We now move forward to the question number 2. Here the event in question is 3 heads and 1 tails in any sequence. The number of event outcomes is:
+</p>
+<p>
+nE = 4!/(3! x 1!) = 4
+</p>
+
+<p>
+The sample space remains unchanged 16 (= 2 ** 4). Therefore, the probability is 4/16 or 1/4.
+</p>
