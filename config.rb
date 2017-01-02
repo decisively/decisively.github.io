@@ -40,11 +40,14 @@ end
 # Discover6Sigma
 activate :blog do |blog|
 	blog.name = 'post'
-	blog.prefix = 'post'
 
 	# Match d6s
-	blog.permalink = '{year}/{month}/{title}.html'
-	blog.sources = '{year}-{month}-{title}.html'
+	blog.permalink = 'post/{year}/{month}/{title}.html'
+	blog.sources = 'post/{year}-{month}-{title}.html'
+
+	# Categories
+	blog.tag_template = "post-cat.html"
+	blog.taglink = "cat/{tag}/"
 
 	# Enable pagination
 	blog.paginate = true
