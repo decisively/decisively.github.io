@@ -38,13 +38,20 @@ Suppose we toss a coin N-times. What will be probability of getting a specific s
 </p>
 <div class="blocktext">
 <b>p<sup>n</sup>.(1 - p)<sup>N-n</sup></b>
+
+<p>`p^n (1-p)^(N-n)`</p>
+
 <br/><br/>where "p" is the probability of getting heads.
 </div>
 <p>
 If the sequence is not important then the probability will be determined by multiplying the above equation by <sup>N</sup>C<sub>n</sub>.
 </p>
 <div class="blocktext">
+
 <b>P(n, N) = p<sup>n</sup>.(1 - p)<sup>N-n</sup>.<sup>N</sup>C<sub>n</sub></b>
+
+<p>`P(n,N) = p^n (1-p)^(N-n) . ^NC_n`</p>
+
 </div>
 <p>
 The above probability is the one that we observed empirically, when we conducted the "coin tossing" experiment. If you recall binomial theorem, it is very easy to observe that P(n, N) is the n<sup>th</sup> term of (p + (1 - p))<sup>N</sup>.
@@ -93,6 +100,9 @@ A normalized distribution function - "f(x)" must result into a sum of "1", if al
 </p>
 <img src="/post/2006/01/distribution/d-binom-is-normal.png" alt="Binomial Distribution is Normalized" class="img-center" />
 <br />
+<p>`sum_(n=0)^N P(n,N) = sum_(n=0)^N \ ^N C_n.p^n.(1-p)^(N-n)`</p>
+<p>`\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =[p+(1-p)]^N \ \ \ \ (:\f\r\o\m\ \t\h\e\ \b\i\n\o\m\i\a\l\ \t\h\e\o\r\e\m:)`</p>
+<p>`\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =1`</p>
 
 <h3>Mean of Binomial Distribution is N.p</h3>
 <p>
@@ -100,6 +110,10 @@ Recall from <a href="http://www.discover6sigma.org/post/2005/12/probability-and-
 </p>
 <img src="/post/2006/01/distribution/d-mean-of-binom.png" alt="Expression for Mean of Binomial Distribution" class="img-center" />
 <br />
+
+<p>`mu = ( sum_(n=0)^N n.P(n,N) )/( sum_(n=0)^N P(n,N))`</p>
+<p>`\ \ = sum_(n=0)^N n.P(n,N)`</p>
+<p>`\ \ = N.p`</p>
 
 <p>
 Although the rigorous mathematical proof is not given here, you are encouraged to try computing mean using simple values for "N" (e.g. 2 &amp; 3).
@@ -112,15 +126,19 @@ The variance for binomial distribution can be computed using the following expre
 <img src="/post/2006/01/distribution/d-variance-of-binom.png" alt="Expression for Variance of Binomial Distribution" class="img-center" />
 <br />
 
+<p>`sigma^2 = ( sum_(n=0)^N (n-mu)^2 . P(n,N) ) / ( sum_(n=0)^N P(n,N) )`</p>
+<p>`\ \ = N.p.(1-p)`</p>
+
+
 <h3>Example</h3>
 <p>
-Let us take an example for "N = 20" and "p = 0.5" to visualize the above characteristics. The following table shows the data. This data can be quickly constructed using a spreadsheet like MS Excel.
+Let us take an example for `N = 20` and `p = 0.5` to visualize the above characteristics. The following table shows the data. This data can be quickly constructed using a spreadsheet like MS Excel.
 </p>
 <img src="/post/2006/01/distribution/d-binom-dist-tbl.png" alt="Example Data for Binomial Distribution" class="img-center" />
 <br />
 
 <p>
-We can observe from cumulative <b>P(n, N)</b> column that the distribution is properly normalized as the last row has a value of "1". The mean and the variance are "10" and "5" respectively. Note, variance for grouped data is computed using &sum;(fx&sup2; &frasl;&nbsp;N) &minus; &mu;&sup2; formula. It can easily be seen that the expression &sum;(fx&sup2; &frasl;&nbsp;N) is equal to n*n*P(n, N).
+We can observe from cumulative `P(n, N)` column that the distribution is properly normalized as the last row has a value of "1". The mean and the variance are "10" and "5" respectively. Note, variance for grouped data is computed using `sum ((fx^2) / N ) - mu^2` formula. It can easily be seen that the expression `sum ((fx^2)/N)` is equal to `n*n*P(n, N)`.
 </p>
 <p>
 The above results also agree with our formula for mean and variance derived earlier. The following graphs illustrate the probability and cumulative distributions.
@@ -136,24 +154,48 @@ Normal distribution can be approximated as a special case of binomial distributi
 <img src="/post/2006/01/distribution/d-normal-pdf.png" alt="Normal Distribution PDF" class="img-center" />
 <br />
 
+<p>`P(x) = 1/(sigma sqrt(2pi)) e - ((x - mu)^2) / (2 sigma^2) `</p>
+
 <p>
 The "e" in the expression is called exponential function. It is expressed as "e<sup>x</sup>", where "e" is equal to approximately 2.7183. The concept of "e" will be discussed later.
 </p>
 
 <p>
-Recall from <a href="http://www.discover6sigma.org/post/2005/10/introduction-to-six-sigma/">Introduction to Six Sigma</a> that 68% of area (i.e. the data points) falls within the area of -1&sigma; and +1&sigma; on either side of the mean. With this PDF, it is very easy to compute the area within +/- 1 &sigma; from mean using the following expression.
+Recall from <a href="http://www.discover6sigma.org/post/2005/10/introduction-to-six-sigma/">Introduction to Six Sigma</a> that 68% of area (i.e. the data points) falls within the area of `-1sigma` and `+1sigma` on either side of the mean. With this PDF, it is very easy to compute the area within `+- 1 sigma` from mean using the following expression.
 </p>
 <img src="/post/2006/01/distribution/d-normal-area-1sigma.png" alt="Area under Normal Distribution" class="img-center" />
 <br />
+
+<p>`P( mu - sigma <  x < mu + sigma)`</p>
+<p>`\ \ = 1/(sigma sqrt(2pi))  int_(mu+sigma)^(mu-sigma) e - ((x - mu)^2) / (2 sigma^2)  dx`</p>
+<p>`\ \ ~~ 0.6827`</p>
+
 
 <p>
 Other area computations can now be easily done using the same method.
 </p>
 <p>
-At this stage we can also observe, how binomial distribution becomes normal distribution when N is very large and p has a finite value. We can compute the area under the binomial distribution with in +/- 1 &sigma; for N=1000 &amp; p=0.5. The expression for this calculation is given below.
+At this stage we can also observe, how binomial distribution becomes normal distribution when N is very large and p has a finite value. We can compute the area under the binomial distribution with in `+- 1 sigma` for `N=1000` &amp; `p=0.5`. The expression for this calculation is given below.
 </p>
 <img src="/post/2006/01/distribution/d-binom2normal.png" alt="Binomial to Normal Distribution" class="img-center" />
 <br />
+
+<p>`mu = N.p`</p>
+<p>`\ \ = 1,000 xx 0.5`</p>
+<p>`\ \ = 500`</p>
+<p>``</p>
+<p>`sigma = [N.p.(1-p)]^(1/2)`</p>
+<p>`\ \ = [1,000 xx 0.5 xx 0.5]^(1/2)`</p>
+<p>`\ \ = 15.81 ~~ 16`</p>
+<p>``</p>
+<p>`mu + sigma = 516`</p>
+<p>`mu - sigma = 484`</p>
+<p>``</p>
+<p>`P(484 < n < 516)`</p>
+<p>`\ \ = sum_(n=484)^516 \ ^1000 C_n.p^n.(1-p)^(1000-n)`</p>
+<p>`\ \ = sum_(n=484)^516 \ ^1000 C_n.(0.5)^1000`</p>
+<p>``</p>
+
 
 <p>
 You will notice that this value will be approximately equal to 0.7, which is very close to 0.6827. This calculation can be carried out using any spreadsheet like MS Excel. As "N" becomes higher, this values approaches to 0.6827.
