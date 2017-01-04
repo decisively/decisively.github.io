@@ -11,14 +11,54 @@ We have drawn so many graphs. We have covered tons of mathematics - mean, mode, 
 Let us begin with an example. Imagine that we are reviewing the production performance of our plants for last 30 days. The production managers are sharing the production details. John reports that the average production was 357287 units per day and his plant produced over 714213 units per day for 16 days in a row, which is a record. The production figures for all other managers were between 345623 and 366543 units per day. Does this tell us something? Think! Yes, it tells us a lot. What John reported is impossible. Let us do the mathematics to uncover that. Total production for John's plant is "357287 average units per day" x "30 days" = "10718610 units" and with 714213 x 16 the production figure during record period is 11427408 units. Impossible, isn't it?
 </p>
 <p>
-Let us put our observation formally now. If the mean of a data set containing non negative numbers is "&mu;", then the percentage of observations or data points that are greater or equal to a value x is always smaller or equal to "100 * (&mu;/x)". This is called <b>Markov's Inequality</b>.
+Let us put our observation formally now. If the mean of a data set containing non negative numbers is "&mu;", then the percentage of observations or data points that are greater or equal to a value x is always smaller or equal to `100 xx (mu/x)`. This is called <b>Markov's Inequality</b>.
 </p>
 <p>
-There is one more inequality worth learning. It is called <b>Chebychev's Inequality</b>. The largest percentage of values for a data set, that have a z score beyond "z" in either direction, is "100/(square of z)". The following table summarizes the outcome of this inequality for quick reference.
+There is one more inequality worth learning. It is called <b>Chebychev's Inequality</b>. The largest percentage of values for a data set, that have a z score beyond "z" in either direction, is `100/z^2`. The following table summarizes the outcome of this inequality for quick reference.
 </p>
 
 <img src="/post/2005/12/so-where-is-the-information/switsi-cheb-ineq.jpg" alt="Chebychev's Inequality" class="img-center" />
 <br />
+
+<table class="table table-condensed table-hover">
+	<tr>
+		<th>z-score</th>
+		<th>Largest %</th>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>100.00</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>25.00</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>11.11</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>6.25</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>4.00</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>2.78</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>2.04</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>1.56</td>
+	</tr>
+
+</table>
 
 <p>
 To understand this inequality, let us pick up any row from the above table - say the second row. Now assume, that there is a dataset having a mean of &mu; and standard deviation of &sigma;. There are 25% values from the data set that are exactly 2&sigma; away from the mean i.e. &mu;. With this knowledge at hand, we can write down the value of standard deviation as:
@@ -26,6 +66,11 @@ To understand this inequality, let us pick up any row from the above table - say
 
 <img src="/post/2005/12/so-where-is-the-information/switsi-cheb-ineq-proof.jpg" alt="Simple Proof of Chebychev's Inequality" class="img-center" />
 <br />
+
+<p>`\ \ \ \ \ \ \ sqrt( 0.25 xx (2 sigma)^2 + \b\a\l\a\n\c\e\ \7\5\%\ \d\e\v\i\a\t\i\o\n\ \s\q\u\a\r\e )`</p>
+<p>`=> sqrt(  sigma^2 + \b\a\l\a\n\c\e\ \7\5\%\ \d\e\v\i\a\t\i\o\n\ \s\q\u\a\r\e )`</p>
+<p>``</p>
+
 
 <p>
 In order to arrive at the value of standard deviation as "&sigma;", the second term must be "0" i.e. the balance 75% terms should be at mean. We can clearly see that it is not possible to have more than 25% values from the data set that are 2&sigma; away from the mean.
