@@ -61,6 +61,11 @@ Consider a population with a variable of interest called, "x". If we draw a rand
 </p>
 <img src="/post/2007/02/sampling/samp-xbar.png" class="img-center" alt="Sample Mean of x" />
 <br />
+
+<p>
+`bar x = (sum x_i)/n`
+</p>
+
 <p>
 Now if we have to draw an inference about the population mean of "x", we need to know about the distribution of sample mean of "x". The distribution of any such sample statistic (like sample mean) is known as a sampling distribution (of mean in this case). The Central Limit Theorem (CLT) gives us three very important pieces of information that help us in drawing the required inference.
 </p>
@@ -73,6 +78,9 @@ Now if we have to draw an inference about the population mean of "x", we need to
 <img src="/post/2007/02/sampling/samp-sigma-xbar.png" class="img-center" alt="Standard deviation of the sampling distribution (sigma xbar)" />
 <br />
 <p>
+`sigma_bar x = sigma/sqrt(n)`
+</p>
+<p>
 This is called "standard error". This can also be understood intuitively. The larger the standard deviation of population, the larger would be sampling error i.e. the standard deviation of sampling distribution. Therefore, standard deviation of population appears in the numerator. In any case, larger the sample size, smaller would be sampling error. This happens because you get a more representative same leading to lesser dispersion in sampling distribution. This is why "n" appears in the denominator. The square root indicates the returns diminish faster with increase in sample size. For example, if you increase a sample size to 40 from 10 (a 4x increase), the standard deviation will only reduce by 1/2 and not by 1/4.
 </p>
 <p>
@@ -84,6 +92,9 @@ Now armed with this knowledge, we can easily compute the certainty (or uncertain
 <img src="/post/2007/02/sampling/samp-95ci-u.png" class="img-center" alt="u with 95% CI" />
 <br />
 <p>
+`bar X +- 1.96 sigma_bar x`
+</p>
+<p>
 Just to recap, 95% CI means 95% area under the normal curve or an area covered within 1.96 times the standard deviation (or Z-score, refer to section on <a href="http://www.discover6sigma.org/post/2005/12/measure-of-dispersion/">Measure of Dispersion</a>) away from the mean in both directions.
 </p>
 <p>
@@ -91,6 +102,9 @@ And the figure for 99% CI will be
 </p>
 <img src="/post/2007/02/sampling/samp-99ci-u.png" class="img-center" alt="u with 99% CI" />
 <br />
+<p>
+`bar X +- 2.58 sigma_bar x`
+</p>
 <p>
 Coming back to correct sample size, note that this depends on (a) variation in population, (b) standard error, and (c) required CI. Typically as rule of thumb, a minimum sample size of 30 is required and in most cases, a sample size between 50 and 100 is good enough.
 </p>
@@ -100,10 +114,17 @@ A more formal method can be derived in form of a formula. For a given CI, corres
 <img src="/post/2007/02/sampling/samp-p.png" class="img-center" alt="u with a CI in terms of Z-score" />
 <br />
 <p>
+`bar X +- Z_(CI) sigma_bar x`
+</p>
+<p>
 We can say that the precision, "P" will be,
 </p>
 <img src="/post/2007/02/sampling/samp-n-formula.png" class="img-center" alt="Formula for sample size computation" />
 <br />
+<p>`\ \ \ \ \ \ \   P = +- Z_(CI) sigma_bar x`</p>
+<p>`=> P = +- Z_(CI).(sigma/sqrt(n))`</p>
+<p>`bb(\T\h\e\r\e\f\o\r\e\ \ \s\a\m\p\l\e\ \s\i\z\e\ \w\i\l\l\ \b\e\: )`</p>
+<p>`=> n = (Z_(CI)^2 sigma^2)/P^2`</p>
 
 <h3>Selecting the sampling technique</h3>
 <p>

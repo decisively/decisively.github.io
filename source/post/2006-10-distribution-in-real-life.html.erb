@@ -26,11 +26,22 @@ A quick and simple mathematical overview will add further clarity. Let us assume
 </p>
 <img src="/post/2006/10/distribution-in-real-life/dir-reliability1.png" alt="Probability of failure between a time interval of 0 and t" class="img-center" />
 <br />
+
+<p>
+`bb P(o < x < t) = int_0^t p(x)*dx`
+</p>
+
 <p>
 The reliability or the probability that the component will survive up to time t can easily be determined from the following equation.
 </p>
 <img src="/post/2006/10/distribution-in-real-life/dir-reliability2.png" alt="Reliability" class="img-center" />
 <br />
+
+<p>
+`bb R(o < x < t) = bb 1 - bb P( o < x < t )`
+</p>
+
+
 <h3>Project Planning</h3>
 <p>
 Most common way of project planning is to identify the tasks required to complete the project, estimate their completion time, and determine their interdependencies followed by development of the network diagram (or graph) to compute project completion time along with other parameters. This methodology works well if (point) estimates of task completion time are highly accurate. In other words the actual completion time experiences negligible variation.
