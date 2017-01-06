@@ -37,6 +37,8 @@ One simple way to determine average deviation seems to be to find the average of
 <img src="/post/2005/12/measure-of-dispersion/mod-avg-dev.jpg" alt="Average Deviation" class="img-center" />
 <br />
 
+<p>`1/n sum_(i=1)^n (x_i - bar x)`</p>
+
 <p>
 But there is a catch! It will be virtually "0". You may like to try it with one of the example data set given above.
 </p>
@@ -48,6 +50,8 @@ So, how do we compute average deviation? A smart idea would be to find average o
 <img src="/post/2005/12/measure-of-dispersion/mod-mad.jpg" alt="Mean Absolute Deviation (MAD)" class="img-center" />
 <br />
 
+<p>`1/n sum_(i=1)^n |(x_i - bar x)|`</p>
+
 <p>
 This quantity is referred as Mean Absolute Deviation (MAD). MAD for the first data set is 2.6 and for the second data set is 3.3. This appears to be a good average measure of deviation. But, still there is a problem. Here the larger deviation values tend to get averaged out and the value does not reflect the impact of larger scatter or dispersion properly.
 </p>
@@ -58,6 +62,8 @@ Therefore, it will be appropriate to compute root mean square (RMS) of deviation
 
 <img src="/post/2005/12/measure-of-dispersion/mod-std-dev.jpg" alt="Standard Deviation" class="img-center" />
 <br />
+
+<p>`sqrt (sum_(i=1)^n ((x_i - bar x)^2)/n )`</p>
 
 <p>
 Since, each data value is squared, the larger values automatically get amplified accordingly to reflect the impact of larger deviations. To understand the concept, let us look at the following data and the corresponding graph.
@@ -84,12 +90,19 @@ The Standards Deviation for the first data set is 3.2 and for the second data se
 <img src="/post/2005/12/measure-of-dispersion/mod-pop-std-dev.jpg" alt="Population Standard Deviation" class="img-center" />
 <br />
 
+<p>`bb(\P\o\p\u\l\a\t\i\o\n\ \S\t\a\n\d\a\r\d\ \D\e\v\i\a\t\i\o\n)`</p>
+<p>`sigma = sqrt (sum_(i=1)^n ((x_i - bar x)^2)/n ) = sqrt (sum_(i=1)^n x_i^2/N - mu^2)`</p>
+
 <p>
 Following table illustrates the mathematical formula for sample standard deviation. The reason for division by "(n - 1)" instead of "n" is discussed later.
 </p>
 
 <img src="/post/2005/12/measure-of-dispersion/mod-samp-std-dev.jpg" alt="Sample Standard Deviation" class="img-center" />
 <br />
+
+<p>`bb(\S\a\m\p\l\e\ \S\t\a\n\d\a\r\d\ \D\e\v\i\a\t\i\o\n)`</p>
+<p>`S=sqrt( sum_(i=0)^n ((x_i - bar x)^2)  /(n-1) ) `</p>
+
 
 <h2 class="h2small">Variance </h2>
 <p>
@@ -104,6 +117,8 @@ Having discovered a good measure of average deviation, how do we compare the spr
 <img src="/post/2005/12/measure-of-dispersion/mod-coef-vari.jpg" alt="Coefficient of Variation" class="img-center" />
 <br />
 
+<p>`bb(\C\o\e\f\f\i\c\i\e\n\t\ \o\f\ \V\a\r\i\a\t\i\o\n) = sigma/mu xx 100`</p>
+
 <p>
 Let us take an example. Consider two different data sets having mean and standard deviation as "14.4 &amp; 3.2" and "144.0 &amp; 3.2" respectively. The same standard deviation does not mean identical degree of scatter. In fact the second one has very little degree of spread or scatter. And coefficient of variation highlights it clearly - coefficient of variation for the first data set is 22.2 and for the second data set it is 2.2.
 </p>
@@ -115,6 +130,8 @@ The z score of a data point or observation indicates how far and in what directi
 
 <img src="/post/2005/12/measure-of-dispersion/mod-z-score.jpg" alt="Z-Score" class="img-center" />
 <br />
+
+<p>`Z = (x_i - mu)/sigma`</p>
 
 <p>
 Z-score is revisited later in the section on distribution.
