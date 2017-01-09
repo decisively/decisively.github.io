@@ -46,8 +46,8 @@ activate :blog do |blog|
 	blog.sources = 'post/{year}-{month}-{title}.html'
 
 	# Categories
-	blog.tag_template = "post-cat.html"
-	blog.taglink = "cat/{tag}/"
+	#blog.tag_template = "post-cat.html"
+	#blog.taglink = "cat/{tag}/"
 
 	# Enable pagination
 	blog.paginate = true
