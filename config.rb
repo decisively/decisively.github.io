@@ -56,6 +56,13 @@ activate :blog do |blog|
 
 end
 
+activate :deploy do |deploy|
+	deploy.build_before = true
+	deploy.deploy_method = :git
+	deploy.branch = 'master'
+	deploy.remote = 'origin'
+end
+
 # General configuration
 
 # Reload the browser automatically whenever files change
