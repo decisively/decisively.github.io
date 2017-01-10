@@ -1,0 +1,10 @@
+language: ruby
+
+# https://docs.travis-ci.com/user/languages/ruby#Caching-Bundler
+cache: bundler
+
+branches:
+  only:
+  - middleman
+
+script: bundle exec middleman build
