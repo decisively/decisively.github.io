@@ -12,4 +12,10 @@ chmod 600 deploy_key
 eval `ssh-agent -s`
 ssh-add deploy_key
 
-git config remote.origin.url
+# Setup git
+git remote set-url origin git@github.com:decisively/decisively.github.io.git
+git config --global user.name Travis
+git config --global user.email travis+ci@graype.in
+
+# Deploy
+bundle exec middleman deploy
