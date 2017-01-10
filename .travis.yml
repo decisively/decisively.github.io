@@ -7,4 +7,8 @@ branches:
   only:
   - middleman
 
-script: bundle exec middleman build
+before_install: openssl aes-256-cbc -K $encrypted_ce6a6ce89e2b_key -iv $encrypted_ce6a6ce89e2b_iv -in deploy_key.enc -out deploy_key -d
+
+script:
+- 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then bash bundle exec middleman build; fi'
+- 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./deploy.sh; fi'
