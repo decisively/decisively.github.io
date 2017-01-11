@@ -20,9 +20,7 @@ In business management, for example, insurance industry uses probability theory 
 <p>
 Basic Terminology Lets introduce a few formal terms to develop understanding of probability theory. When we toss a coin or roll a die, it is called an experiment. An event is one or more possible outcomes of an experiment. In coin toss experiment there are 2 possible outcomes - heads and tails (assuming the coin will never stand on its circumferential edge!). Similarly, in a roll a die experiment there are 6 possible outcomes. Such a collection of all possible outcomes of an experiment is called sample space. Mathematical notation of toss a coin experiment is given below:
 </p>
-<p>
-S = {head, tail} ... ... ... ... (I)
-</p>
+<p>`S = {head, tail} ... ... ... ... (bbb(I))`</p>
 
 <h3>Basic Definitions</h3>
 
@@ -30,16 +28,11 @@ S = {head, tail} ... ... ... ... (I)
 <p>
 Probability theory defines the probability of an event occurrence as
 </p>
-<p>
-Probability of an event P(E) =<br />
-Number of event outcomes (nE) /Total number of outcomes in the sample space (N) ... ... ... ... (II)
-</p>
+<p>`\P\r\o\b\a\b\i\l\i\t\y\ \o\f\ \a\n\ \e\v\e\n\t\ P(E) = \N\u\m\b\e\r\ \o\f\ \e\v\e\n\t\ \o\u\t\c\o\m\e\s\ (nE) -: \T\o\t\a\l\ \n\u\m\b\e\r\ \o\f\ \o\u\t\c\o\m\e\s\ \i\n\ \t\h\e\ \s\a\m\p\l\e\ \s\p\a\c\e\ (N) ... ... ... ... (bbb(II))`</p>
 <p>
 Therefore if we roll a die, probability of getting a six is
 </p>
-<p>
-P(6) = 1/6 or 0.167
-</p>
+<p>`P(6) = 1/6 or 0.167`</p>
 <p>
 Because there is only "1" outcome of one roll of die that will produce a "6" and the sample space S = {1, 2, 3, 4, 5, 6} has "6" possible outcomes.
 </p>
@@ -70,27 +63,21 @@ Events are dependent when occurrence of one event affects the occurrence of any 
 <p>
 Let us say that there are A, and B mutually exclusive events with individual probabilities as P(A) = n A/N, P(B) = n B/N, then the probability of occurrence of either A or B is the sum of their individual probability of occurrence:
 </p>
-<p>
-P(A or B) = P(A) + P(B) ... ... ... ... (III)<br />
-= (n A + n B)/N
-</p>
+<p>`P(A or B) = P(A) + P(B) ... ... ... ... (bbb(III))`</p>
+<p>`= (n A + n B)/N`</p>
 
 <h4>Multiplication Rule for Independent Events</h4>
 <p>
 Let us say there are A and B independent events then the possibility of A and B occurring together is the product of their individual probabilities:
 </p>
-<p>
-P(AB) or P(A and B) = P(A) x P(B) ... ... ... ... (IV)<br />
-= (n A/N) x (n B/N)
-</p>
+<p>`P(AB) or P(A and B) = P(A) xx P(B) ... ... ... ... (bbb(IV))`</p>
+<p>`= (n A/N) xx (n B/N)`</p>
 
 <h4>Addition Rule for Non-mutually Exclusive Events</h4>
 <p>
 Let us say that there are A, and B events that are not mutually exclusive with individual probabilities as P(A) = n A/N, P(B) = n B/N, then the probability of occurrence of either A or B is given as:
 </p>
-<p>
-P(A or B) = P(A) + P(B) - P(AB) ... ... ... ... (V)
-</p>
+<p>`P(A or B) = P(A) + P(B) - P(AB) ... ... ... ... (bbb(V))`</p>
 <p>
 The subtraction of P(AB) is to avoid double counting. To get a better understanding, consider an example - drawing a jack or a club from a deck of cards. In this experiment, we can draw either a club or a jack or a jack of club. The both individual probabilities P(J) and P(C) include "1" count of event JC i.e. there is a double counting of that event in the sum. And that is why, we need to subtract P(JC) from the sum P(J) + P(C).
 </p>
@@ -100,9 +87,7 @@ The subtraction of P(AB) is to avoid double counting. To get a better understand
 <p>
 Another way to build better understanding is to compute the probability of not drawing a jack or a club and then subtract it from 1 to arrive at the desired probability:
 </p>
-<p>
-1 - (1 - P(J)) x (1 - P(C)) = P(J) + P(C) - P(JC)
-</p>
+<p>`1 - (1 - P(J)) xx (1 - P(C)) = P(J) + P(C) - P(JC)`</p>
 <p>
 Notice, this is identical to equation (V) above.
 </p>
@@ -119,30 +104,22 @@ Permutation and combination help you to count events using simple mathematical f
 <p>
 Permutation formula allows you to count all possible different sequence of "n" objects:
 </p>
-<p>
-n x (n - 1) x (n - 2) x ... 3 x 2 x 1 = n! ... ... ... ... (VI)
-</p>
+<p>`n xx (n - 1) xx (n - 2) xx ... 3 xx 2 xx 1 = n! ... ... ... ... (bbb(VI))`</p>
 <p>
 <b>Note</b>: n! is read as n factorial.
 </p>
 <p>
 To understand this, let us take an example - how many different sequences can we create from letters "A", "B", "C", and "D"? The first letter of a sequence can be any one of the four. After drawing one, the second letter of the sequence can be any of the remaining three letters. The third letter can be any of the remaining two letters, and the fourth must be the one remaining letter. Therefore, the count is
 </p>
-<p>
-4 x 3 x 2 x 1 = 4! = 24
-</p>
+<p>`4 xx 3 xx 2 xx 1 = 4! = 24`</p>
 <p>
 The generalized way of obtaining a count of "ordered subsets" of "k" objects from a set of "n" objects is given by:
 </p>
-<p>
-nPk = n!/(n - k)! ... ... ... ... (VII)
-</p>
+<p>`nPk = (n!)/((n - k)!) ... ... ... ... (bbb(VII))`</p>
 <p>
 Going back to our previous example, this time let us enumerate sequences for 2 letters from the set of 4 letters:
 </p>
-<p>
-Count = 4P2 = 4!/(4-2)! = (4 x 3 x 2 x 1)/(2 x 1) = 12
-</p>
+<p>`Count = 4P2 = (4!)/((4-2)!) = (4 xx 3 xx 2 xx 1)/(2 xx 1) = 12`</p>
 <p>
 The list of these 12 sequences is AB, AC, AD, BA, BC, BD, CA, CB, CD, DA, DB, DC.
 </p>
@@ -154,25 +131,20 @@ It is all about ways of choosing, choosing "n" objects from a set of "k" objects
 <p>
 To sum up formally, the number of ways of choosing "n unordered" objects from "k" objects is given by:
 </p>
-<p>
-nCk = n!/(k! x (n - k)!) ... ... ... ... (VIII)
-</p>
+<p>`nCk = (n!)/(k! xx (n - k)!) ... ... ... ... (bbb(VIII))`</p>
 <p>
 We can now easily compute the value, calculated imperially in the current example, using the above formula as 6.
 </p>
 <p>
 Armed with this knowledge, let us go back to our original question that we asked in the beginning of "counting events". Let us look at the question number 1. The probability is:
 </p>
-<p>
-P(HTHH) = P(H) x P(T) x P(H) x P(H)<br />
-= (1/2) x (1/2) x (1/2) x (1/2) = 1/16
-</p>
+<p>`P(HTHH) = P(H) xx P(T) xx P(H) xx P(H)`</p>
+<p>`= (1/2) xx (1/2) xx (1/2) xx (1/2) = 1/16`</p>
+
 <p>
 We now move forward to the question number 2. Here the event in question is 3 heads and 1 tails in any sequence. The number of event outcomes is:
 </p>
-<p>
-nE = 4!/(3! x 1!) = 4
-</p>
+<p>`nE = (4!)/(3! xx 1!) = 4`</p>
 
 <p>
 The sample space remains unchanged 16 (= 2 ** 4). Therefore, the probability is 4/16 or 1/4.
