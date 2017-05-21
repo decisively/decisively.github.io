@@ -5,6 +5,7 @@ pageable: true
 <div class="container">
 <div class="row">
 
+<div class="col-md-10 col-md-offset-1">
 <% if paginate && num_pages > 1 %>
   <p>Page <%= page_number %> of <%= num_pages %></p>
 
@@ -12,19 +13,24 @@ pageable: true
     <p><%= link_to 'Previous page', prev_page %></p>
   <% end %>
 <% end %>
+</div>
 
 <% blog('post').articles.each do |post| %>
-	<div class="col-md-12">
-		<h1><%= link_to post.title, post %></h1>
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><%= link_to post.title, post %></h1>
+		</div>
 		<p><%= post.body %></p>
-	</div>
+	</main>
 <% end %>
 
+<div class="col-md-10 col-md-offset-1">
 <% if paginate %>
   <% if next_page %>
     <p><%= link_to 'Next page', next_page %></p>
   <% end %>
 <% end %>
+</div>
 
 </div >
 </div >
