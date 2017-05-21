@@ -18,7 +18,7 @@ header {
 }
 
 #logo {
-	height: 30px;
+	height: 60px;
 }
 
 header nav {
@@ -35,6 +35,7 @@ header nav ul {
 header nav ul li {
 	float: left;
 	margin-left: 40px;
+	margin-top: 20px;
 }
 
 header nav ul li a {
@@ -70,13 +71,14 @@ section.graphics {
 	margin-bottom: 55px;
 }
 
+main h1 a,
 main h1 {
 	margin: 0;
-	margin-bottom: -5px;
+	margin-bottom: 10px;
 	margin-top: 30px;
 	padding: 0;
-	font: 21px 'ff-tisa-sans-web-pro', serif;
-	font-weight: 900;
+	font: 44px 'ff-tisa-sans-web-pro', serif;
+	font-weight: 400;
 	text-align: left;
 	color: #222;
 }
@@ -92,9 +94,28 @@ main p {
 	text-align: left;
 	font-family: 'ff-tisa-sans-web-pro', sans-serif;
 	color: #222;
-	padding-top: 10px;
+	padding-top: 30px;
 	font-size: 18px;
 	line-height: 28px;
+}
+
+table {
+	font-size: 14px;
+	background-color: #f0f0f0;
+}
+
+th {
+	border: 2px solid #fff;
+	padding: 15px;
+	text-transform: uppercase;
+	vertical-align: top;
+	background-color: #dfdfdf;
+}
+
+td {
+	border: 2px solid #fff;
+	padding: 15px;
+	vertical-align: top;
 }
 
 footer {
