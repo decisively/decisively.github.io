@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+	<!-- Use title if it's in the page YAML frontmatter -->
+	<title>Box plot</title>
+
+	<link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
+	<link href="/stylesheets/master.css" rel="stylesheet" />
+	<script src="/javascripts/jquery.min.js"></script>
+	<script src="/javascripts/bootstrap.min.js"></script>
+
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=AM_CHTML"></script>
+
+	<script src="https://use.typekit.net/cwc1qce.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+</head>
+
+<body class="post post_2011 post_2011_06 post_2011_06_boxplot post_2011_06_boxplot_index">
+	<header class="container">
+	<div class="row">
+		<div class="col-md-3 col-md-offset-1">
+			<a href="/">
+				<img src="/images/decisively_logo.png" alt="Decisively from GRAYPE" id="logo"/>
+			</a>
+		</div>
+
+		<nav class="col-md-5 col-md-offset-2">
+			<ul>
+				<li><a href="/examples/">Examples</a></li>
+				<li><a href="/learn/">Learn</a></li>
+				<li><a href="/blog/">Blog</a></li>
+				<li><a href="http://graype.in/">About</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+	<p>
+Box Plot provides an intuitive graphical representation of the five number summary of a dataset. The five number summary consists of Minimum, Q1, Q2 or Median, Q3, and Maximum of a dataset. John W. Tukey introduced the concept of Box Plot in his book Exploratory Data Analysis, published in 1977. It is also referred as Box &amp; Whisker Plot.
+</p>
+<p>
+Let us understand the power of box plot through a series of examples; the following example shows the box plot along with the sample data.
+</p>
+<p>
+<img src="/post/2011/06/boxplot/boxplot.jpeg" width="90%" alt="Example of Box Plot with Sample Data" class ="img-center" />
+</p>
+<p>
+The box represents the inter quartile range (IQR = Q3-Q1) where its left border (also called hinge) corresponds to the first quartile (Q1) and the right border corresponds to the third quartile (Q3). Therefore, the middle 50% of data values fall within the box. The line in the middle represents the median of the data. The left whisker represents the smallest 25% of data values with its left most end corresponding to the minimum value of the data. Similarly, the right whisker represents the largest 25% of data values with its right most end corresponding to the maximum value of the data.
+</p>
+
+<p class="related">EXPLORE: <a href="http://www.discover6sigma.org/post/2005/12/measure-of-central-tendency/">Central Tendency</a> and <a href="http://www.discover6sigma.org/post/2005/12/measure-of-dispersion/">Meausre of Dispersion</a></p>
+<p>
+Let us look at the second data set and the corresponding box plot. The data has been superimposed on the histogram with box plot aligned perfectly on the top to give you a crisp and easy to understand picture.
+</p>
+<p>
+<img src="/post/2011/06/boxplot/boxplot-m100.png" width="90%" alt="Box Plot with Histogram" class ="img-center" />
+</p>
+<p>
+The histogram in the figure clearly suggests that,
+</p>
+<ol>
+<li>It has no skew implying that it has symmetrical distribution.</li>
+<li>It has long tails i.e. it possibly has outliers.</li>
+</ol>
+<p>
+Now, it is time to look at the box plot. Notice that both the whiskers are much longer than the length of the box (IQR) - an indication of the possible presence of outliers. In fact, Tukey suggests that an outlier is a point that is greater than or less than 1.5 times the IQR. Here is the same box plot, but with outliers (0.95 and 1.05) clearly highlighted as per Tukey's recommendations.
+</p>
+<p>
+<img src="/post/2011/06/boxplot/boxplot-m100witho.png" width="90%" alt="Box Plot with Histogram" class ="img-center" />
+</p>
+
+<p>
+The above box plots (with or without outliers) also reveal that the two whiskers are of equal length and the median lies right in the middle of the box - an indication of symmetrical distribution. Any deviation from this leads to a non-symmetrical distribution, as illustrated in the following box plot.
+</p>
+
+<p>
+<img src="/post/2011/06/boxplot/boxplot-m95.png" width="90%" alt="Box Plot with skew" class ="img-center" />
+</p>
+
+<p>
+Box plot also serves as a great way to quickly compare two or more series by juxtaposing the box plots of the series to be investigated. The following plot shows the previous two box plots juxtaposed clearly to highlight the differences (or similarities) in central tendencies and dispersions.
+</p>
+<p>
+<img src="/post/2011/06/boxplot/boxplot-juxtaposed.png" width="90%" alt="Juxtaposed Box Plots" class ="img-center" />
+</p>
+
+<h2 class="h2small">Important Observations</h2>
+<ol>
+<li>Box plot is based on robust statistics, i.e. it is more tolerant (or robust) to the presence of outliers.</li>
+<li>It gives an indication of shape of distribution in terms of symmetry or skewness.</li>
+<li>It is an excellent means to determine if there are similarities (or differences) between two or more data sets by juxtaposing their box plots.</li>
+</ol>
+
+	<footer>
+	<div class="container">
+		<div class="row">
+			<section class="col-md-10 col-md-offset-1">
+				<p>
+					<a href="/terms/">Terms of Use</a> |
+					<a href="/privacy/">Privacy Policy</a> |
+					<a href="http://graype.in">About</a>
+					<br />
+					&copy; GRAYPE Systems (P) Limited
+				</p>
+			</section>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>

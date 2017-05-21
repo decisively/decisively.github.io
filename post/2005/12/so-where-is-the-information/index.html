@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+	<!-- Use title if it's in the page YAML frontmatter -->
+	<title>So, where is the information?</title>
+
+	<link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
+	<link href="/stylesheets/master.css" rel="stylesheet" />
+	<script src="/javascripts/jquery.min.js"></script>
+	<script src="/javascripts/bootstrap.min.js"></script>
+
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=AM_CHTML"></script>
+
+	<script src="https://use.typekit.net/cwc1qce.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+</head>
+
+<body class="post post_2005 post_2005_12 post_2005_12_so-where-is-the-information post_2005_12_so-where-is-the-information_index">
+	<header class="container">
+	<div class="row">
+		<div class="col-md-3 col-md-offset-1">
+			<a href="/">
+				<img src="/images/decisively_logo.png" alt="Decisively from GRAYPE" id="logo"/>
+			</a>
+		</div>
+
+		<nav class="col-md-5 col-md-offset-2">
+			<ul>
+				<li><a href="/examples/">Examples</a></li>
+				<li><a href="/learn/">Learn</a></li>
+				<li><a href="/blog/">Blog</a></li>
+				<li><a href="http://graype.in/">About</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+	<p>
+We have drawn so many graphs. We have covered tons of mathematics - mean, mode, median, and MAD. But where is the information? When we look at mean of a data set, what do we understand from it? It is now time to see the unseen!
+</p>
+<p>
+Let us begin with an example. Imagine that we are reviewing the production performance of our plants for last 30 days. The production managers are sharing the production details. John reports that the average production was 357287 units per day and his plant produced over 714213 units per day for 16 days in a row, which is a record. The production figures for all other managers were between 345623 and 366543 units per day. Does this tell us something? Think! Yes, it tells us a lot. What John reported is impossible. Let us do the mathematics to uncover that. Total production for John's plant is "357287 average units per day" x "30 days" = "10718610 units" and with 714213 x 16 the production figure during record period is 11427408 units. Impossible, isn't it?
+</p>
+<p>
+Let us put our observation formally now. If the mean of a data set containing non negative numbers is "&mu;", then the percentage of observations or data points that are greater or equal to a value x is always smaller or equal to `100 xx (mu/x)`. This is called <b>Markov's Inequality</b>.
+</p>
+<p>
+There is one more inequality worth learning. It is called <b>Chebychev's Inequality</b>. The largest percentage of values for a data set, that have a z score beyond "z" in either direction, is `100/z^2`. The following table summarizes the outcome of this inequality for quick reference.
+</p>
+
+<img src="/post/2005/12/so-where-is-the-information/switsi-cheb-ineq.jpg" alt="Chebychev's Inequality" class="img-center" />
+<br />
+
+<table class="table table-condensed table-hover">
+	<tr>
+		<th>z-score</th>
+		<th>Largest %</th>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>100.00</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>25.00</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>11.11</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>6.25</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>4.00</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>2.78</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>2.04</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>1.56</td>
+	</tr>
+
+</table>
+
+<p>
+To understand this inequality, let us pick up any row from the above table - say the second row. Now assume, that there is a dataset having a mean of &mu; and standard deviation of &sigma;. There are 25% values from the data set that are exactly 2&sigma; away from the mean i.e. &mu;. With this knowledge at hand, we can write down the value of standard deviation as:
+</p>
+
+<img src="/post/2005/12/so-where-is-the-information/switsi-cheb-ineq-proof.jpg" alt="Simple Proof of Chebychev's Inequality" class="img-center" />
+<br />
+
+<p>`\ \ \ \ \ \ \ sqrt( 0.25 xx (2 sigma)^2 + \b\a\l\a\n\c\e\ \7\5\%\ \d\e\v\i\a\t\i\o\n\ \s\q\u\a\r\e )`</p>
+<p>`=> sqrt(  sigma^2 + \b\a\l\a\n\c\e\ \7\5\%\ \d\e\v\i\a\t\i\o\n\ \s\q\u\a\r\e )`</p>
+<p>``</p>
+
+
+<p>
+In order to arrive at the value of standard deviation as "&sigma;", the second term must be "0" i.e. the balance 75% terms should be at mean. We can clearly see that it is not possible to have more than 25% values from the data set that are 2&sigma; away from the mean.
+</p>
+<p>
+Please note, that it applies to any distribution. At this stage, we may like to compare these figures with what we learned about normal distribution in Introduction to Six Sigma.
+</p>
+<p>
+Let us revisit our famous pizza shop. The shop management wishes to add another area for pizza delivery. They collect information (read mean &amp; standard deviation) on travel time for different routes over a period of time. This can now be used to perform a quick go/no-go analysis. Right?
+</p>
+
+<p>
+Indeed, mean and standard deviation contains a lot of information that we can use in real life.
+</p>
+
+	<footer>
+	<div class="container">
+		<div class="row">
+			<section class="col-md-10 col-md-offset-1">
+				<p>
+					<a href="/terms/">Terms of Use</a> |
+					<a href="/privacy/">Privacy Policy</a> |
+					<a href="http://graype.in">About</a>
+					<br />
+					&copy; GRAYPE Systems (P) Limited
+				</p>
+			</section>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>

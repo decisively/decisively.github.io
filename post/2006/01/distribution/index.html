@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+	<!-- Use title if it's in the page YAML frontmatter -->
+	<title>Distribution</title>
+
+	<link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
+	<link href="/stylesheets/master.css" rel="stylesheet" />
+	<script src="/javascripts/jquery.min.js"></script>
+	<script src="/javascripts/bootstrap.min.js"></script>
+
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=AM_CHTML"></script>
+
+	<script src="https://use.typekit.net/cwc1qce.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+</head>
+
+<body class="post post_2006 post_2006_01 post_2006_01_distribution post_2006_01_distribution_index">
+	<header class="container">
+	<div class="row">
+		<div class="col-md-3 col-md-offset-1">
+			<a href="/">
+				<img src="/images/decisively_logo.png" alt="Decisively from GRAYPE" id="logo"/>
+			</a>
+		</div>
+
+		<nav class="col-md-5 col-md-offset-2">
+			<ul>
+				<li><a href="/examples/">Examples</a></li>
+				<li><a href="/learn/">Learn</a></li>
+				<li><a href="/blog/">Blog</a></li>
+				<li><a href="http://graype.in/">About</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+	<p>
+As discussed earlier, distribution tells us how data elements of a given data set are distributed within its range. It is time now to take a bigger bite into distribution and go beyond pizza delivery data.
+</p>
+<p>
+Before we delve deeper into distribution, let us quickly revisit why it is important for us? Recall from Variation &amp; Defect, "the natural variation always occurs and it can not be traced to a specific cause. It is random within a predictable range or in other words, it follows a distribution pattern".
+</p>
+<p>
+It is really interesting to note that although each outcome of a random event is uncertain when seen in isolation; but collectively they follow a predictable pattern. This pattern is called its distribution function. Let us take an example to understand the concept - tossing an unbiased coin. What is the probability of getting a heads when we toss a coin? It is 0.5. What will happen if we toss the coin 20 times (we refer to this as an experiment)? Again the expectation is to get heads 10 times. Note it is only the expectation or the probability. The actual result may vary every time we repeat this experiment. Let us now repeat this experiment 20 times and note the distribution of observing heads in each experiment.
+</p>
+<img src="/post/2006/01/distribution/d-ct20.jpg" alt="Distribution with experiment repeated 20 times" class="img-center" />
+<br />
+<p>
+The following 2 graphs illustrate the distribution for the same experiment repeated 200 times and 2000 times respectively.
+</p>
+<img src="/post/2006/01/distribution/d-ct200.jpg" alt="Distribution with experiment repeated 200 times" class="img-center" />
+<br />
+<img src="/post/2006/01/distribution/d-ct2000.jpg" alt="Distribution with experiment repeated 2000 times" class="img-center" />
+<br />
+<p>
+What do we observe from the above experiments? Something that we mentioned in the beginning - "collectively outcome of random events follow a predictable pattern". It becomes more evident with increasing number of experiments. The other key point to note is that the mean observed is also close to 10.
+</p>
+<p>
+The graphs shown above are created using random data generated using <b>MINITAB</b> - a statistical software. However, It is strongly recommended to try this experiment manually by repeating it 10 times to get a practical feeling.
+</p>
+<p>
+With this picture, it is time to look at the formal mathematical scenario. We will begin with binomial distribution.
+</p>
+
+<h2 class="h2large">Binomial Distribution</h2>
+<p>
+Suppose we toss a coin N-times. What will be probability of getting a specific sequence of "n" heads? This requires application of "Multiplication Rule for Independent Events". For further details, refer section on <a href="http://www.discover6sigma.org/post/2005/09/basic-probability-theory/">Basic Probability Theory</a>. The probability is given by the following equation.
+</p>
+<div class="blocktext">
+<b>p<sup>n</sup>.(1 - p)<sup>N-n</sup></b>
+
+<p>`p^n (1-p)^(N-n)`</p>
+
+<br/><br/>where "p" is the probability of getting heads.
+</div>
+<p>
+If the sequence is not important then the probability will be determined by multiplying the above equation by <sup>N</sup>C<sub>n</sub>.
+</p>
+<div class="blocktext">
+
+<b>P(n, N) = p<sup>n</sup>.(1 - p)<sup>N-n</sup>.<sup>N</sup>C<sub>n</sub></b>
+
+<p>`P(n,N) = p^n (1-p)^(N-n) . ^NC_n`</p>
+
+</div>
+<p>
+The above probability is the one that we observed empirically, when we conducted the "coin tossing" experiment. If you recall binomial theorem, it is very easy to observe that P(n, N) is the n<sup>th</sup> term of (p + (1 - p))<sup>N</sup>.
+</p>
+<h3>Brief Detour to Binomial Theorem</h3>
+<p>
+It tells us how to expand the power of sums. Let us look at the following simple expansions to develop a clear understanding.
+</p>
+<div class="blocktext">
+<b>
+(a + b)<sup>0</sup> = &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1
+<br />
+(a + b)<sup>1</sup> = &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a + b
+<br />
+(a + b)<sup>2</sup> = &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a<sup>2</sup> + 2ab + b<sup>2</sup>
+<br />
+(a + b)<sup>3</sup> = &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a<sup>3</sup> + 3a<sup>2</sup>b + 3ab<sup>2</sup> + b<sup>3</sup>
+<br />
+(a + b)<sup>4</sup> = a<sup>4</sup> + 4a<sup>3</sup>b + 6a<sup>2</sup>b<sup>2</sup> + 4ab<sup>3</sup> + b<sup>4</sup>
+</b>
+</div>
+<p>
+A close observation of the above expansions reveals that each term in the expansion follows the formula for P(n, N). You must be wondering why the above expansions are written in a triangular manner. In fact, if you look at the coefficient of each term what you will see is the Pascal triangle. The same is illustrated below.
+</p>
+<div class="blocktext">
+<b>
+N = 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1<br />
+N = 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 1<br />
+N = 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 2 1<br />
+N = 3&nbsp;&nbsp;&nbsp;&nbsp;1 3 3 1<br />
+N = 4&nbsp;&nbsp;&nbsp;1 4 6 4 1<br />
+</b>
+</div>
+<p>
+Pascal triangle provides us an easy way to find out each coefficient of term in the expansion.
+</p>
+
+<h3>Back to Binomial Distribution</h3>
+<p>
+The function to compute <b>P(n, N)</b> is called binomial distribution function. This function has some interesting characteristics. These are discussed below.
+</p>
+
+<h3>Binomial Distribution is Normalized</h3>
+<p>
+A normalized distribution function - "f(x)" must result into a sum of "1", if all values of "f(x)" for every "x" are added together. Such a function is also called probability distribution function (PDF). We can easily visualize by computing the sum of <b>P(n, N)</b> for every value of "n".
+</p>
+<img src="/post/2006/01/distribution/d-binom-is-normal.png" alt="Binomial Distribution is Normalized" class="img-center" />
+<br />
+<p>`sum_(n=0)^N P(n,N) = sum_(n=0)^N \ ^N C_n.p^n.(1-p)^(N-n)`</p>
+<p>`\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =[p+(1-p)]^N \ \ \ \ (:\f\r\o\m\ \t\h\e\ \b\i\n\o\m\i\a\l\ \t\h\e\o\r\e\m:)`</p>
+<p>`\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =1`</p>
+
+<h3>Mean of Binomial Distribution is N.p</h3>
+<p>
+Recall from <a href="http://www.discover6sigma.org/post/2005/12/probability-and-statistics/">Probability and Statistics</a>, mean is the sum of product of "p(x)" and "x", for all values of "x". Therefore, in case of binomial distribution it can be computed using the following expression.
+</p>
+<img src="/post/2006/01/distribution/d-mean-of-binom.png" alt="Expression for Mean of Binomial Distribution" class="img-center" />
+<br />
+
+<p>`mu = ( sum_(n=0)^N n.P(n,N) )/( sum_(n=0)^N P(n,N))`</p>
+<p>`\ \ = sum_(n=0)^N n.P(n,N)`</p>
+<p>`\ \ = N.p`</p>
+
+<p>
+Although the rigorous mathematical proof is not given here, you are encouraged to try computing mean using simple values for "N" (e.g. 2 &amp; 3).
+</p>
+
+<h3>Variance of Binomial Distribution is N.p.(1-p)</h3>
+<p>
+The variance for binomial distribution can be computed using the following expression.
+</p>
+<img src="/post/2006/01/distribution/d-variance-of-binom.png" alt="Expression for Variance of Binomial Distribution" class="img-center" />
+<br />
+
+<p>`sigma^2 = ( sum_(n=0)^N (n-mu)^2 . P(n,N) ) / ( sum_(n=0)^N P(n,N) )`</p>
+<p>`\ \ = N.p.(1-p)`</p>
+
+
+<h3>Example</h3>
+<p>
+Let us take an example for `N = 20` and `p = 0.5` to visualize the above characteristics. The following table shows the data. This data can be quickly constructed using a spreadsheet like MS Excel.
+</p>
+<img src="/post/2006/01/distribution/d-binom-dist-tbl.png" alt="Example Data for Binomial Distribution" class="img-center" />
+<br />
+
+<p>
+We can observe from cumulative `P(n, N)` column that the distribution is properly normalized as the last row has a value of "1". The mean and the variance are "10" and "5" respectively. Note, variance for grouped data is computed using `sum ((fx^2) / N ) - mu^2` formula. It can easily be seen that the expression `sum ((fx^2)/N)` is equal to `n*n*P(n, N)`.
+</p>
+<p>
+The above results also agree with our formula for mean and variance derived earlier. The following graphs illustrate the probability and cumulative distributions.
+</p>
+<img src="/post/2006/01/distribution/d-binom-dist.png" alt="Binomial Distribution Graphs" class="img-center" />
+<br />
+
+
+<h2 class="h2large">Binomial to Normal Distribution</h2>
+<p>
+Normal distribution can be approximated as a special case of binomial distribution for very large "N" and finite "p". Normal distribution is found in abundance in nature. Examples are covered in the topic on <a href="http://www.discover6sigma.org/post/2006/10/distribution-in-real-life/" title="Distribution in Real Life">Distribution in Real Life</a> later. The PDF of normal distribution is given below.
+</p>
+<img src="/post/2006/01/distribution/d-normal-pdf.png" alt="Normal Distribution PDF" class="img-center" />
+<br />
+
+<p>`P(x) = 1/(sigma sqrt(2pi)) e - ((x - mu)^2) / (2 sigma^2) `</p>
+
+<p>
+The "e" in the expression is called exponential function. It is expressed as "e<sup>x</sup>", where "e" is equal to approximately 2.7183. The concept of "e" will be discussed later.
+</p>
+
+<p>
+Recall from <a href="http://www.discover6sigma.org/post/2005/10/introduction-to-six-sigma/">Introduction to Six Sigma</a> that 68% of area (i.e. the data points) falls within the area of `-1sigma` and `+1sigma` on either side of the mean. With this PDF, it is very easy to compute the area within `+- 1 sigma` from mean using the following expression.
+</p>
+<img src="/post/2006/01/distribution/d-normal-area-1sigma.png" alt="Area under Normal Distribution" class="img-center" />
+<br />
+
+<p>`P( mu - sigma <  x < mu + sigma)`</p>
+<p>`\ \ = 1/(sigma sqrt(2pi))  int_(mu+sigma)^(mu-sigma) e - ((x - mu)^2) / (2 sigma^2)  dx`</p>
+<p>`\ \ ~~ 0.6827`</p>
+
+
+<p>
+Other area computations can now be easily done using the same method.
+</p>
+<p>
+At this stage we can also observe, how binomial distribution becomes normal distribution when N is very large and p has a finite value. We can compute the area under the binomial distribution with in `+- 1 sigma` for `N=1000` &amp; `p=0.5`. The expression for this calculation is given below.
+</p>
+<img src="/post/2006/01/distribution/d-binom2normal.png" alt="Binomial to Normal Distribution" class="img-center" />
+<br />
+
+<p>`mu = N.p`</p>
+<p>`\ \ = 1,000 xx 0.5`</p>
+<p>`\ \ = 500`</p>
+<p>``</p>
+<p>`sigma = [N.p.(1-p)]^(1/2)`</p>
+<p>`\ \ = [1,000 xx 0.5 xx 0.5]^(1/2)`</p>
+<p>`\ \ = 15.81 ~~ 16`</p>
+<p>``</p>
+<p>`mu + sigma = 516`</p>
+<p>`mu - sigma = 484`</p>
+<p>``</p>
+<p>`P(484 < n < 516)`</p>
+<p>`\ \ = sum_(n=484)^516 \ ^1000 C_n.p^n.(1-p)^(1000-n)`</p>
+<p>`\ \ = sum_(n=484)^516 \ ^1000 C_n.(0.5)^1000`</p>
+<p>``</p>
+
+
+<p>
+You will notice that this value will be approximately equal to 0.7, which is very close to 0.6827. This calculation can be carried out using any spreadsheet like MS Excel. As "N" becomes higher, this values approaches to 0.6827.
+</p>
+
+	<footer>
+	<div class="container">
+		<div class="row">
+			<section class="col-md-10 col-md-offset-1">
+				<p>
+					<a href="/terms/">Terms of Use</a> |
+					<a href="/privacy/">Privacy Policy</a> |
+					<a href="http://graype.in">About</a>
+					<br />
+					&copy; GRAYPE Systems (P) Limited
+				</p>
+			</section>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>

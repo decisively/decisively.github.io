@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+	<!-- Use title if it's in the page YAML frontmatter -->
+	<title>Measure of dispersion</title>
+
+	<link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
+	<link href="/stylesheets/master.css" rel="stylesheet" />
+	<script src="/javascripts/jquery.min.js"></script>
+	<script src="/javascripts/bootstrap.min.js"></script>
+
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=AM_CHTML"></script>
+
+	<script src="https://use.typekit.net/cwc1qce.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+</head>
+
+<body class="post post_2005 post_2005_12 post_2005_12_measure-of-dispersion post_2005_12_measure-of-dispersion_index">
+	<header class="container">
+	<div class="row">
+		<div class="col-md-3 col-md-offset-1">
+			<a href="/">
+				<img src="/images/decisively_logo.png" alt="Decisively from GRAYPE" id="logo"/>
+			</a>
+		</div>
+
+		<nav class="col-md-5 col-md-offset-2">
+			<ul>
+				<li><a href="/examples/">Examples</a></li>
+				<li><a href="/learn/">Learn</a></li>
+				<li><a href="/blog/">Blog</a></li>
+				<li><a href="http://graype.in/">About</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+	<p>
+Let us first take a closer look at dispersion. Here are two frequency distribution graphs drawn from two different data sets of pizza delivery time.
+</p>
+
+<img src="/post/2005/12/measure-of-dispersion/mod-disp-example.jpg" alt="Example Frequency Distribution Graphs" class="img-center" />
+<br />
+
+<p>
+Notice both have a mean value of 14.4, but the degree of spread or scatter are different. The second data set has a higher spread compared to the first one. In other words, the second one has higher variability. Recall, one of the key objective in Six Sigma is to reduce variation. Therefore, it is very important to understand different key measures of dispersion clearly.
+</p>
+
+<h2 class="h2small">Range</h2>
+<p>
+It is the difference between the highest and the lowest value in the data set. In our first data set of pizza shop example, it is (20.5-8.0) or 12.5 whereas in the second case it is (25.9 - 5.9) or 20.0.
+</p>
+
+<h2 class="h2small">Interquartile Range</h2>
+<p>
+As the name suggest, it is the range of middle 50% of the ordered data set. Let us look at the pizza shop example data again. The interquartile range in the first case is (16.8  - 12.0) = 4.8, and in the second case it is (17.0 - 12.0) = 5.0.
+</p>
+
+<p>
+Clearly, interquartile range is less impacted by the extreme values of the data set, as compared to the range. However, both fail to provide an average figure of deviation or scatter present in the dataset.
+</p>
+
+<h2 class="h2small">Standard Deviation - Measure of Average Deviation</h2>
+<p>
+One simple way to determine average deviation seems to be to find the average of the expression (mean - data value) for every data value in the data set.
+</p>
+
+<img src="/post/2005/12/measure-of-dispersion/mod-avg-dev.jpg" alt="Average Deviation" class="img-center" />
+<br />
+
+<p>`1/n sum_(i=1)^n (x_i - bar x)`</p>
+
+<p>
+But there is a catch! It will be virtually "0". You may like to try it with one of the example data set given above.
+</p>
+
+<p>
+So, how do we compute average deviation? A smart idea would be to find average of the absolute value of the expression (mean - data value) for every data value in the data set. Note, absolute value means ignoring the "-" sign.
+</p>
+
+<img src="/post/2005/12/measure-of-dispersion/mod-mad.jpg" alt="Mean Absolute Deviation (MAD)" class="img-center" />
+<br />
+
+<p>`1/n sum_(i=1)^n |(x_i - bar x)|`</p>
+
+<p>
+This quantity is referred as Mean Absolute Deviation (MAD). MAD for the first data set is 2.6 and for the second data set is 3.3. This appears to be a good average measure of deviation. But, still there is a problem. Here the larger deviation values tend to get averaged out and the value does not reflect the impact of larger scatter or dispersion properly.
+</p>
+
+<p>
+Therefore, it will be appropriate to compute root mean square (RMS) of deviations (from the mean) instead of the simple mean. RMS is the square root of the mean of square of the each data value.
+</p>
+
+<img src="/post/2005/12/measure-of-dispersion/mod-std-dev.jpg" alt="Standard Deviation" class="img-center" />
+<br />
+
+<p>`sqrt (sum_(i=1)^n ((x_i - bar x)^2)/n )`</p>
+
+<p>
+Since, each data value is squared, the larger values automatically get amplified accordingly to reflect the impact of larger deviations. To understand the concept, let us look at the following data and the corresponding graph.
+</p>
+
+<img src="/post/2005/12/measure-of-dispersion/mod-understand-rms.jpg" alt="Understanding RMS" class="img-center" />
+<br />
+
+<p>
+The data shows X and Y values, where Y value is the square of X value. In the graph, the dark blue line represents the X value and the pink line represents the Y value. Notice how Y becomes increasingly larger with increase in X value. This means the large the deviation translates to correspondingly larger impact (i.e. the effect of squaring). Therefore, RMS is a faithful measure of average deviation. This is what is known as <b>Standard Deviation</b>.
+</p>
+
+<p>
+Here are the details of the first data set that we can use to quickly compute the vales ourselves.
+</p>
+
+<img src="/post/2005/12/measure-of-dispersion/mod-mod-working.jpg" alt="Example Working Details" class="img-center" />
+<br />
+
+<p>
+The Standards Deviation for the first data set is 3.2 and for the second data set is 4.4. Notice the affect of the amplification of larger scatter in the second case (i.e. 2.6 &amp; 3.2 versus 3.3 &amp; 4.4). Following table illustrates the mathematical formula for population standard deviation.
+</p>
+
+<img src="/post/2005/12/measure-of-dispersion/mod-pop-std-dev.jpg" alt="Population Standard Deviation" class="img-center" />
+<br />
+
+<p>`bb(\P\o\p\u\l\a\t\i\o\n\ \S\t\a\n\d\a\r\d\ \D\e\v\i\a\t\i\o\n)`</p>
+<p>`sigma = sqrt (sum_(i=1)^n ((x_i - bar x)^2)/n ) = sqrt (sum_(i=1)^n x_i^2/N - mu^2)`</p>
+
+<p>
+Following table illustrates the mathematical formula for sample standard deviation. The reason for division by "(n - 1)" instead of "n" is discussed later.
+</p>
+
+<img src="/post/2005/12/measure-of-dispersion/mod-samp-std-dev.jpg" alt="Sample Standard Deviation" class="img-center" />
+<br />
+
+<p>`bb(\S\a\m\p\l\e\ \S\t\a\n\d\a\r\d\ \D\e\v\i\a\t\i\o\n)`</p>
+<p>`S=sqrt( sum_(i=0)^n ((x_i - bar x)^2)  /(n-1) ) `</p>
+
+
+<h2 class="h2small">Variance </h2>
+<p>
+The square of standard deviation is known as Variance. Why did we need to define one more parameter, when standard deviation appears to be the right answer? It has some interesting and useful properties. Prominent one is the addition property for two independent data sets or observations. In other words, variance of the sum of independent data sets or observations (also referred random variables) is the sum of their variances.
+</p>
+
+<h2 class="h2small">Coefficient of Variation</h2>
+<p>
+Having discovered a good measure of average deviation, how do we compare the spread or scatter of two independent data sets? Just knowledge of standard deviation is not enough - it is the absolute measure of average deviation of a data set. For the purpose of comparison, we need to look at both mean and standard deviation together. Coefficient of Variation does that precisely.
+</p>
+
+<img src="/post/2005/12/measure-of-dispersion/mod-coef-vari.jpg" alt="Coefficient of Variation" class="img-center" />
+<br />
+
+<p>`bb(\C\o\e\f\f\i\c\i\e\n\t\ \o\f\ \V\a\r\i\a\t\i\o\n) = sigma/mu xx 100`</p>
+
+<p>
+Let us take an example. Consider two different data sets having mean and standard deviation as "14.4 &amp; 3.2" and "144.0 &amp; 3.2" respectively. The same standard deviation does not mean identical degree of scatter. In fact the second one has very little degree of spread or scatter. And coefficient of variation highlights it clearly - coefficient of variation for the first data set is 22.2 and for the second data set it is 2.2.
+</p>
+
+<h2 class="h2small">Z-Score</h2>
+<p>
+The z score of a data point or observation indicates how far and in what direction that observation is away from its data set's mean.
+</p>
+
+<img src="/post/2005/12/measure-of-dispersion/mod-z-score.jpg" alt="Z-Score" class="img-center" />
+<br />
+
+<p>`Z = (x_i - mu)/sigma`</p>
+
+<p>
+Z-score is revisited later in the section on distribution.
+</p>
+
+	<footer>
+	<div class="container">
+		<div class="row">
+			<section class="col-md-10 col-md-offset-1">
+				<p>
+					<a href="/terms/">Terms of Use</a> |
+					<a href="/privacy/">Privacy Policy</a> |
+					<a href="http://graype.in">About</a>
+					<br />
+					&copy; GRAYPE Systems (P) Limited
+				</p>
+			</section>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>

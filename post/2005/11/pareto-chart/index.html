@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+	<!-- Use title if it's in the page YAML frontmatter -->
+	<title>Pareto chart</title>
+
+	<link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
+	<link href="/stylesheets/master.css" rel="stylesheet" />
+	<script src="/javascripts/jquery.min.js"></script>
+	<script src="/javascripts/bootstrap.min.js"></script>
+
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=AM_CHTML"></script>
+
+	<script src="https://use.typekit.net/cwc1qce.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+</head>
+
+<body class="post post_2005 post_2005_11 post_2005_11_pareto-chart post_2005_11_pareto-chart_index">
+	<header class="container">
+	<div class="row">
+		<div class="col-md-3 col-md-offset-1">
+			<a href="/">
+				<img src="/images/decisively_logo.png" alt="Decisively from GRAYPE" id="logo"/>
+			</a>
+		</div>
+
+		<nav class="col-md-5 col-md-offset-2">
+			<ul>
+				<li><a href="/examples/">Examples</a></li>
+				<li><a href="/learn/">Learn</a></li>
+				<li><a href="/blog/">Blog</a></li>
+				<li><a href="http://graype.in/">About</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+	<p>
+A Pareto Chart depicts the frequency with which certain events occur. It is a bar graph where each frequency (or frequency range) is shown in a descending order of importance of data, from left to right.
+</p>
+<p>
+This is based on the Pareto Principle, also called 80-20 rule or rule of vital few. Formulated by the father of quality - Dr. Juran and named after the famous Italian economist Vilfredo Pareto, this principle helps separate the "vital few" from the "useful many" in any business scenario. It helps us identify and focus on "vital few" to maximize our returns on investments on resources.
+</p>
+<p>
+To develop an exact understanding of the concept, let us go back to our famous pizza shop example. Here is some old customer complaint data before they mastered the thirty minutes pizza delivery.
+</p>
+
+<img src="/post/2005/11/pareto-chart/pc-raw-data.jpg" alt="Customer Complaint Data" class="img-center" />
+<br />
+
+<p>
+The pizza shop wanted to develop a strategy to reduce the customer complaint dramatically. This is where Pareto Chart comes in to action. Let us see how.
+</p>
+<p>
+To create a Pareto Chart, this data is sorted and cumulative count &amp; percentages are computed as illustrated in the following table.
+</p>
+
+<img src="/post/2005/11/pareto-chart/pc-proc-data.jpg" alt="Cumulative Count &amp; Percentages" class="img-center" />
+<br />
+
+<p>
+Using this data. a bar-cum-line graph is drawn using a standard spreadsheet like MS Excel. The bar represents the count of each complaint and the line illustrates the cumulative complaint count percentages.
+</p>
+
+<img src="/post/2005/11/pareto-chart/pc-pc.jpg" alt="Perato Chart" class="img-center" />
+
+<p>
+With this graph, finding the vital few is simple. Locate the 80% point on the right y-axis and find the corresponding point on the x-axis. It clearly highlights that we need to address "delayed delivery" and "pizza not hot" complaint categories to take care of 80% of the customer complaints. In fact, the "pizza not hot" complaint was partially the result of "delayed delivery" problem. These two complaint categories only constitute 22% of all the complaint categories. Can we see the 80-20 rule? It is evident that by fixing only 20% (22% to be precise) of the complaint categories solve 80% (78% to be precise) of the customer complaints. This helped our pizza shop to focus on solving the right set of the problems
+</p>
+
+	<footer>
+	<div class="container">
+		<div class="row">
+			<section class="col-md-10 col-md-offset-1">
+				<p>
+					<a href="/terms/">Terms of Use</a> |
+					<a href="/privacy/">Privacy Policy</a> |
+					<a href="http://graype.in">About</a>
+					<br />
+					&copy; GRAYPE Systems (P) Limited
+				</p>
+			</section>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>

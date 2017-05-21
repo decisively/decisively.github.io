@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+	<!-- Use title if it's in the page YAML frontmatter -->
+	<title>Scatter plot</title>
+
+	<link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
+	<link href="/stylesheets/master.css" rel="stylesheet" />
+	<script src="/javascripts/jquery.min.js"></script>
+	<script src="/javascripts/bootstrap.min.js"></script>
+
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=AM_CHTML"></script>
+
+	<script src="https://use.typekit.net/cwc1qce.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+</head>
+
+<body class="post post_2013 post_2013_12 post_2013_12_scatter-plot post_2013_12_scatter-plot_index">
+	<header class="container">
+	<div class="row">
+		<div class="col-md-3 col-md-offset-1">
+			<a href="/">
+				<img src="/images/decisively_logo.png" alt="Decisively from GRAYPE" id="logo"/>
+			</a>
+		</div>
+
+		<nav class="col-md-5 col-md-offset-2">
+			<ul>
+				<li><a href="/examples/">Examples</a></li>
+				<li><a href="/learn/">Learn</a></li>
+				<li><a href="/blog/">Blog</a></li>
+				<li><a href="http://graype.in/">About</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+	<p>Scatter plot is a technique to discover relationship between a dependent variable (y) and an independent variable (x) by plotting &ldquo;y&rdquo; against &ldquo;x&rdquo;. Once plotted, it is very easy to spot the correlation between &ldquo;x&rdquo; and &ldquo;y&rdquo; variables. For example, the following scatter plot between pizza delivery time (y) and the delivery distance (x) reveals a possible linear correlation.</p>
+
+<p><img src="/post/2013/12/scatter-plot/scatter-plot-1.png" alt="Scatter Plot between pizza delivery time (y) and the delivery distance (x)" class ="img-center" /></p>
+
+<p>Such analysis is the first step towards determining the maximum delivery distance or the nearby areas, where this pizza outlet will be confident of 30 minutes delivery (after taking in to the account pizza preparation time and of course variation).</p>
+
+<p class="related">SCAN: <a href="http://www.discover6sigma.org/post/2005/10/variation-defect/">Variation &amp; Defect</a>.</p>
+
+<p>Let us now look in to various commonly found correlation patterns in scatter plots and their interpretation. Scatter Plot 2 indicates no correlation between variables X and Y variables:</p>
+
+<p><img src="/post/2013/12/scatter-plot/scatter-plot-2.png" alt="No correlation example" class ="img-center" /></p>
+
+<p>Scatter Plot 3 illustrates a curvilinear relationship between X and Y variables:</p>
+
+<p><img src="/post/2013/12/scatter-plot/scatter-plot-3.png" alt="Curvilinear relationship example" class ="img-center" /></p>
+
+<p>This relationship is a relationship between two or more variables which is depicted graphically by anything other than a straight line. Curvilinear relationships can be broadly of 2 types viz. polynomial and exponential. A polynomial relationship in one variable is expressed as:</p>
+
+<div class="blocktext">
+y = a<sub>0</sub> + a<sub>1</sub>x + a<sub>2</sub>x<sup>2</sup> + a<sub>3</sub>x<sup>3</sup> + ... a<sub>n-1</sub>x<sup>n-1</sup> + a<sub>n</sub>x<sup>n</sup>
+</div>
+
+<p>A linear relationship is a special case of polynomial relationship where n=1 leading to y = a<sub>1</sub>x + a<sub>0</sub> or y = mx + c.</p>
+
+<p>An exponential function in which the independent variable appears as exponent (i.e. as the power) as shown in the example below:</p>
+
+<div class="blocktext">
+y = a<sup>x</sup>
+</div>
+
+<p>The correlation can be either positive, i.e. &ldquo;y&rdquo; increases with increasing &ldquo;x&rdquo; or negative, i.e. &ldquo;y&rdquo; decreases with increase in &ldquo;x&rdquo;. This is also referred as direction of the correlation. Scatter Plot 1 above is an example of positive correlation; and Scatter Plot 4 highlights a negative correlation:</p>
+
+<p><img src="/post/2013/12/scatter-plot/scatter-plot-4.png" alt="Negative correlation example" class ="img-center" /></p>
+
+<p>The degree of scatter in a plot suggests the strength of correlation, typically attributed as &ldquo;weak&rdquo; or &ldquo;strong&rdquo; as highlighted in Scatter Plot 1 and 5.</p>
+
+<p><img src="/post/2013/12/scatter-plot/scatter-plot-5.png" alt="Weak correlation example" class ="img-center" /></p>
+
+<p>To summarize, a scatter plot reveals (a) type of correlation, e.g. linear, polynomial or exponential; (b) direction of correlation, e.g. negative or positive; and (c) strength of correlation, e.g. weak or strong. Some scatter plots may exhibit presence of clusters and outliers also. The pattern or trend revealed in a scatter plot helps us select an appropriate regression model. A common model in use is a simple linear regression, where the correlation is represented using a equation y = mx + c. Such a model may be used to predict values of &ldquo;y&rdquo; on the basis of &ldquo;x&rdquo; values. Correlation is established by applying the appropriate model.</p>
+
+<p>Sometimes no correlation may be observed due to the fact that the &ldquo;x&rdquo; and &ldquo;y&rdquo; data is a combination of data obtained from multiple sources. Examples of such multiplicity of sources are shifts, machines, and days of week.</p>
+
+<h2>Correlation does not necessarily imply causation</h2>
+
+<p>While causality implies correlation but correlation does not necessarily mean causation. A classic example of a false correlation is where you may observe a positive correlation between number of fire fighters deployed to fight against a fire and the extent of property damage. Does that mean that more fire fighters lead to more property damage in an fire accident? No! More fire fighters are required to handle a large fire. A third hidden or lurking variable (in this case size of fire) may cause a false correlation or association between &ldquo;y&rdquo; (extent of property damage) and &ldquo;x&rdquo; (number of fire fighters) variables.</p>
+
+	<footer>
+	<div class="container">
+		<div class="row">
+			<section class="col-md-10 col-md-offset-1">
+				<p>
+					<a href="/terms/">Terms of Use</a> |
+					<a href="/privacy/">Privacy Policy</a> |
+					<a href="http://graype.in">About</a>
+					<br />
+					&copy; GRAYPE Systems (P) Limited
+				</p>
+			</section>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>

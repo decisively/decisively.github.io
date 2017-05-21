@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+	<!-- Use title if it's in the page YAML frontmatter -->
+	<title>Descriptive statistics</title>
+
+	<link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
+	<link href="/stylesheets/master.css" rel="stylesheet" />
+	<script src="/javascripts/jquery.min.js"></script>
+	<script src="/javascripts/bootstrap.min.js"></script>
+
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=AM_CHTML"></script>
+
+	<script src="https://use.typekit.net/cwc1qce.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+</head>
+
+<body class="post post_2011 post_2011_06 post_2011_06_desc-stats post_2011_06_desc-stats_index">
+	<header class="container">
+	<div class="row">
+		<div class="col-md-3 col-md-offset-1">
+			<a href="/">
+				<img src="/images/decisively_logo.png" alt="Decisively from GRAYPE" id="logo"/>
+			</a>
+		</div>
+
+		<nav class="col-md-5 col-md-offset-2">
+			<ul>
+				<li><a href="/examples/">Examples</a></li>
+				<li><a href="/learn/">Learn</a></li>
+				<li><a href="/blog/">Blog</a></li>
+				<li><a href="http://graype.in/">About</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+	<p>
+Descriptive Statistics is one of the simplest techniques used in quality management to obtain a meaningful insight into the data being analyzed.
+</p>
+<p>
+Let us take a few examples. It makes sense to build a frequency table of complaints by categories from the raw data on complaints from different customers. It clearly tells us the top few complaints that need immediate attention. On the other hand, it would be preferable to compute the average or mean from loan processing time data of thousands of applications from a bank to find out the average turnaround time required to process any application. This can subsequently be compared with industry average to benchmark bank's performance.
+</p>
+<p class="related">SCAN: <a href="http://www.discover6sigma.org/post/2005/12/statistics-simplified/">Basics of Statistics</a></p>
+<p>
+Data types tell us how we can gain meaningful insight in the data – this could be achieved by computing mean or by building frequency table or by using other summary measures such as mode or median. Therefore, it is important to understand the type of data being analyzed to determine what summary measures are applicable to obtain a meaningful insight. Recall that there are two types of data - quantitative or numeric or scale, and qualitative or categorical or attribute. The categorical data can be in form of either ordered or unordered categories. Examples of unordered category data is marital status (e.g. single, married, widowed, or separated) or customer complaints data collected in our pizza shop example. Such data is also referred to as nominal data.
+</p>
+<p>
+Ordered categorical data or ordinal data defines the values representing rank or order. For example, customer satisfaction in terms of unsatisfied, expectations met, exceeded expectations, and significantly exceeded expectations.
+</p>
+<p>
+With this background of data it should be very easy to imagine that not all measures may be computed for a given data (type). For example, it does not make sense to compute mean of nominal data; imagine computing mean of marital status! In this case, mode is what will give us meaningful insight into the data. Following table summarizes the applicable characteristics and representations for each data type.
+</p>
+
+<p>
+<img src="/post/2011/06/desc-stats/desc-stats.png" alt="Ideas generated from Brainstorming" class ="img-center" />
+</p>
+<p class="related">EXPLORE: <a href="http://www.discover6sigma.org/post/2005/12/measure-of-central-tendency/">More on Central Tendency</a> and <a href="http://www.discover6sigma.org/post/2005/12/measure-of-dispersion/">Meausre of Dispersion</a></p>
+<p>
+Note that outliers are extreme data values in a dataset that have significant numeric distance from the rest of the data. The presence of an outlier is usually an indication of an error in measurement or recording. Such data values impact mean and standard deviation directly.
+</p>
+
+<p>
+Trimmed mean is computed after removing the fixed percentage of extreme upper and lower data values; typical percentage is 5%. Such a mean is resistant to outliers. Similarly in the case of dispersion, IQR is more resistant to outliers than the standard deviation or variance. This happens because IQR is the range of only the middle 50% of all data values.
+</p>
+
+<p>
+Measures computed of a sample drawn from the population are referred to as statistics; when the same measure is computed for a population, it is called a parameter.
+</p>
+
+	<footer>
+	<div class="container">
+		<div class="row">
+			<section class="col-md-10 col-md-offset-1">
+				<p>
+					<a href="/terms/">Terms of Use</a> |
+					<a href="/privacy/">Privacy Policy</a> |
+					<a href="http://graype.in">About</a>
+					<br />
+					&copy; GRAYPE Systems (P) Limited
+				</p>
+			</section>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>

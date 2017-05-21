@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+	<!-- Use title if it's in the page YAML frontmatter -->
+	<title>Probability and statistics</title>
+
+	<link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
+	<link href="/stylesheets/master.css" rel="stylesheet" />
+	<script src="/javascripts/jquery.min.js"></script>
+	<script src="/javascripts/bootstrap.min.js"></script>
+
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=AM_CHTML"></script>
+
+	<script src="https://use.typekit.net/cwc1qce.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+</head>
+
+<body class="post post_2005 post_2005_12 post_2005_12_probability-and-statistics post_2005_12_probability-and-statistics_index">
+	<header class="container">
+	<div class="row">
+		<div class="col-md-3 col-md-offset-1">
+			<a href="/">
+				<img src="/images/decisively_logo.png" alt="Decisively from GRAYPE" id="logo"/>
+			</a>
+		</div>
+
+		<nav class="col-md-5 col-md-offset-2">
+			<ul>
+				<li><a href="/examples/">Examples</a></li>
+				<li><a href="/learn/">Learn</a></li>
+				<li><a href="/blog/">Blog</a></li>
+				<li><a href="http://graype.in/">About</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+	<p>
+Let us revisit the frequency distribution table for pizza delivery time that we created in section on Statistics Simplified.
+</p>
+
+<img src="/post/2005/12/probability-and-statistics/pas-freq-table.jpg" alt="Example Frequency Distribution Table" class="img-center" />
+<br />
+
+<p>
+If the above data is our "sample space" then what is the probability of delivering pizza between 14 and 16 minutes? Clearly it is 10 divided by 40 equal to 0.25. Let us re-write the formal equation for computing the probability.
+</p>
+
+<img src="/post/2005/12/probability-and-statistics/pas-prob-formula.jpg" alt="Equation for Computing Probability" class="img-center" />
+<br />
+
+<p>`p(x_i)=f_i/N`</p>
+<p>`\w\h\e\r\e\,`</p>
+<p>`N=sum_(i=0)^n f_i \(\s\a\m\p\l\e\ \s\p\a\c\e\)`</p>
+
+
+
+<p>
+Now, recall the formula of computing the mean from a frequency table. And watch, how probability fits in to the formula.
+</p>
+
+<img src="/post/2005/12/probability-and-statistics/pas-stats2prob.jpg" alt="Probability and Statistics Relation" class="img-center" />
+<br />
+
+<p>`\ \ \ \ \ \ \ bar x = 1/N sum_(i=1)^n f_i x_i`</p>
+<p>`=> bar x = sum_(i=1)^n (f_i x_i)/N`</p>
+<p>`=> bar x = sum_(i=1)^n p(x_i)x_i`</p>
+
+	<footer>
+	<div class="container">
+		<div class="row">
+			<section class="col-md-10 col-md-offset-1">
+				<p>
+					<a href="/terms/">Terms of Use</a> |
+					<a href="/privacy/">Privacy Policy</a> |
+					<a href="http://graype.in">About</a>
+					<br />
+					&copy; GRAYPE Systems (P) Limited
+				</p>
+			</section>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>

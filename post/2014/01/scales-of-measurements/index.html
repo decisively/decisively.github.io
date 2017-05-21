@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+	<!-- Use title if it's in the page YAML frontmatter -->
+	<title>Scale of Measurements</title>
+
+	<link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
+	<link href="/stylesheets/master.css" rel="stylesheet" />
+	<script src="/javascripts/jquery.min.js"></script>
+	<script src="/javascripts/bootstrap.min.js"></script>
+
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=AM_CHTML"></script>
+
+	<script src="https://use.typekit.net/cwc1qce.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+</head>
+
+<body class="post post_2014 post_2014_01 post_2014_01_scales-of-measurements post_2014_01_scales-of-measurements_index">
+	<header class="container">
+	<div class="row">
+		<div class="col-md-3 col-md-offset-1">
+			<a href="/">
+				<img src="/images/decisively_logo.png" alt="Decisively from GRAYPE" id="logo"/>
+			</a>
+		</div>
+
+		<nav class="col-md-5 col-md-offset-2">
+			<ul>
+				<li><a href="/examples/">Examples</a></li>
+				<li><a href="/learn/">Learn</a></li>
+				<li><a href="/blog/">Blog</a></li>
+				<li><a href="http://graype.in/">About</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+	<div class="col-md-7 col-md-offset-1">
+
+<p>The choice of statistical analysis techniques for a data set depends on it's scale of measurement. Therefore it is critical to develop a clear understanding of the same.</p>
+
+<p>Scale is defined as a graduated range of values forming a standard system for measuring or grading something. Scale of measurement refers to the properties of value assigned to an observation.</p>
+
+<p>Sounds too abstract? Let us look closely at some statements around measurements - “my laptop bag weighs 2.5 Kgs”, “today's temperature is 12 degrees Fahrenheit”, “customer is highly satisfied”, and “she is married”. Notice the values here, viz. “2.5 Kgs”, “12 degree Fahrenheit”, “highly satisfied”, and “married”. You can easily visualize that each of these value have different properties.</p>
+
+<p>The value “married” is a mere classification of marital status of a person. Such a value can at best be compared for “equality”; it will be absurd to say that “married” is greater (or possibly smaller) than “separated”! This type of scale is known as the <strong>nominal scale</strong>. This is the most primitive scale of measurement. Some of us may not even feel comfortable terming it as a scale of “measurement”!</p>
+
+<p>The value “highly satisfied” clearly has an additional property of rank ordering. Therefore, you can compare such values for “greater/less than” also. In other words, we know that a “highly satisfied” customer is happier (i.e. greater) than a “satisfied” customer! This type of scale is known as the <strong>ordinal scale</strong>. While you can test these values for equality or greater/less than but there is no way to exactly quantify the difference between two ordinal scale values. For example, how do you quantify the difference between satisfied and highly satisfied customer?</p>
+
+<p>
+Values in nominal and ordinal scale can be viewed as simple classification labels. Therefore, these values can be either &ldquo;text&rdquo; or &ldquo;numeral&rdquo;.
+</p>
+
+<p>
+In case of the temperature scale, you can quantify the difference (or the interval) between two values. For example, the difference between 12 degrees and 22 degrees Fahrenheit is the same as the difference between 81 degrees and 91 degrees, which is equal to 10 degrees. Another such example is time scale. In fact we normally talk of time intervals only. Here again, the distance or interval between 1800 and 1810 is 10 years, which is the same as the distance between 2000 and 2010. But in both of these scales, there is no absolute or true &ldquo;0&rdquo;; the choice of &ldquo;0&rdquo; value is rather arbitrary - more of a matter of convenience or convention. For instance, there is no beginning of time!  The lack of true or absolute &ldquo;0&rdquo;, makes it difficult to express ratios. It is rather impossible or funny. Can time in the year 2000 be visualized as 1.11(= 2000/1800) times of what it was there in the year 1800?! This type of scale is known as the <strong>interval scale</strong>.
+</p>
+
+<p>
+The weight scale has all of the above properties and also has an absolute or true &ldquo;0&rdquo;! That is why it is natural to comprehend ratios here - 5.0Kgs is clearly twice as heavy as 2.5Kgs. This type of scale is known as the <strong>ratio scale</strong>.
+</p>
+
+<p>
+Here is a summary of some of the important statistical techniques that you can apply on datasets belonging to the different scales of measurement:</p>
+<br><br>
+</div>
+
+
+<div class="col-md-10 col-md-offset-1">
+<table class="data">
+<tbody>
+<tr>
+<th>Scale</th><th>Graphs &amp; Procedures</th><th>Central Tendency</th><th>Dispersion</th>
+</tr>
+<tr>
+<th>Nominal</th><td>Pie and Bar;<br/>Frequencies</td><td>Mode</td><td>Information Entropy(?)</td>
+</tr>
+
+<tr>
+<th>Ordinal</th><td>Pie and Bar;<br/>Frequencies</td><td>Mode, Median</td><td>Range, IQR, Percentile</td>
+</tr>
+
+<tr>
+<th>Interval</th><td>Pie, Bar, Histogram and Boxplot;<br/>Frequencies, Descriptive and Exploratory</td><td>Mode, Median, Arithmetic Mean</td><td>Range, IQR, Percentile, Standard Deviation</td>
+</tr>
+
+<tr>
+<th>Ratio</th><td>Pie, Bar, Histogram and Boxplot;<br/>Frequencies, Descriptive and Exploratory</td><td>Mode, Median, Arithmetic &amp; Geometric Mean</td><td>Range, IQR, Percentile, Standard Deviation, Coefficient of Variation</td>
+</tr>
+<tbody>
+</table>
+</div>
+
+	<footer>
+	<div class="container">
+		<div class="row">
+			<section class="col-md-10 col-md-offset-1">
+				<p>
+					<a href="/terms/">Terms of Use</a> |
+					<a href="/privacy/">Privacy Policy</a> |
+					<a href="http://graype.in">About</a>
+					<br />
+					&copy; GRAYPE Systems (P) Limited
+				</p>
+			</section>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,2150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+	<!-- Use title if it's in the page YAML frontmatter -->
+	<title>Decisively - Simplify Analytics &amp; Decision Making</title>
+
+	<link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
+	<link href="/stylesheets/master.css" rel="stylesheet" />
+	<script src="/javascripts/jquery.min.js"></script>
+	<script src="/javascripts/bootstrap.min.js"></script>
+
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=AM_CHTML"></script>
+
+	<script src="https://use.typekit.net/cwc1qce.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+</head>
+
+<body class="learn learn_page learn_page_3 learn_page_3_index">
+	<header class="container">
+	<div class="row">
+		<div class="col-md-3 col-md-offset-1">
+			<a href="/">
+				<img src="/images/decisively_logo.png" alt="Decisively from GRAYPE" id="logo"/>
+			</a>
+		</div>
+
+		<nav class="col-md-5 col-md-offset-2">
+			<ul>
+				<li><a href="/examples/">Examples</a></li>
+				<li><a href="/learn/">Learn</a></li>
+				<li><a href="/blog/">Blog</a></li>
+				<li><a href="http://graype.in/">About</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+	<div class="container">
+<div class="row">
+
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><a href="/post/2014/01/scales-of-measurements/">Scale of Measurements</a></h1>
+		</div>
+		<p><div class="col-md-7 col-md-offset-1">
+
+<p>The choice of statistical analysis techniques for a data set depends on it's scale of measurement. Therefore it is critical to develop a clear understanding of the same.</p>
+
+<p>Scale is defined as a graduated range of values forming a standard system for measuring or grading something. Scale of measurement refers to the properties of value assigned to an observation.</p>
+
+<p>Sounds too abstract? Let us look closely at some statements around measurements - “my laptop bag weighs 2.5 Kgs”, “today's temperature is 12 degrees Fahrenheit”, “customer is highly satisfied”, and “she is married”. Notice the values here, viz. “2.5 Kgs”, “12 degree Fahrenheit”, “highly satisfied”, and “married”. You can easily visualize that each of these value have different properties.</p>
+
+<p>The value “married” is a mere classification of marital status of a person. Such a value can at best be compared for “equality”; it will be absurd to say that “married” is greater (or possibly smaller) than “separated”! This type of scale is known as the <strong>nominal scale</strong>. This is the most primitive scale of measurement. Some of us may not even feel comfortable terming it as a scale of “measurement”!</p>
+
+<p>The value “highly satisfied” clearly has an additional property of rank ordering. Therefore, you can compare such values for “greater/less than” also. In other words, we know that a “highly satisfied” customer is happier (i.e. greater) than a “satisfied” customer! This type of scale is known as the <strong>ordinal scale</strong>. While you can test these values for equality or greater/less than but there is no way to exactly quantify the difference between two ordinal scale values. For example, how do you quantify the difference between satisfied and highly satisfied customer?</p>
+
+<p>
+Values in nominal and ordinal scale can be viewed as simple classification labels. Therefore, these values can be either &ldquo;text&rdquo; or &ldquo;numeral&rdquo;.
+</p>
+
+<p>
+In case of the temperature scale, you can quantify the difference (or the interval) between two values. For example, the difference between 12 degrees and 22 degrees Fahrenheit is the same as the difference between 81 degrees and 91 degrees, which is equal to 10 degrees. Another such example is time scale. In fact we normally talk of time intervals only. Here again, the distance or interval between 1800 and 1810 is 10 years, which is the same as the distance between 2000 and 2010. But in both of these scales, there is no absolute or true &ldquo;0&rdquo;; the choice of &ldquo;0&rdquo; value is rather arbitrary - more of a matter of convenience or convention. For instance, there is no beginning of time!  The lack of true or absolute &ldquo;0&rdquo;, makes it difficult to express ratios. It is rather impossible or funny. Can time in the year 2000 be visualized as 1.11(= 2000/1800) times of what it was there in the year 1800?! This type of scale is known as the <strong>interval scale</strong>.
+</p>
+
+<p>
+The weight scale has all of the above properties and also has an absolute or true &ldquo;0&rdquo;! That is why it is natural to comprehend ratios here - 5.0Kgs is clearly twice as heavy as 2.5Kgs. This type of scale is known as the <strong>ratio scale</strong>.
+</p>
+
+<p>
+Here is a summary of some of the important statistical techniques that you can apply on datasets belonging to the different scales of measurement:</p>
+<br><br>
+</div>
+
+
+<div class="col-md-10 col-md-offset-1">
+<table class="data">
+<tbody>
+<tr>
+<th>Scale</th><th>Graphs &amp; Procedures</th><th>Central Tendency</th><th>Dispersion</th>
+</tr>
+<tr>
+<th>Nominal</th><td>Pie and Bar;<br/>Frequencies</td><td>Mode</td><td>Information Entropy(?)</td>
+</tr>
+
+<tr>
+<th>Ordinal</th><td>Pie and Bar;<br/>Frequencies</td><td>Mode, Median</td><td>Range, IQR, Percentile</td>
+</tr>
+
+<tr>
+<th>Interval</th><td>Pie, Bar, Histogram and Boxplot;<br/>Frequencies, Descriptive and Exploratory</td><td>Mode, Median, Arithmetic Mean</td><td>Range, IQR, Percentile, Standard Deviation</td>
+</tr>
+
+<tr>
+<th>Ratio</th><td>Pie, Bar, Histogram and Boxplot;<br/>Frequencies, Descriptive and Exploratory</td><td>Mode, Median, Arithmetic &amp; Geometric Mean</td><td>Range, IQR, Percentile, Standard Deviation, Coefficient of Variation</td>
+</tr>
+<tbody>
+</table>
+</div>
+</p>
+	</main>
+	<div class="clearfix"></div>
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><a href="/post/2013/12/scatter-plot/">Scatter plot</a></h1>
+		</div>
+		<p><p>Scatter plot is a technique to discover relationship between a dependent variable (y) and an independent variable (x) by plotting &ldquo;y&rdquo; against &ldquo;x&rdquo;. Once plotted, it is very easy to spot the correlation between &ldquo;x&rdquo; and &ldquo;y&rdquo; variables. For example, the following scatter plot between pizza delivery time (y) and the delivery distance (x) reveals a possible linear correlation.</p>
+
+<p><img src="/post/2013/12/scatter-plot/scatter-plot-1.png" alt="Scatter Plot between pizza delivery time (y) and the delivery distance (x)" class ="img-center" /></p>
+
+<p>Such analysis is the first step towards determining the maximum delivery distance or the nearby areas, where this pizza outlet will be confident of 30 minutes delivery (after taking in to the account pizza preparation time and of course variation).</p>
+
+<p class="related">SCAN: <a href="http://www.discover6sigma.org/post/2005/10/variation-defect/">Variation &amp; Defect</a>.</p>
+
+<p>Let us now look in to various commonly found correlation patterns in scatter plots and their interpretation. Scatter Plot 2 indicates no correlation between variables X and Y variables:</p>
+
+<p><img src="/post/2013/12/scatter-plot/scatter-plot-2.png" alt="No correlation example" class ="img-center" /></p>
+
+<p>Scatter Plot 3 illustrates a curvilinear relationship between X and Y variables:</p>
+
+<p><img src="/post/2013/12/scatter-plot/scatter-plot-3.png" alt="Curvilinear relationship example" class ="img-center" /></p>
+
+<p>This relationship is a relationship between two or more variables which is depicted graphically by anything other than a straight line. Curvilinear relationships can be broadly of 2 types viz. polynomial and exponential. A polynomial relationship in one variable is expressed as:</p>
+
+<div class="blocktext">
+y = a<sub>0</sub> + a<sub>1</sub>x + a<sub>2</sub>x<sup>2</sup> + a<sub>3</sub>x<sup>3</sup> + ... a<sub>n-1</sub>x<sup>n-1</sup> + a<sub>n</sub>x<sup>n</sup>
+</div>
+
+<p>A linear relationship is a special case of polynomial relationship where n=1 leading to y = a<sub>1</sub>x + a<sub>0</sub> or y = mx + c.</p>
+
+<p>An exponential function in which the independent variable appears as exponent (i.e. as the power) as shown in the example below:</p>
+
+<div class="blocktext">
+y = a<sup>x</sup>
+</div>
+
+<p>The correlation can be either positive, i.e. &ldquo;y&rdquo; increases with increasing &ldquo;x&rdquo; or negative, i.e. &ldquo;y&rdquo; decreases with increase in &ldquo;x&rdquo;. This is also referred as direction of the correlation. Scatter Plot 1 above is an example of positive correlation; and Scatter Plot 4 highlights a negative correlation:</p>
+
+<p><img src="/post/2013/12/scatter-plot/scatter-plot-4.png" alt="Negative correlation example" class ="img-center" /></p>
+
+<p>The degree of scatter in a plot suggests the strength of correlation, typically attributed as &ldquo;weak&rdquo; or &ldquo;strong&rdquo; as highlighted in Scatter Plot 1 and 5.</p>
+
+<p><img src="/post/2013/12/scatter-plot/scatter-plot-5.png" alt="Weak correlation example" class ="img-center" /></p>
+
+<p>To summarize, a scatter plot reveals (a) type of correlation, e.g. linear, polynomial or exponential; (b) direction of correlation, e.g. negative or positive; and (c) strength of correlation, e.g. weak or strong. Some scatter plots may exhibit presence of clusters and outliers also. The pattern or trend revealed in a scatter plot helps us select an appropriate regression model. A common model in use is a simple linear regression, where the correlation is represented using a equation y = mx + c. Such a model may be used to predict values of &ldquo;y&rdquo; on the basis of &ldquo;x&rdquo; values. Correlation is established by applying the appropriate model.</p>
+
+<p>Sometimes no correlation may be observed due to the fact that the &ldquo;x&rdquo; and &ldquo;y&rdquo; data is a combination of data obtained from multiple sources. Examples of such multiplicity of sources are shifts, machines, and days of week.</p>
+
+<h2>Correlation does not necessarily imply causation</h2>
+
+<p>While causality implies correlation but correlation does not necessarily mean causation. A classic example of a false correlation is where you may observe a positive correlation between number of fire fighters deployed to fight against a fire and the extent of property damage. Does that mean that more fire fighters lead to more property damage in an fire accident? No! More fire fighters are required to handle a large fire. A third hidden or lurking variable (in this case size of fire) may cause a false correlation or association between &ldquo;y&rdquo; (extent of property damage) and &ldquo;x&rdquo; (number of fire fighters) variables.</p>
+</p>
+	</main>
+	<div class="clearfix"></div>
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><a href="/post/2011/06/desc-stats/">Descriptive statistics</a></h1>
+		</div>
+		<p><p>
+Descriptive Statistics is one of the simplest techniques used in quality management to obtain a meaningful insight into the data being analyzed.
+</p>
+<p>
+Let us take a few examples. It makes sense to build a frequency table of complaints by categories from the raw data on complaints from different customers. It clearly tells us the top few complaints that need immediate attention. On the other hand, it would be preferable to compute the average or mean from loan processing time data of thousands of applications from a bank to find out the average turnaround time required to process any application. This can subsequently be compared with industry average to benchmark bank's performance.
+</p>
+<p class="related">SCAN: <a href="http://www.discover6sigma.org/post/2005/12/statistics-simplified/">Basics of Statistics</a></p>
+<p>
+Data types tell us how we can gain meaningful insight in the data – this could be achieved by computing mean or by building frequency table or by using other summary measures such as mode or median. Therefore, it is important to understand the type of data being analyzed to determine what summary measures are applicable to obtain a meaningful insight. Recall that there are two types of data - quantitative or numeric or scale, and qualitative or categorical or attribute. The categorical data can be in form of either ordered or unordered categories. Examples of unordered category data is marital status (e.g. single, married, widowed, or separated) or customer complaints data collected in our pizza shop example. Such data is also referred to as nominal data.
+</p>
+<p>
+Ordered categorical data or ordinal data defines the values representing rank or order. For example, customer satisfaction in terms of unsatisfied, expectations met, exceeded expectations, and significantly exceeded expectations.
+</p>
+<p>
+With this background of data it should be very easy to imagine that not all measures may be computed for a given data (type). For example, it does not make sense to compute mean of nominal data; imagine computing mean of marital status! In this case, mode is what will give us meaningful insight into the data. Following table summarizes the applicable characteristics and representations for each data type.
+</p>
+
+<p>
+<img src="/post/2011/06/desc-stats/desc-stats.png" alt="Ideas generated from Brainstorming" class ="img-center" />
+</p>
+<p class="related">EXPLORE: <a href="http://www.discover6sigma.org/post/2005/12/measure-of-central-tendency/">More on Central Tendency</a> and <a href="http://www.discover6sigma.org/post/2005/12/measure-of-dispersion/">Meausre of Dispersion</a></p>
+<p>
+Note that outliers are extreme data values in a dataset that have significant numeric distance from the rest of the data. The presence of an outlier is usually an indication of an error in measurement or recording. Such data values impact mean and standard deviation directly.
+</p>
+
+<p>
+Trimmed mean is computed after removing the fixed percentage of extreme upper and lower data values; typical percentage is 5%. Such a mean is resistant to outliers. Similarly in the case of dispersion, IQR is more resistant to outliers than the standard deviation or variance. This happens because IQR is the range of only the middle 50% of all data values.
+</p>
+
+<p>
+Measures computed of a sample drawn from the population are referred to as statistics; when the same measure is computed for a population, it is called a parameter.
+</p>
+</p>
+	</main>
+	<div class="clearfix"></div>
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><a href="/post/2011/06/boxplot/">Box plot</a></h1>
+		</div>
+		<p><p>
+Box Plot provides an intuitive graphical representation of the five number summary of a dataset. The five number summary consists of Minimum, Q1, Q2 or Median, Q3, and Maximum of a dataset. John W. Tukey introduced the concept of Box Plot in his book Exploratory Data Analysis, published in 1977. It is also referred as Box &amp; Whisker Plot.
+</p>
+<p>
+Let us understand the power of box plot through a series of examples; the following example shows the box plot along with the sample data.
+</p>
+<p>
+<img src="/post/2011/06/boxplot/boxplot.jpeg" width="90%" alt="Example of Box Plot with Sample Data" class ="img-center" />
+</p>
+<p>
+The box represents the inter quartile range (IQR = Q3-Q1) where its left border (also called hinge) corresponds to the first quartile (Q1) and the right border corresponds to the third quartile (Q3). Therefore, the middle 50% of data values fall within the box. The line in the middle represents the median of the data. The left whisker represents the smallest 25% of data values with its left most end corresponding to the minimum value of the data. Similarly, the right whisker represents the largest 25% of data values with its right most end corresponding to the maximum value of the data.
+</p>
+
+<p class="related">EXPLORE: <a href="http://www.discover6sigma.org/post/2005/12/measure-of-central-tendency/">Central Tendency</a> and <a href="http://www.discover6sigma.org/post/2005/12/measure-of-dispersion/">Meausre of Dispersion</a></p>
+<p>
+Let us look at the second data set and the corresponding box plot. The data has been superimposed on the histogram with box plot aligned perfectly on the top to give you a crisp and easy to understand picture.
+</p>
+<p>
+<img src="/post/2011/06/boxplot/boxplot-m100.png" width="90%" alt="Box Plot with Histogram" class ="img-center" />
+</p>
+<p>
+The histogram in the figure clearly suggests that,
+</p>
+<ol>
+<li>It has no skew implying that it has symmetrical distribution.</li>
+<li>It has long tails i.e. it possibly has outliers.</li>
+</ol>
+<p>
+Now, it is time to look at the box plot. Notice that both the whiskers are much longer than the length of the box (IQR) - an indication of the possible presence of outliers. In fact, Tukey suggests that an outlier is a point that is greater than or less than 1.5 times the IQR. Here is the same box plot, but with outliers (0.95 and 1.05) clearly highlighted as per Tukey's recommendations.
+</p>
+<p>
+<img src="/post/2011/06/boxplot/boxplot-m100witho.png" width="90%" alt="Box Plot with Histogram" class ="img-center" />
+</p>
+
+<p>
+The above box plots (with or without outliers) also reveal that the two whiskers are of equal length and the median lies right in the middle of the box - an indication of symmetrical distribution. Any deviation from this leads to a non-symmetrical distribution, as illustrated in the following box plot.
+</p>
+
+<p>
+<img src="/post/2011/06/boxplot/boxplot-m95.png" width="90%" alt="Box Plot with skew" class ="img-center" />
+</p>
+
+<p>
+Box plot also serves as a great way to quickly compare two or more series by juxtaposing the box plots of the series to be investigated. The following plot shows the previous two box plots juxtaposed clearly to highlight the differences (or similarities) in central tendencies and dispersions.
+</p>
+<p>
+<img src="/post/2011/06/boxplot/boxplot-juxtaposed.png" width="90%" alt="Juxtaposed Box Plots" class ="img-center" />
+</p>
+
+<h2 class="h2small">Important Observations</h2>
+<ol>
+<li>Box plot is based on robust statistics, i.e. it is more tolerant (or robust) to the presence of outliers.</li>
+<li>It gives an indication of shape of distribution in terms of symmetry or skewness.</li>
+<li>It is an excellent means to determine if there are similarities (or differences) between two or more data sets by juxtaposing their box plots.</li>
+</ol>
+</p>
+	</main>
+	<div class="clearfix"></div>
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><a href="/post/2009/02/affinity-diagram/">Affinity diagram</a></h1>
+		</div>
+		<p><p>
+A pool of ideas, generated from a <a href="http://www.discover6sigma.org/post/2005/11/brainstorming/" title="Brainstorming">brainstorming</a> session, needs to be  analyzed, prioritized before they can be implemented. A smaller set of ideas are easy to sift through and evaluate without applying any formal technique.
+
+Affinity diagramming is an effective technique to handle a large number of ideas. It is typically used when
+</p>
+<ol class="normal-li">
+<li>
+Large data set is to be traversed, like ideas generated from brainstorming and sieve for prioritization.
+</li>
+<li>
+Complexity due to diverse views and opinions.
+</li>
+<li>
+Group involvement and consensus.
+</li>
+</ol>
+
+<p>
+Association, kinship, likeness are synonymous to affinity, and they are the underlying principle to be followed while adopting this technique. The process of affinity diagramming requires the team to categorize the ideas based on their subject knowledge thereby making it easy to sift and prioritize ideas.
+</p>
+<h2 class="h2small">Prerequisites for an Affinity Session</h2>
+<ol class="normal-li">
+<li>
+An idea set generated from a Brainstorming Session, typically captured in form of Post-it Notes.
+</li>
+<li>
+Team should include people who have the necessary knowledge and skills to meld opinions, perspectives and are aware about the problem at hand. Too small or a very large team may not be effective. Rule of thumb suggests between 4 to 6 members in the team.
+</li>
+<li>
+Invitation that clearly states the purpose of the session.
+</li>
+<li>
+A facilitator is required to conduct the session.
+</li>
+</ol>
+
+<h2 class="h2small">How to conduct an Affinity Session</h2>
+<ol class="normal-li">
+<li>
+Select and block a (Lively) room free from interruptions and distractions.
+</li>
+<li>
+Initiate the session by explaining the purpose, possibly already written and highlighted on the board.
+</li>
+<li>
+Place the Post-its randomly on the board/flat surface, ensuring visibility to all.
+</li>
+<li>
+Set the first objective as sorting ideas, opinions &amp; issues  based on the most natural relationship amongst them.
+</li>
+<li>
+Invite participants to get involved in the exercise of creating like groups from the idea pool.
+</li>
+<li>
+Participants should look for ideas that are related in some way, move the post-its for the like ideas to be together. The process should be followed till all ideas have been grouped.
+</li>
+<li>
+Resolve conflict of ideas falling in more than one group by placing another post-it with the same idea in both groups.
+</li>
+<li>
+Participants now can discuss on the patterns identified and focus on the controversial ideas.   A consensus can be reached by discussion, making the changes in grouping.
+</li>
+<li>
+When ideas are grouped, select the heading to categorize each group. A meaning full but short heading represents the key thought of the group being assigned to. Now move groups under their respective headings to view the Affinity Diagram.
+</li>
+</ol>
+
+<p>
+At the end of session, team is ready with Affinity Diagram, the categorized ideas are now ready for further shortlisting, if required.
+</p>
+<p class="related">EXPLORE: <a href="http://www.discover6sigma.org/post/2014/01/voting-prz/">Decision Making using Voting: How to use Voting to shortlist Ideas</a></p>
+<h2 class="h2small">Affinity Diagram Example</h2>
+<p>
+Following diagrams show a simplified sample for our famous timely pizza delivery problem.
+</p>
+<p>
+<img src="/post/2009/02/affinity-diagram/pre-affinity.png" alt="Ideas generated from Brainstorming" class ="img-center" />
+</p>
+<p>
+<img src="/post/2009/02/affinity-diagram/post-affinity.png" alt="Ideas after Affinity Diagramming" class ="img-center" />
+</p>
+
+<p>
+In real life, brainstorming &amp; affinity diagramming techniques also find their applications while using other quality management tools and techniques. For example, while creating FMEA, possible cause of failures can be discovered through a brainstorming session and subsequently they can be categorized into different risk categories using affinity diagramming.
+</p>
+</p>
+	</main>
+	<div class="clearfix"></div>
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><a href="/post/2007/06/sipoc/">SIPOC</a></h1>
+		</div>
+		<p><p>
+SIPOC is a high-level picture of the process that depicts how the given process is servicing the customer. It is an acronym for Suppliers - Inputs - Process - Outputs - Customers. The definition of each of these SIPOC entities is given below.
+</p>
+<p>
+<b>Suppliers</b> provide inputs to the process.<br /><br />
+<b>Inputs</b> define the material, service and/or information that are used by the process to produce the outputs.<br /><br />
+<b>Process</b> is a defined sequence of activities, usually adds value to inputs to produce outputs for the customers.<br /><br />
+<b>Outputs</b> are the products, services, and/or information that are valuable to the customers.<br /><br />
+<b>Customers</b> are the users of the outputs produced by the process.<br /><br />
+</p>
+<p>
+In more formal terms, SIPOC can be seen as a high-level process map. It is typically used during the define phase of a process improvement project, as it helps us clearly understand the purpose and the scope of a process. It is a starting point in identifying the voice of the customer (VOC). It gives us initial insight in to the vital inputs (or X variables) of a process [Y = f(X)] that have significant impact on critical outputs (or Y variables). It also becomes a primary input to detailed process map construction.
+</p>
+<p class="related">SCAN: <a href="http://www.discover6sigma.org/post/2005/10/processes-are-everywhere/">Processes are everywhere</a></p>
+<p>
+Creation of SIPOC is a team activity that requires brainstorming to discover (hidden) details. The team consists of all the stakeholders of the process under consideration. Brainstorming is carried out iteratively for each element (i.e. suppliers, inputs, process steps, outputs and customers) of SIPOC. While creating SIPOC for a new process under design, it is a good idea to start from customer and move backwards to supplier. On the other hand, during discovery or documentation of an existing process, SIPOC is usually created starting from process definition followed by identification of outputs, customers, inputs and suppliers.
+</p>
+<p class="related">EXPLORE: <a href="http://www.discover6sigma.org/post/2005/11/brainstorming/">How to brainstorm?</a></p>
+<p>
+The broad guidelines for the definition/identification of 5-SIPOC entities are given below. To illustrate the concept, examples from our 30-minute pizza deliver shop for the order process are used.
+</p>
+<p>
+Suppliers are individuals or organizations that provide inputs to the process. These can be internal (e.g. department, division, or individuals) or external (e.g. vendors, government, or individuals). It is also possible that a supplier is also a customer. In our example, key suppliers can be for dough, vegetables, tomato paste, cheese, packing box, 2-wheeler maintenance, and telephone services.
+</p>
+<p>
+Inputs are material, information, and/or services that are required by the process to produce the outputs. It can even include factors that influence the process. For example, in a paint shop, environmental factors such as humidity can impact the process. For pizza order process, typical inputs are dough, vegetable, tomato paste, cheese, and packing box.
+</p>
+<p>
+Defining the process involves identification of key process steps and their sequence. The steps should be written in a verb-object format with contextually meaningful modifiers such as adjectives, adverbs or indirect objects. For example, pickup phone within 3 rings or take customer order on phone. It also important to establish the process boundaries at this stage in terms of which event triggers the process and which event marks the end of the process.
+</p>
+<p>
+In our case, process starts from customer call for his/her order and ends on successful delivery within 30 minutes. Some important process steps are receive order from customer, queue order in the kitchen, receive order items at packing station &amp; check against order, pack ordered items, identify delivery person &amp; handover order and delivery address.
+</p>
+<p>
+Outputs are typically product, information, service, and/or decisions that are produced as a result of the process execution. In our case, output is delivery of all the ordered items within 30 minutes from the order.
+</p>
+<p>
+Customers are those who pay for the process output or get directly impacted by the process output. In our example, customer is the person who placed the order.
+</p>
+<p>
+SIPOC is usually contracted in a 5-column tabular format as illustrated below.
+</p>
+
+<img src="/post/2007/06/sipoc/sipoc-template.gif" class="img-center" alt="SIPOC Template" />
+</p>
+	</main>
+	<div class="clearfix"></div>
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><a href="/post/2007/02/sampling/">Sampling</a></h1>
+		</div>
+		<p><p>
+Do you remember the quote in the "first step" section of this site, "You can manage, what you can measure; you can measure, what you can define; you can define, what you can understand"? <a href="http://www.discover6sigma.org/post/2005/11/operational-definition/">Operational definition</a> was the first step towards effective management. It helps us build a clear understanding of a concept or a phenomenon so that it can be unambiguously measured.
+</p>
+<p>
+The next step is measurement. Sampling is all about making measurement simpler, especially when you are required to take a large number of measurements. Let us take the example of our washer manufacturing process described in the post on <a href="http://www.discover6sigma.org/post/2005/10/processes-are-everywhere/">Processes are everywhere</a>. Imagine that this process is producing 100,000 washers every day. In order to ensure that washers shipped are within the specified tolerance limits, can we measure diameter of every washer before shipping? Probably not! It would be nice if we can pick up a representative sample consisting of few hundred washers, measure their diameter, and draw inference about the entire lot manufactured in a day. Sampling allows us to achieve this. At this stage, you may like to revisit the section on "Basic Statistics" in post on <a href="http://www.discover6sigma.org/post/2005/12/statistics-simplified/">Statistics Simplified</a>.
+</p>
+<h2 class="h2large">What is Sampling?</h2>
+<p>
+Sampling is a method to draw inference about one or more characteristics of a large group of items by examining a smaller but representative selection of group items. This selection is referred as the sample. This selection can be probability driven, or judgment/non-probability driven.
+</p>
+<p>
+In non-probability sampling scheme, the probability of a population element being chosen is unknown and is based on the judgment of the researcher.
+</p>
+<p>
+In probability driven sampling, each element of population has a "known non-zero" probability selection. It is easy to build mathematical or statistical models for drawing inference about the population. Our focus will be on this type of sampling.
+</p>
+<p>
+One common example of probability sampling is "random sampling", where each element (and each combination of element) has an equal chance of being selected. More details are discussed later in this post.
+</p>
+
+<h2 class="h2large">Why Sampling?</h2>
+<p>
+Why can't we look at the entire population? Simply because sometimes the population is so large that it makes it prohibitive in terms of time and resources to carry out the measurements or survey. In any large volume manufacturing process, we face such challenges regularly. Other examples are exit polls, or any national level survey.
+</p>
+<p>
+In addition, there are occasions where measurement leads to destruction of the item under consideration. Typical examples are measurement of tensile strength of a wire, or measuring battery life, or crash testing of a car.
+</p>
+<h2 class="h2large">Steps to Successful Sampling</h2>
+<p>
+The goal is to acquire a sample that is true representative of the population; it is something like a mini replica of population that is good enough to draw inference with required "accuracy &amp; precision" about the population. Any successful sampling requires striking a balance between the required "accuracy &amp; precision" and the "available resources". The key steps are outlined below.
+</p>
+<ol class="normal-li">
+<li>Defining the population</li>
+<li>Determining the sample size</li>
+<li>Selecting the sampling technique</li>
+</ol>
+
+<h3>Defining the population</h3>
+<p>
+This is an important step if the entire population is not accessible for sampling. Ideal situation will be to draw sample from across the entire population. However, this may not be practical in every situation. The items within a population who can be sampled are usually limited. Such a target population, which can be sampled, is called a sampling frame. Defining this sampling frame is the first step of any successful sampling. This becomes an important input in determination of sample size and selection of sampling technique.
+</p>
+
+<h3>Determine the sample size</h3>
+<p>
+How large or how small sample should be drawn? The answer lies in the goal of successful sampling i.e. "to acquire a sample that is true representative of the population".
+</p>
+<p>
+<a href="http://www.discover6sigma.org/post/2005/10/variation-defect/">Variation</a> comes in action once again. Imagine that there is no variation in the population or in other words, every item is identical. In such a situation a sample size of "1" is not only good enough but it will also deliver 100% accuracy &amp; precision. However, in real life variation is everywhere. Therefore, higher the variation in the population, larger the sample size required.
+</p>
+<p>
+Let us turn to some mathematics to develop clear understanding. This part of the discussion will be interspersed with some introductory content on drawing inference. It is both unavoidable and important at this stage.
+</p>
+<p>
+Consider a population with a variable of interest called, "x". If we draw a random sample of size "n", the sample mean of "x" will be given by the following equation.
+</p>
+<img src="/post/2007/02/sampling/samp-xbar.png" class="img-center" alt="Sample Mean of x" />
+<br />
+
+<p>
+`bar x = (sum x_i)/n`
+</p>
+
+<p>
+Now if we have to draw an inference about the population mean of "x", we need to know about the distribution of sample mean of "x". The distribution of any such sample statistic (like sample mean) is known as a sampling distribution (of mean in this case). The Central Limit Theorem (CLT) gives us three very important pieces of information that help us in drawing the required inference.
+</p>
+<p>
+<b>First,</b> the mean of sampling distribution is equal to population mean. This can be understood intuitively. When we repeatedly sample from the given population, and record the each sample mean, we will observe that (a) it is highly unlikely that the sample means are exactly equal to the population mean, (b) some sample mean will be smaller than the population mean, (c) some sample mean will be larger than the population mean. Now since our sampling is truly random without any bias, the deviations of sampling mean from the population mean in either direction will be equally likely. Therefore, we can conclude that the sampling distribution mean is equal to population mean.
+</p>
+<p>
+<b>Second,</b> the standard deviation of the sampling distribution is given by the following equation.
+</p>
+<img src="/post/2007/02/sampling/samp-sigma-xbar.png" class="img-center" alt="Standard deviation of the sampling distribution (sigma xbar)" />
+<br />
+<p>
+`sigma_bar x = sigma/sqrt(n)`
+</p>
+<p>
+This is called "standard error". This can also be understood intuitively. The larger the standard deviation of population, the larger would be sampling error i.e. the standard deviation of sampling distribution. Therefore, standard deviation of population appears in the numerator. In any case, larger the sample size, smaller would be sampling error. This happens because you get a more representative same leading to lesser dispersion in sampling distribution. This is why "n" appears in the denominator. The square root indicates the returns diminish faster with increase in sample size. For example, if you increase a sample size to 40 from 10 (a 4x increase), the standard deviation will only reduce by 1/2 and not by 1/4.
+</p>
+<p>
+<b>Third,</b> if the sample size is large enough (typically more than 30), the sampling distribution of mean will tend to be distributed normally. This is true irrespective of the distribution pattern of population. This phenomenon seems true intuitively as most of the random natural distributions are normal in nature.
+</p>
+<p>
+Now armed with this knowledge, we can easily compute the certainty (or uncertainty) in a measurement for a required precision. This certainty (or probability) is called "confidence interval" (CI). Since, the sampling distribution is normal, the computations are very simple. For example for 95% CI for &mu; is given below:
+</p>
+<img src="/post/2007/02/sampling/samp-95ci-u.png" class="img-center" alt="u with 95% CI" />
+<br />
+<p>
+`bar X +- 1.96 sigma_bar x`
+</p>
+<p>
+Just to recap, 95% CI means 95% area under the normal curve or an area covered within 1.96 times the standard deviation (or Z-score, refer to section on <a href="http://www.discover6sigma.org/post/2005/12/measure-of-dispersion/">Measure of Dispersion</a>) away from the mean in both directions.
+</p>
+<p>
+And the figure for 99% CI will be
+</p>
+<img src="/post/2007/02/sampling/samp-99ci-u.png" class="img-center" alt="u with 99% CI" />
+<br />
+<p>
+`bar X +- 2.58 sigma_bar x`
+</p>
+<p>
+Coming back to correct sample size, note that this depends on (a) variation in population, (b) standard error, and (c) required CI. Typically as rule of thumb, a minimum sample size of 30 is required and in most cases, a sample size between 50 and 100 is good enough.
+</p>
+<p>
+A more formal method can be derived in form of a formula. For a given CI, corresponding Zci can be found in any z-score table. Therefore, as discussed earlier, &mu; for the given CI will be given by following equation.
+</p>
+<img src="/post/2007/02/sampling/samp-p.png" class="img-center" alt="u with a CI in terms of Z-score" />
+<br />
+<p>
+`bar X +- Z_(CI) sigma_bar x`
+</p>
+<p>
+We can say that the precision, "P" will be,
+</p>
+<img src="/post/2007/02/sampling/samp-n-formula.png" class="img-center" alt="Formula for sample size computation" />
+<br />
+<p>`\ \ \ \ \ \ \   P = +- Z_(CI) sigma_bar x`</p>
+<p>`=> P = +- Z_(CI).(sigma/sqrt(n))`</p>
+<p>`bb(\T\h\e\r\e\f\o\r\e\ \ \s\a\m\p\l\e\ \s\i\z\e\ \w\i\l\l\ \b\e\: )`</p>
+<p>`=> n = (Z_(CI)^2 sigma^2)/P^2`</p>
+
+<h3>Selecting the sampling technique</h3>
+<p>
+There are many sampling techniques. This section discusses three key methods.
+</p>
+<p>
+<b>Simple Random Sampling</b> ensures that each element of the population has an equal chance of being selected. Typically, random number generators are used to select a random sample from the population.
+</p>
+<p>
+<b>Systematic Random Sampling</b> is a modified form of random sampling. It adds a bit of order to random sampling. The first element of the population is selected randomly. After that, starting from this randomly selected element, every nth element is selected, where n is equal to the population size divided by the sample size. It is easier compared to the simple random sampling. However, it is not suitable if there is a periodicity in the population. It works very well if the list is haphazard.
+</p>
+<p>
+<b>Stratified Random Sampling</b> is another form of modified random sampling. In this case, the entire population is divided in to homogenous subgroups that share a common characteristic. Thereafter, random sampling is carried out on each group. This technique reduces the standard error and produces more representative sample from the population whenever subgroups are present or possible. For example, if our washers are produced on three different machines then it may be a good idea to have three subgroups (one for each machine) for stratified random sampling.
+</p>
+
+<p>
+With this introductory note on sampling, you are now ready to carry out some basic sampling and start drawing inference about the population. More detailed and in-depth discussion will be coming up later.
+</p>
+</p>
+	</main>
+	<div class="clearfix"></div>
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><a href="/post/2006/10/distribution-in-real-life/">Distribution in real life</a></h1>
+		</div>
+		<p><p>
+Equipped with basic knowledge of distribution, let us now explore the applications of distribution in our lives. A closer look will reveal that it has been used in cosmic world to quantum world to our daily lives. For example, astronomers studied the distribution of gamma ray bursts to predict the shape of our galaxy and the presence of stellar nurseries. In quantum physics, the Heisenberg's uncertainty principle also talks about the distribution of position of a particle or "delta x" - the uncertainty in position for a given uncertainty in momentum. A simpler example is heights of people - it follows a normal distribution - a natural phenomenon.
+</p>
+
+
+<h2 class="h2large">Real Life Applications</h2>
+<p>
+Let us look at some more real life applications.
+</p>
+<h3>Data Compression</h3>
+<p>
+A very common and easy to understand application is data compression. Almost all of us have used ZIP software at some point in time - right? Such software compresses the data by leveraging the distribution of letters or words contained in the data. Normally if you were to encode a message consisting of only English alphabets, you would assign a fixed 5-bits code to each alphabet irrespective of its distribution in the message to be encoded. The trick is to find out the distribution pattern of the alphabets and assign the shortest code to alphabet with highest frequency of occurrence and the longest to smallest frequency of occurrence. You can easily observe that this variable length encoding would lead to a compression compared to a fixed length encoding approach.
+</p>
+<h3>Reliability</h3>
+<p>
+In engineering world, reliability is defined as the probability that a system will function within its specified limits for a specified period of time under stated environmental conditions. We can easily visualize that reliability is all about studying the failure-time distribution under the given environmental conditions.
+</p>
+<p>
+A quick and simple mathematical overview will add further clarity. Let us assume p(x) is the probability distribution function (PDF) of time to failure of a given component. The probability that the component will fail between a time interval of "0" and "t" will therefore be given by:
+</p>
+<img src="/post/2006/10/distribution-in-real-life/dir-reliability1.png" alt="Probability of failure between a time interval of 0 and t" class="img-center" />
+<br />
+
+<p>
+`bb P(o < x < t) = int_0^t p(x)*dx`
+</p>
+
+<p>
+The reliability or the probability that the component will survive up to time t can easily be determined from the following equation.
+</p>
+<img src="/post/2006/10/distribution-in-real-life/dir-reliability2.png" alt="Reliability" class="img-center" />
+<br />
+
+<p>
+`bb R(o < x < t) = bb 1 - bb P( o < x < t )`
+</p>
+
+
+<h3>Project Planning</h3>
+<p>
+Most common way of project planning is to identify the tasks required to complete the project, estimate their completion time, and determine their interdependencies followed by development of the network diagram (or graph) to compute project completion time along with other parameters. This methodology works well if (point) estimates of task completion time are highly accurate. In other words the actual completion time experiences negligible variation.
+</p>
+<p>
+In real world that is full of variations, PERT methodology of project planning comes to our rescue. The 2 key differences in this methodology are (a) understanding the distribution of task completion time (from past data) and (b) application of Central Limit Theorem (CLT) to compute the project completion time with a defined confidence level.
+</p>
+
+<div class="blocktext">
+For a quick reference, CLT states that irrespective of the distribution of the population, the sampling distribution of mean will tend to be distributed normally, as long as your sample size is big enough (about 30 or more). Note sampling distribution is the distribution pattern of a given statistic found by repeated sampling of the population.
+</div>
+
+<p>
+The distribution of completion times provides us the minimum, maximum, and the most likely (mode) completion time, which allows us to compute the mean and variance of completion time. On the critical path of the project, the mean and variance are added to find out the mean project completion time and the corresponding variance. And this follows a normal distribution according to the CLT. With this information, we can now easily compute the project completion time with required confidence level. Imagine in case of point estimates equal to average task completion time value, the project completion time will have a confidence level of just about 50% only.
+</p>
+<h3>Quality Management</h3>
+<p>
+Conceptual understanding of distribution along with its practical applications is the foundation of several quality management techniques. These are discussed in detailed separately. Let us take a quick glimpse of its application. Let us say we receive a large shipment of certain part into our warehouse from the vendor. Vendor claims that there are no more than 2% defective parts in the shipment. If we sampled 150 parts randomly, what will be the probability of detecting at least one defective part? Simple application of binomial distribution will help us determine the answer. It will be 1 - P(n=0) and the value will be 0.95 approximately. For exact formula, please refer to binomial distribution in post on <a href="http://www.discover6sigma.org/post/2006/01/distribution/" title="Distribution">Distribution</a>.
+</p>
+</p>
+	</main>
+	<div class="clearfix"></div>
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><a href="/post/2006/01/distribution/">Distribution</a></h1>
+		</div>
+		<p><p>
+As discussed earlier, distribution tells us how data elements of a given data set are distributed within its range. It is time now to take a bigger bite into distribution and go beyond pizza delivery data.
+</p>
+<p>
+Before we delve deeper into distribution, let us quickly revisit why it is important for us? Recall from Variation &amp; Defect, "the natural variation always occurs and it can not be traced to a specific cause. It is random within a predictable range or in other words, it follows a distribution pattern".
+</p>
+<p>
+It is really interesting to note that although each outcome of a random event is uncertain when seen in isolation; but collectively they follow a predictable pattern. This pattern is called its distribution function. Let us take an example to understand the concept - tossing an unbiased coin. What is the probability of getting a heads when we toss a coin? It is 0.5. What will happen if we toss the coin 20 times (we refer to this as an experiment)? Again the expectation is to get heads 10 times. Note it is only the expectation or the probability. The actual result may vary every time we repeat this experiment. Let us now repeat this experiment 20 times and note the distribution of observing heads in each experiment.
+</p>
+<img src="/post/2006/01/distribution/d-ct20.jpg" alt="Distribution with experiment repeated 20 times" class="img-center" />
+<br />
+<p>
+The following 2 graphs illustrate the distribution for the same experiment repeated 200 times and 2000 times respectively.
+</p>
+<img src="/post/2006/01/distribution/d-ct200.jpg" alt="Distribution with experiment repeated 200 times" class="img-center" />
+<br />
+<img src="/post/2006/01/distribution/d-ct2000.jpg" alt="Distribution with experiment repeated 2000 times" class="img-center" />
+<br />
+<p>
+What do we observe from the above experiments? Something that we mentioned in the beginning - "collectively outcome of random events follow a predictable pattern". It becomes more evident with increasing number of experiments. The other key point to note is that the mean observed is also close to 10.
+</p>
+<p>
+The graphs shown above are created using random data generated using <b>MINITAB</b> - a statistical software. However, It is strongly recommended to try this experiment manually by repeating it 10 times to get a practical feeling.
+</p>
+<p>
+With this picture, it is time to look at the formal mathematical scenario. We will begin with binomial distribution.
+</p>
+
+<h2 class="h2large">Binomial Distribution</h2>
+<p>
+Suppose we toss a coin N-times. What will be probability of getting a specific sequence of "n" heads? This requires application of "Multiplication Rule for Independent Events". For further details, refer section on <a href="http://www.discover6sigma.org/post/2005/09/basic-probability-theory/">Basic Probability Theory</a>. The probability is given by the following equation.
+</p>
+<div class="blocktext">
+<b>p<sup>n</sup>.(1 - p)<sup>N-n</sup></b>
+
+<p>`p^n (1-p)^(N-n)`</p>
+
+<br/><br/>where "p" is the probability of getting heads.
+</div>
+<p>
+If the sequence is not important then the probability will be determined by multiplying the above equation by <sup>N</sup>C<sub>n</sub>.
+</p>
+<div class="blocktext">
+
+<b>P(n, N) = p<sup>n</sup>.(1 - p)<sup>N-n</sup>.<sup>N</sup>C<sub>n</sub></b>
+
+<p>`P(n,N) = p^n (1-p)^(N-n) . ^NC_n`</p>
+
+</div>
+<p>
+The above probability is the one that we observed empirically, when we conducted the "coin tossing" experiment. If you recall binomial theorem, it is very easy to observe that P(n, N) is the n<sup>th</sup> term of (p + (1 - p))<sup>N</sup>.
+</p>
+<h3>Brief Detour to Binomial Theorem</h3>
+<p>
+It tells us how to expand the power of sums. Let us look at the following simple expansions to develop a clear understanding.
+</p>
+<div class="blocktext">
+<b>
+(a + b)<sup>0</sup> = &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1
+<br />
+(a + b)<sup>1</sup> = &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a + b
+<br />
+(a + b)<sup>2</sup> = &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a<sup>2</sup> + 2ab + b<sup>2</sup>
+<br />
+(a + b)<sup>3</sup> = &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a<sup>3</sup> + 3a<sup>2</sup>b + 3ab<sup>2</sup> + b<sup>3</sup>
+<br />
+(a + b)<sup>4</sup> = a<sup>4</sup> + 4a<sup>3</sup>b + 6a<sup>2</sup>b<sup>2</sup> + 4ab<sup>3</sup> + b<sup>4</sup>
+</b>
+</div>
+<p>
+A close observation of the above expansions reveals that each term in the expansion follows the formula for P(n, N). You must be wondering why the above expansions are written in a triangular manner. In fact, if you look at the coefficient of each term what you will see is the Pascal triangle. The same is illustrated below.
+</p>
+<div class="blocktext">
+<b>
+N = 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1<br />
+N = 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 1<br />
+N = 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 2 1<br />
+N = 3&nbsp;&nbsp;&nbsp;&nbsp;1 3 3 1<br />
+N = 4&nbsp;&nbsp;&nbsp;1 4 6 4 1<br />
+</b>
+</div>
+<p>
+Pascal triangle provides us an easy way to find out each coefficient of term in the expansion.
+</p>
+
+<h3>Back to Binomial Distribution</h3>
+<p>
+The function to compute <b>P(n, N)</b> is called binomial distribution function. This function has some interesting characteristics. These are discussed below.
+</p>
+
+<h3>Binomial Distribution is Normalized</h3>
+<p>
+A normalized distribution function - "f(x)" must result into a sum of "1", if all values of "f(x)" for every "x" are added together. Such a function is also called probability distribution function (PDF). We can easily visualize by computing the sum of <b>P(n, N)</b> for every value of "n".
+</p>
+<img src="/post/2006/01/distribution/d-binom-is-normal.png" alt="Binomial Distribution is Normalized" class="img-center" />
+<br />
+<p>`sum_(n=0)^N P(n,N) = sum_(n=0)^N \ ^N C_n.p^n.(1-p)^(N-n)`</p>
+<p>`\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =[p+(1-p)]^N \ \ \ \ (:\f\r\o\m\ \t\h\e\ \b\i\n\o\m\i\a\l\ \t\h\e\o\r\e\m:)`</p>
+<p>`\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =1`</p>
+
+<h3>Mean of Binomial Distribution is N.p</h3>
+<p>
+Recall from <a href="http://www.discover6sigma.org/post/2005/12/probability-and-statistics/">Probability and Statistics</a>, mean is the sum of product of "p(x)" and "x", for all values of "x". Therefore, in case of binomial distribution it can be computed using the following expression.
+</p>
+<img src="/post/2006/01/distribution/d-mean-of-binom.png" alt="Expression for Mean of Binomial Distribution" class="img-center" />
+<br />
+
+<p>`mu = ( sum_(n=0)^N n.P(n,N) )/( sum_(n=0)^N P(n,N))`</p>
+<p>`\ \ = sum_(n=0)^N n.P(n,N)`</p>
+<p>`\ \ = N.p`</p>
+
+<p>
+Although the rigorous mathematical proof is not given here, you are encouraged to try computing mean using simple values for "N" (e.g. 2 &amp; 3).
+</p>
+
+<h3>Variance of Binomial Distribution is N.p.(1-p)</h3>
+<p>
+The variance for binomial distribution can be computed using the following expression.
+</p>
+<img src="/post/2006/01/distribution/d-variance-of-binom.png" alt="Expression for Variance of Binomial Distribution" class="img-center" />
+<br />
+
+<p>`sigma^2 = ( sum_(n=0)^N (n-mu)^2 . P(n,N) ) / ( sum_(n=0)^N P(n,N) )`</p>
+<p>`\ \ = N.p.(1-p)`</p>
+
+
+<h3>Example</h3>
+<p>
+Let us take an example for `N = 20` and `p = 0.5` to visualize the above characteristics. The following table shows the data. This data can be quickly constructed using a spreadsheet like MS Excel.
+</p>
+<img src="/post/2006/01/distribution/d-binom-dist-tbl.png" alt="Example Data for Binomial Distribution" class="img-center" />
+<br />
+
+<p>
+We can observe from cumulative `P(n, N)` column that the distribution is properly normalized as the last row has a value of "1". The mean and the variance are "10" and "5" respectively. Note, variance for grouped data is computed using `sum ((fx^2) / N ) - mu^2` formula. It can easily be seen that the expression `sum ((fx^2)/N)` is equal to `n*n*P(n, N)`.
+</p>
+<p>
+The above results also agree with our formula for mean and variance derived earlier. The following graphs illustrate the probability and cumulative distributions.
+</p>
+<img src="/post/2006/01/distribution/d-binom-dist.png" alt="Binomial Distribution Graphs" class="img-center" />
+<br />
+
+
+<h2 class="h2large">Binomial to Normal Distribution</h2>
+<p>
+Normal distribution can be approximated as a special case of binomial distribution for very large "N" and finite "p". Normal distribution is found in abundance in nature. Examples are covered in the topic on <a href="http://www.discover6sigma.org/post/2006/10/distribution-in-real-life/" title="Distribution in Real Life">Distribution in Real Life</a> later. The PDF of normal distribution is given below.
+</p>
+<img src="/post/2006/01/distribution/d-normal-pdf.png" alt="Normal Distribution PDF" class="img-center" />
+<br />
+
+<p>`P(x) = 1/(sigma sqrt(2pi)) e - ((x - mu)^2) / (2 sigma^2) `</p>
+
+<p>
+The "e" in the expression is called exponential function. It is expressed as "e<sup>x</sup>", where "e" is equal to approximately 2.7183. The concept of "e" will be discussed later.
+</p>
+
+<p>
+Recall from <a href="http://www.discover6sigma.org/post/2005/10/introduction-to-six-sigma/">Introduction to Six Sigma</a> that 68% of area (i.e. the data points) falls within the area of `-1sigma` and `+1sigma` on either side of the mean. With this PDF, it is very easy to compute the area within `+- 1 sigma` from mean using the following expression.
+</p>
+<img src="/post/2006/01/distribution/d-normal-area-1sigma.png" alt="Area under Normal Distribution" class="img-center" />
+<br />
+
+<p>`P( mu - sigma <  x < mu + sigma)`</p>
+<p>`\ \ = 1/(sigma sqrt(2pi))  int_(mu+sigma)^(mu-sigma) e - ((x - mu)^2) / (2 sigma^2)  dx`</p>
+<p>`\ \ ~~ 0.6827`</p>
+
+
+<p>
+Other area computations can now be easily done using the same method.
+</p>
+<p>
+At this stage we can also observe, how binomial distribution becomes normal distribution when N is very large and p has a finite value. We can compute the area under the binomial distribution with in `+- 1 sigma` for `N=1000` &amp; `p=0.5`. The expression for this calculation is given below.
+</p>
+<img src="/post/2006/01/distribution/d-binom2normal.png" alt="Binomial to Normal Distribution" class="img-center" />
+<br />
+
+<p>`mu = N.p`</p>
+<p>`\ \ = 1,000 xx 0.5`</p>
+<p>`\ \ = 500`</p>
+<p>``</p>
+<p>`sigma = [N.p.(1-p)]^(1/2)`</p>
+<p>`\ \ = [1,000 xx 0.5 xx 0.5]^(1/2)`</p>
+<p>`\ \ = 15.81 ~~ 16`</p>
+<p>``</p>
+<p>`mu + sigma = 516`</p>
+<p>`mu - sigma = 484`</p>
+<p>``</p>
+<p>`P(484 < n < 516)`</p>
+<p>`\ \ = sum_(n=484)^516 \ ^1000 C_n.p^n.(1-p)^(1000-n)`</p>
+<p>`\ \ = sum_(n=484)^516 \ ^1000 C_n.(0.5)^1000`</p>
+<p>``</p>
+
+
+<p>
+You will notice that this value will be approximately equal to 0.7, which is very close to 0.6827. This calculation can be carried out using any spreadsheet like MS Excel. As "N" becomes higher, this values approaches to 0.6827.
+</p>
+</p>
+	</main>
+	<div class="clearfix"></div>
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><a href="/post/2005/12/statistics-simplified/">Statistics simplified</a></h1>
+		</div>
+		<p><p>
+We are bombarded with tons of data everyday in a business environment. The key challenge is how to convert this data into information and information into knowledge and finally knowledge into wisdom. While wisdom is an individual's ability to apply knowledge or understanding in a given situation; it is the transformation of data into knowledge where statistics comes to our rescue. Statistics is the science of collecting, organizing, and interpreting data whether it is numerical or non-numerical. In other words, statistics helps us measure our business processes leading to higher order of manageability.
+</p>
+<p>
+H.G. Wells, the father of science fiction, predicted that statistical thinking would one day be as necessary for efficient citizenship as the ability to read and write. Like many of his prediction, this is so true in today's context.
+</p>
+<p>
+Statistics seems intimidating in the beginning but it is not once you develop a clear understanding of this simple subject. Let us explore the simplicity of statistics. At this point, it may be a good idea to pause and quickly revisit our discussions in section on Introduction to Six Sigma.
+</p>
+<p>
+Statistics is classified into two categories: descriptive statistics and inferential statistics. Descriptive statistics addresses data collection, presentation and characterization. Let us recall our famous pizza example. We collected data on delivery time of 5000 orders and found that the average delivery time, a characteristics of data, was 16 minutes. This is an example of descriptive statistics. Inferential statistics covers estimation, drawing conclusions, decision-making, and hypothesis testing. Our inference that almost 99.7% deliveries will always be made on time is an example of inferential statistics.
+</p>
+
+<h2 class="h2large">Basic Statistics</h2>
+<p>
+Lets introduce a few formal terms that are used frequently. Population is the collection of things under consideration. It is also referred as the universe. Sample is a portion of the population selected for analysis. We use sampling techniques to select a faithful representation of the population. Parameter is a summary measure computed to describe a characteristic of the population. Statistic is a summary measure computed to describe a characteristic of the sample. The following figure illustrates the concept behind above terms graphically:
+</p>
+
+<img src="/post/2005/12/statistics-simplified/ss-stat-pop-samp.jpg" alt="Sample &amp; Population" class="img-center" />
+<br />
+
+<h3>Understanding Data</h3>
+<p>
+Understanding data is the first step in the journey of statistics (and also Six Sigma). Data is "something" known or given about a specific subject or situation. In other words, it is raw facts or figures such as last 5 years revenue figures of a company or colors of trousers that John has in his wardrobe.
+</p>
+<p>
+Data can come from different sources. Data sources can be categorized in two broad categories viz. primary or direct and secondary or indirect. Experimentation, observation, and survey are examples of direct or primary data sources. Precompiled data drawn from print media or electronic media is an example of secondary or indirect data source.
+</p>
+<p>
+There are two types of data - quantitative or numeric and qualitative or categorical. Last 5 years revenue figures of a company is an example of quantitative data. Colors of trousers that John has in his wardrobe are qualitative data.
+</p>
+
+<p class="related">EXPLORE: <a href="http://www.discover6sigma.org/post/2014/01/scales-of-measurement/">Scales of Measurement</a></p>
+
+<h3>Organizing Data</h3>
+<p>
+Organizing data leads to discovery of meaningful pattern and characteristics from the data. These patterns or characteristics are usually range of data, growth or decay patterns, what values appear most often, some kind of central tendency in data or scatter in data. Type of data determines the data organization technique.
+</p>
+
+<h4>Organizing Quantitative Data</h4>
+<p>
+The simplest way to organize raw or unordered quantitative data is to sort it in a specific order. Once sorted, more meaningful representations like stem &amp; leaf diagram, frequency or cumulative distributions and graphs can be created.
+</p>
+<p>
+Let us go back to our pizza shop example to develop a clear understanding. Here is some raw pizza delivery time data, collected during first half of a day.
+</p>
+
+<img src="/post/2005/12/statistics-simplified/ss-unsorted-data.jpg" alt="Raw Pizza Delivery Time Data" class="img-center" />
+<br />
+
+<p>
+This data can be easily sorted in ascending (or descending) order.
+</p>
+
+<img src="/post/2005/12/statistics-simplified/ss-sorted-data.jpg" alt="Sorted Pizza Delivery Time Data" class="img-center" />
+<br />
+
+<p>
+Once sorted, we can easily create a frequency distribution table using the following procedure.
+</p>
+<ol class="normal-li">
+<li>Find the range of data. In our case it is (20.5-8) = 12.5.</li>
+<li>Select number of classes, usually between 5 and 15. Note class is group (or range) of similar values of data points. We have chosen 7 classes.</li>
+<li>Compute class interval (or range) by dividing the range of data by number of classes and subsequently rounding the result. For us it is 12.5/7 = 1.79 or 2.</li>
+<li>Determine class boundaries for each class. In our case, first few classes are 8 minutes to less than 10 minutes, 10 minutes to less than 12 minutes.</li>
+<li>Finally count the data points for each class and assign to classes.</li>
+</ol>
+<p>
+Here is the final outcome.
+</p>
+
+<img src="/post/2005/12/statistics-simplified/ss-freq-table.jpg" alt="Pizza Delivery Time Frequency Table" class="img-center" />
+<br />
+
+<p>
+This data can now be easily transformed in to a frequency distribution graph or a histogram. The following figure illustrates the final graph. Note x-axis represents the class and the y-axis represents the frequency.
+</p>
+
+<img src="/post/2005/12/statistics-simplified/ss-freq-dist.jpg" alt="Pizza Delivery Time Frequency Distribution" class="img-center" />
+<br />
+
+<p>
+The figures in each bar are the data values that lie within the corresponding data class interval. A frequency distribution table or graph illustrates as to how the data is distributed within the range of the data. Distribution is a very important concept in context of Statistics and also Six Sigma and is separately discussed in detail.
+</p>
+<p>
+Another quick way to explore data is stem &amp; leaf diagram. Let us take the above pizza shop data and create a stem &amp; leaf diagram. We begin with list the stems vertically. Stems are the unique digits before the decimal point. Thereafter, we write down leafs corresponding to each stem in from of it. Leafs are the digits after the decimal point. The following figure illustrates the concept.
+</p>
+
+<img src="/post/2005/12/statistics-simplified/ss-stem-leaf.jpg" alt="Stem &amp; Leaf Diagram" class="img-center" />
+<br />
+
+<p>
+This is a very quick way to get an approximate picture of the frequency distribution.
+</p>
+
+<h4>Organizing Qualitative Data</h4>
+<p>
+In case of qualitative or categorical data, we are usually interested in count of events in each of the categories. For example, recall the customer complaints data collected in our pizza shop example.
+</p>
+
+<img src="/post/2005/12/statistics-simplified/ss-cust-cmplnts-data.jpg" alt="Customer Complaints Data" class="img-center" />
+<br />
+
+<p>
+This is nothing but the count of complaints in each category of complaints. A special case of this type of data is yes/no data, where there are only two possible outcomes. An example of yes/no data is the presence or absence of a defect.
+</p>
+<p>
+This type of data can be represented in form of summary tables or graphs like pareto, pie or bar. For a detailed example, please see section on Pareto Chart.
+</p>
+
+<h3>Determining Data Characteristics</h3>
+<p>
+During data organization, we tabulated the data, drew graphs, and discovered patterns such as frequency distribution. We are now ready to compute two key characteristics from the data. These characteristics are measure of central tendency and measure of dispersion or scatter.
+</p>
+
+<p>
+Other specific advance topics related to Six Sigma are explained separately on a need to know basis. Some such topics are distribution, central limit theorem, etc.
+</p>
+</p>
+	</main>
+	<div class="clearfix"></div>
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><a href="/post/2005/12/so-where-is-the-information/">So, where is the information?</a></h1>
+		</div>
+		<p><p>
+We have drawn so many graphs. We have covered tons of mathematics - mean, mode, median, and MAD. But where is the information? When we look at mean of a data set, what do we understand from it? It is now time to see the unseen!
+</p>
+<p>
+Let us begin with an example. Imagine that we are reviewing the production performance of our plants for last 30 days. The production managers are sharing the production details. John reports that the average production was 357287 units per day and his plant produced over 714213 units per day for 16 days in a row, which is a record. The production figures for all other managers were between 345623 and 366543 units per day. Does this tell us something? Think! Yes, it tells us a lot. What John reported is impossible. Let us do the mathematics to uncover that. Total production for John's plant is "357287 average units per day" x "30 days" = "10718610 units" and with 714213 x 16 the production figure during record period is 11427408 units. Impossible, isn't it?
+</p>
+<p>
+Let us put our observation formally now. If the mean of a data set containing non negative numbers is "&mu;", then the percentage of observations or data points that are greater or equal to a value x is always smaller or equal to `100 xx (mu/x)`. This is called <b>Markov's Inequality</b>.
+</p>
+<p>
+There is one more inequality worth learning. It is called <b>Chebychev's Inequality</b>. The largest percentage of values for a data set, that have a z score beyond "z" in either direction, is `100/z^2`. The following table summarizes the outcome of this inequality for quick reference.
+</p>
+
+<img src="/post/2005/12/so-where-is-the-information/switsi-cheb-ineq.jpg" alt="Chebychev's Inequality" class="img-center" />
+<br />
+
+<table class="table table-condensed table-hover">
+	<tr>
+		<th>z-score</th>
+		<th>Largest %</th>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>100.00</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>25.00</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>11.11</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>6.25</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>4.00</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>2.78</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>2.04</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>1.56</td>
+	</tr>
+
+</table>
+
+<p>
+To understand this inequality, let us pick up any row from the above table - say the second row. Now assume, that there is a dataset having a mean of &mu; and standard deviation of &sigma;. There are 25% values from the data set that are exactly 2&sigma; away from the mean i.e. &mu;. With this knowledge at hand, we can write down the value of standard deviation as:
+</p>
+
+<img src="/post/2005/12/so-where-is-the-information/switsi-cheb-ineq-proof.jpg" alt="Simple Proof of Chebychev's Inequality" class="img-center" />
+<br />
+
+<p>`\ \ \ \ \ \ \ sqrt( 0.25 xx (2 sigma)^2 + \b\a\l\a\n\c\e\ \7\5\%\ \d\e\v\i\a\t\i\o\n\ \s\q\u\a\r\e )`</p>
+<p>`=> sqrt(  sigma^2 + \b\a\l\a\n\c\e\ \7\5\%\ \d\e\v\i\a\t\i\o\n\ \s\q\u\a\r\e )`</p>
+<p>``</p>
+
+
+<p>
+In order to arrive at the value of standard deviation as "&sigma;", the second term must be "0" i.e. the balance 75% terms should be at mean. We can clearly see that it is not possible to have more than 25% values from the data set that are 2&sigma; away from the mean.
+</p>
+<p>
+Please note, that it applies to any distribution. At this stage, we may like to compare these figures with what we learned about normal distribution in Introduction to Six Sigma.
+</p>
+<p>
+Let us revisit our famous pizza shop. The shop management wishes to add another area for pizza delivery. They collect information (read mean &amp; standard deviation) on travel time for different routes over a period of time. This can now be used to perform a quick go/no-go analysis. Right?
+</p>
+
+<p>
+Indeed, mean and standard deviation contains a lot of information that we can use in real life.
+</p>
+</p>
+	</main>
+	<div class="clearfix"></div>
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><a href="/post/2005/12/probability-and-statistics/">Probability and statistics</a></h1>
+		</div>
+		<p><p>
+Let us revisit the frequency distribution table for pizza delivery time that we created in section on Statistics Simplified.
+</p>
+
+<img src="/post/2005/12/probability-and-statistics/pas-freq-table.jpg" alt="Example Frequency Distribution Table" class="img-center" />
+<br />
+
+<p>
+If the above data is our "sample space" then what is the probability of delivering pizza between 14 and 16 minutes? Clearly it is 10 divided by 40 equal to 0.25. Let us re-write the formal equation for computing the probability.
+</p>
+
+<img src="/post/2005/12/probability-and-statistics/pas-prob-formula.jpg" alt="Equation for Computing Probability" class="img-center" />
+<br />
+
+<p>`p(x_i)=f_i/N`</p>
+<p>`\w\h\e\r\e\,`</p>
+<p>`N=sum_(i=0)^n f_i \(\s\a\m\p\l\e\ \s\p\a\c\e\)`</p>
+
+
+
+<p>
+Now, recall the formula of computing the mean from a frequency table. And watch, how probability fits in to the formula.
+</p>
+
+<img src="/post/2005/12/probability-and-statistics/pas-stats2prob.jpg" alt="Probability and Statistics Relation" class="img-center" />
+<br />
+
+<p>`\ \ \ \ \ \ \ bar x = 1/N sum_(i=1)^n f_i x_i`</p>
+<p>`=> bar x = sum_(i=1)^n (f_i x_i)/N`</p>
+<p>`=> bar x = sum_(i=1)^n p(x_i)x_i`</p>
+</p>
+	</main>
+	<div class="clearfix"></div>
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><a href="/post/2005/12/measure-of-dispersion/">Measure of dispersion</a></h1>
+		</div>
+		<p><p>
+Let us first take a closer look at dispersion. Here are two frequency distribution graphs drawn from two different data sets of pizza delivery time.
+</p>
+
+<img src="/post/2005/12/measure-of-dispersion/mod-disp-example.jpg" alt="Example Frequency Distribution Graphs" class="img-center" />
+<br />
+
+<p>
+Notice both have a mean value of 14.4, but the degree of spread or scatter are different. The second data set has a higher spread compared to the first one. In other words, the second one has higher variability. Recall, one of the key objective in Six Sigma is to reduce variation. Therefore, it is very important to understand different key measures of dispersion clearly.
+</p>
+
+<h2 class="h2small">Range</h2>
+<p>
+It is the difference between the highest and the lowest value in the data set. In our first data set of pizza shop example, it is (20.5-8.0) or 12.5 whereas in the second case it is (25.9 - 5.9) or 20.0.
+</p>
+
+<h2 class="h2small">Interquartile Range</h2>
+<p>
+As the name suggest, it is the range of middle 50% of the ordered data set. Let us look at the pizza shop example data again. The interquartile range in the first case is (16.8  - 12.0) = 4.8, and in the second case it is (17.0 - 12.0) = 5.0.
+</p>
+
+<p>
+Clearly, interquartile range is less impacted by the extreme values of the data set, as compared to the range. However, both fail to provide an average figure of deviation or scatter present in the dataset.
+</p>
+
+<h2 class="h2small">Standard Deviation - Measure of Average Deviation</h2>
+<p>
+One simple way to determine average deviation seems to be to find the average of the expression (mean - data value) for every data value in the data set.
+</p>
+
+<img src="/post/2005/12/measure-of-dispersion/mod-avg-dev.jpg" alt="Average Deviation" class="img-center" />
+<br />
+
+<p>`1/n sum_(i=1)^n (x_i - bar x)`</p>
+
+<p>
+But there is a catch! It will be virtually "0". You may like to try it with one of the example data set given above.
+</p>
+
+<p>
+So, how do we compute average deviation? A smart idea would be to find average of the absolute value of the expression (mean - data value) for every data value in the data set. Note, absolute value means ignoring the "-" sign.
+</p>
+
+<img src="/post/2005/12/measure-of-dispersion/mod-mad.jpg" alt="Mean Absolute Deviation (MAD)" class="img-center" />
+<br />
+
+<p>`1/n sum_(i=1)^n |(x_i - bar x)|`</p>
+
+<p>
+This quantity is referred as Mean Absolute Deviation (MAD). MAD for the first data set is 2.6 and for the second data set is 3.3. This appears to be a good average measure of deviation. But, still there is a problem. Here the larger deviation values tend to get averaged out and the value does not reflect the impact of larger scatter or dispersion properly.
+</p>
+
+<p>
+Therefore, it will be appropriate to compute root mean square (RMS) of deviations (from the mean) instead of the simple mean. RMS is the square root of the mean of square of the each data value.
+</p>
+
+<img src="/post/2005/12/measure-of-dispersion/mod-std-dev.jpg" alt="Standard Deviation" class="img-center" />
+<br />
+
+<p>`sqrt (sum_(i=1)^n ((x_i - bar x)^2)/n )`</p>
+
+<p>
+Since, each data value is squared, the larger values automatically get amplified accordingly to reflect the impact of larger deviations. To understand the concept, let us look at the following data and the corresponding graph.
+</p>
+
+<img src="/post/2005/12/measure-of-dispersion/mod-understand-rms.jpg" alt="Understanding RMS" class="img-center" />
+<br />
+
+<p>
+The data shows X and Y values, where Y value is the square of X value. In the graph, the dark blue line represents the X value and the pink line represents the Y value. Notice how Y becomes increasingly larger with increase in X value. This means the large the deviation translates to correspondingly larger impact (i.e. the effect of squaring). Therefore, RMS is a faithful measure of average deviation. This is what is known as <b>Standard Deviation</b>.
+</p>
+
+<p>
+Here are the details of the first data set that we can use to quickly compute the vales ourselves.
+</p>
+
+<img src="/post/2005/12/measure-of-dispersion/mod-mod-working.jpg" alt="Example Working Details" class="img-center" />
+<br />
+
+<p>
+The Standards Deviation for the first data set is 3.2 and for the second data set is 4.4. Notice the affect of the amplification of larger scatter in the second case (i.e. 2.6 &amp; 3.2 versus 3.3 &amp; 4.4). Following table illustrates the mathematical formula for population standard deviation.
+</p>
+
+<img src="/post/2005/12/measure-of-dispersion/mod-pop-std-dev.jpg" alt="Population Standard Deviation" class="img-center" />
+<br />
+
+<p>`bb(\P\o\p\u\l\a\t\i\o\n\ \S\t\a\n\d\a\r\d\ \D\e\v\i\a\t\i\o\n)`</p>
+<p>`sigma = sqrt (sum_(i=1)^n ((x_i - bar x)^2)/n ) = sqrt (sum_(i=1)^n x_i^2/N - mu^2)`</p>
+
+<p>
+Following table illustrates the mathematical formula for sample standard deviation. The reason for division by "(n - 1)" instead of "n" is discussed later.
+</p>
+
+<img src="/post/2005/12/measure-of-dispersion/mod-samp-std-dev.jpg" alt="Sample Standard Deviation" class="img-center" />
+<br />
+
+<p>`bb(\S\a\m\p\l\e\ \S\t\a\n\d\a\r\d\ \D\e\v\i\a\t\i\o\n)`</p>
+<p>`S=sqrt( sum_(i=0)^n ((x_i - bar x)^2)  /(n-1) ) `</p>
+
+
+<h2 class="h2small">Variance </h2>
+<p>
+The square of standard deviation is known as Variance. Why did we need to define one more parameter, when standard deviation appears to be the right answer? It has some interesting and useful properties. Prominent one is the addition property for two independent data sets or observations. In other words, variance of the sum of independent data sets or observations (also referred random variables) is the sum of their variances.
+</p>
+
+<h2 class="h2small">Coefficient of Variation</h2>
+<p>
+Having discovered a good measure of average deviation, how do we compare the spread or scatter of two independent data sets? Just knowledge of standard deviation is not enough - it is the absolute measure of average deviation of a data set. For the purpose of comparison, we need to look at both mean and standard deviation together. Coefficient of Variation does that precisely.
+</p>
+
+<img src="/post/2005/12/measure-of-dispersion/mod-coef-vari.jpg" alt="Coefficient of Variation" class="img-center" />
+<br />
+
+<p>`bb(\C\o\e\f\f\i\c\i\e\n\t\ \o\f\ \V\a\r\i\a\t\i\o\n) = sigma/mu xx 100`</p>
+
+<p>
+Let us take an example. Consider two different data sets having mean and standard deviation as "14.4 &amp; 3.2" and "144.0 &amp; 3.2" respectively. The same standard deviation does not mean identical degree of scatter. In fact the second one has very little degree of spread or scatter. And coefficient of variation highlights it clearly - coefficient of variation for the first data set is 22.2 and for the second data set it is 2.2.
+</p>
+
+<h2 class="h2small">Z-Score</h2>
+<p>
+The z score of a data point or observation indicates how far and in what direction that observation is away from its data set's mean.
+</p>
+
+<img src="/post/2005/12/measure-of-dispersion/mod-z-score.jpg" alt="Z-Score" class="img-center" />
+<br />
+
+<p>`Z = (x_i - mu)/sigma`</p>
+
+<p>
+Z-score is revisited later in the section on distribution.
+</p>
+</p>
+	</main>
+	<div class="clearfix"></div>
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><a href="/post/2005/12/measure-of-central-tendency/">Measure of central tendency</a></h1>
+		</div>
+		<p><p>
+Simply stated, central tendency is a kind of middle point of a distribution and dispersion is the degree of scatter or spread of the data. There are several measures of central tendency. We will explore three such measures - median, mode, and mean. We will continue with our pizza shop example to develop a clear understanding of these characteristics.
+</p>
+
+<h2 class="h2small">Median</h2>
+<p>
+It is the middle most data item in the entire ordered or sorted data set. Finding middle point in data set with odd number of items is easy; it is simply (n + 1)/2 th item. In case of even number of items, the median is the sum of the two middle points divided by "2". In our pizza shop example, median is (14.0 + 14.4)/2 or 14.2, because in this case number of data items are even.
+</p>
+
+<h2 class="h2small">Mode</h2>
+<p>
+It is the data value that is found or repeated most often in the data set. In our pizza shop example, it is 14.0 as it is found four times i.e. the maximum in the data set.
+</p>
+
+<h2 class="h2small">Mean</h2>
+<p>
+Often referred as average, it is the sum of all data values divided by total number of data items. In our pizza shop example, mean is 14.4. Following table illustrates the mathematical formula for mean.
+</p>
+
+<img src="/post/2005/12/measure-of-central-tendency/moct-mean.jpg" alt="Mean" class="img-center" />
+<br />
+
+<p>`bb(\S\a\m\p\l\e\ \m\e\a\n)`</p>
+<p>`bar x = (sum x)/n`</p>
+<p>`bb(\P\o\p\u\l\a\t\i\o\n\ \m\e\a\n)`</p>
+<p>`mu = (sum x)/N`</p>
+<p>``</p>
+<p>`\w\h\e\r\e\ bb(sum x)\ \i\s\ \s\u\m\ \o\f\ \a\l\l\ \d\a\t\a\ \v\al\u\e\s`</p>
+<p>`\ \ \ \ \ \ \ \ \ \ \ \ \ bb(N)\ \i\s\ \n\u\m\b\e\r\ \o\f\ \d\a\t\a\ \i\t\e\m\s\ \i\n\ \p\o\p\u\l\a\t\i\o\n`</p>
+<p>`\ \ \ \ \ \ \ \ \ \ \ \ \ bb(n)\ \i\s\ \n\u\m\b\e\r\ \o\f\ \d\a\t\a\ \i\t\e\m\s\ \i\n\ \s\a\m\p\l\e`</p>
+
+<p>
+If we only have a frequency table, then we assume that the mean value of each range (or class) appears in the data set "its frequency" times. The mean value of range is computed by adding the upper &amp; lower value and by dividing it by "2". The formula to arrive at mean becomes:
+</p>
+
+<img src="/post/2005/12/measure-of-central-tendency/moct-mean-using-freq.jpg" alt="Mean Using Frequency" class="img-center" />
+<br />
+
+<p>`bar x = 1/n  sum_(i=1)^n f_i x_i`</p>
+<p>`\w\h\e\r\e\,`</p>
+<p>`N = sum_(i=1)^n f_i`</p>
+
+<p>
+Here "n" is the number of classes (or ranges), "f" represents the frequency of data item "x". Note ith "x" is mean value of ith class (or range).
+</p>
+<p>
+Very simple, isn't it? Looks like that we have understood all about mean, mode and median. No, not really! We need to develop a deeper and clearer understanding of these concepts, as they are the founding principles of Statistics (also Six Sigma). To do that, let us go back to our childhood and recall seesaw.
+</p>
+
+<img src="/post/2005/12/measure-of-central-tendency/moct-see-saw.jpg" alt="Seesaw Example" class="img-center" />
+<br />
+
+<p>
+As long as we had a partner of similar (ideally identical) weight, we could easily sit equidistant from the center and enjoy. If there was a significant difference in our weight, we needed to adjust our respective distances from the center. The heavier child sat closer to the center compared to the lighter child. Recall, if heavy and light child sat equidistant from the center, the lighter child always remain hung in the air!
+</p>
+<p>
+We understood all these tricks in our childhood by simple common sense. We later also learned the physics behind it. The 2 key concepts involved are center of gravity (or center of mass) and moment of mass.
+</p>
+<p>
+Center of gravity is the position at which the mass "balances" without loosing balance or tilting to the left or right.
+</p>
+<p>
+Moment of mass is always determined about a point. It is the tendency of the mass to contribute a torque or in other words make the object rotate (about a point).
+</p>
+<p>
+Putting it formally, in this seesaw to play perfectly we needed "m1.x1 = m2.x2". Here "m" denotes mass and "x" denotes distance of child from center. The suffix 1 &amp; 2 are identifying child-1 and child-2. The center point in the above picture is the "center of gravity" and "m1.x1" and "m2.x2" are the "moment of mass" for children.
+</p>
+<p>
+These principals hold good if there are multiple children sitting on each side of the seesaw. Look at the following figure.
+</p>
+
+<img src="/post/2005/12/measure-of-central-tendency/moct-see-saw-multi.jpg" alt="Example - Seesaw with multiple children" class="img-center" />
+<br />
+
+<p>
+This time "x" is denoting the coordinates instead of the distances. Therefore, for balance it is important that the following holds true:
+</p>
+
+<img src="/post/2005/12/measure-of-central-tendency/moct-see-saw-multi-eqn.jpg" alt="Seesaw in balance - Equations" class="img-center" />
+<br />
+
+<p>`m_1(bar x - x_1) + m_2(bar x - x_2) = m_3(bar x - x_3) + m_4(bar x - x_4) +m_5(bar x - x_5)`</p>
+
+<p>
+Now, it is time to build a formal picture. Imagine that there are 1 to n masses distributed across our seesaw. We can now easily understand the following sequence of equations.
+</p>
+
+
+
+<div class="blocktext">
+Notice, that the last equation is exactly like the equation for finding mean from a frequency table or distribution. There is a striking similarity between "center of gravity" and "mean". The "frequency" is just like the "mass" and "distance" is like "data item". At center of gravity, the "moment of mass" on left is same as that of right. In context of a frequency diagram, this becomes the area under the curve (or histogram). The median is the middle point of the seesaw. The mode is the point where there is maximum weight (i.e. frequency or maximum repetition).
+</div>
+<p>
+With this conceptual background, it should now become easy for us to visualize the following facts. In any symmetrical frequency distribution, mean, mode and median are always at the same point. However, if there is a skew scenario changes. Look at the following figure:
+</p>
+
+<img src="/post/2005/12/measure-of-central-tendency/moct-skew.jpg" alt="Skew in frequency distribution" class="img-center" />
+<br />
+
+<p>
+In case of positive skew (as shown in first figure), the mode is at the peak of the distribution, the median is to the right of mode, and the mean is to the right of both - mode &amp; median. In case of negative skew, scenario reverses.
+</p>
+
+<h2 class="h2small">Important Observations about Mean, Mode, and Median</h2>
+<ol class="normal-li">
+<li>Median is usually not applicable to qualitative data.</li>
+<li>Mode is useful for a) qualitative data, b) quantitative data having skewed distribution where considering all data points (or observations) is not important and focus is on the "typical value". In a multi-modal data situation, it may begin to loose meaning.</li>
+<li>Mean is useful wherever it is important to consider all data points or observations (total is important).</li>
+<li>Therefore, the extreme values in the data set impact the mean. Weighted mean should be considered, if relative importance of each data point or observation has to be accounted.</li>
+</ol>
+</p>
+	</main>
+	<div class="clearfix"></div>
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><a href="/post/2005/11/risk-management/">Risk management</a></h1>
+		</div>
+		<p><p>
+To understand risk management, let us first understand what is a risk and what is not a risk?
+</p>
+<p>
+Consider the following statement, "I run a risk of collision when I drive on a crowded street as my brake pads are completely worn-out". Is it a risk? No, it is not. In fact the collision is certain, unless of course you are driving on an absolutely empty freeway - which you are not in this case! It is a problem and needs a fix.
+</p>
+<p>
+Now consider the following statement, "I need to attend a critical negotiation meeting at customer location at 11:00 hours sharp. It takes 25 minutes to reach under normal traffic conditions. I can start for that meeting only at 10:30 hours due to an important assignment. I run a risk of reaching late and lose on initial negotiation advantage". Is this a risk? Yes, it is. The element of uncertainty makes it a risk. And you can possibly explore mitigation strategies like going on a motorcycle rather then using a car. At this stage, it is also important to recall the exact meaning of word mitigate, "to moderate or lessen a quality or condition in force or intensity".
+</p>
+<p>
+Risk has two key elements - a) an uncertainty and b) an impact in terms of potential loss (if it happens).
+</p>
+<p>
+Risk management is a continuous process. Risk management process involves following key steps:
+</p>
+<ol class="normal-li">
+<li>Identify risks</li>
+<li>Assess each risk</li>
+<li>Rank all risks according to their severity</li>
+<li>Plan for risk mitigation and contingency on the basis of outcome of step 3</li>
+<li>Monitor each risk</li>
+<li>Control deviations (if any) from risk mitigation plan</li>
+</ol>
+
+<h2 class="h2small">Identify</h2>
+<p>
+Risk identification is carried out at the beginning of every project. Subsequently, it is revisited during each project review on an ongoing basis for all residual risks and new risks. The identification of risk is highly project specific. In general, any project has three key dimensions viz. cost, specifications, and time; and risks can be discovered in these contexts. Each risk must be clearly documented in a "condition (i.e. uncertainty)" - "consequence (i.e. impact)" format. In our previous example, "condition" is the occurrence of heavy traffic and "consequence" is losing the initial negotiation advantage.
+</p>
+<p>
+It is always a good idea to create a risk classification or taxonomy. Each risk must be classified according to the taxonomy. Once this data acquires critical mass, it helps in developing better risk management strategies.
+</p>
+
+<h2 class="h2small">Assess</h2>
+<p>
+Risk assessment involves determining the uncertainty, the impact, and the first risk indicator. The uncertainty is the probability of occurrence of the risk. This probability can be determined either qualitatively or quantitatively. For qualitative measure, it is recommended to use 4 categories (to avoid middle point bias) such as 1-low, 2-medium, 3-high, and 4-very high. The quantitative measure is a normal probability scale measure from 0 to 1. The impact can be determined in terms of its severity, preferably a value from 1 (lowest) to 4 (highest). The first risk indicator is earliest condition or event that signals risk turning in to a problem.
+</p>
+
+<h2 class="h2small">Rank</h2>
+<p>
+After successful risk assessment, ranking is a relatively simple task. Sorting the product of the probability of every risk and its corresponding impact generates the risk ranking. This now becomes an important input for risk mitigation planning. The risk ranking determines the extent of risk planning focus.
+</p>
+
+<h2 class="h2small">Plan</h2>
+<p>
+At this step, a mitigation approach is developed for each risk, to either avoid or reduce the impact of risk. The responsibility to implement the mitigation strategy is assigned to a team member along with a target date. The actual execution of the mitigation plan is called risk resolution. In addition, a contingency plan is also developed to handle the situation when a risk turns in to a problem.
+</p>
+
+<h2 class="h2small">Monitor</h2>
+<p>
+It involves regular tracking of risk resolution process and first risk indicator. The deviations in the risk resolution process are recorded. Occurrence of first risk indicator may trigger activation of contingency plan.
+</p>
+
+<h2 class="h2small">Control</h2>
+<p>
+At this step, strategy to reduce deviation in the risk resolution process is developed and implemented.
+</p>
+<p>
+All the above six steps are carried out on an ongoing basis for a project so that all risks stay managed during its life cycle.
+</p>
+
+<h2 class="h2small">Minimum Risk Documentation Format</h2>
+<p>
+The following table outlines a minimum documentation format to record each project risk:
+</p>
+
+<img src="/post/2005/11/risk-management/rm-doc-format.jpg" alt="Documentation Format" class="img-center" />
+</p>
+	</main>
+	<div class="clearfix"></div>
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><a href="/post/2005/11/pareto-chart/">Pareto chart</a></h1>
+		</div>
+		<p><p>
+A Pareto Chart depicts the frequency with which certain events occur. It is a bar graph where each frequency (or frequency range) is shown in a descending order of importance of data, from left to right.
+</p>
+<p>
+This is based on the Pareto Principle, also called 80-20 rule or rule of vital few. Formulated by the father of quality - Dr. Juran and named after the famous Italian economist Vilfredo Pareto, this principle helps separate the "vital few" from the "useful many" in any business scenario. It helps us identify and focus on "vital few" to maximize our returns on investments on resources.
+</p>
+<p>
+To develop an exact understanding of the concept, let us go back to our famous pizza shop example. Here is some old customer complaint data before they mastered the thirty minutes pizza delivery.
+</p>
+
+<img src="/post/2005/11/pareto-chart/pc-raw-data.jpg" alt="Customer Complaint Data" class="img-center" />
+<br />
+
+<p>
+The pizza shop wanted to develop a strategy to reduce the customer complaint dramatically. This is where Pareto Chart comes in to action. Let us see how.
+</p>
+<p>
+To create a Pareto Chart, this data is sorted and cumulative count &amp; percentages are computed as illustrated in the following table.
+</p>
+
+<img src="/post/2005/11/pareto-chart/pc-proc-data.jpg" alt="Cumulative Count &amp; Percentages" class="img-center" />
+<br />
+
+<p>
+Using this data. a bar-cum-line graph is drawn using a standard spreadsheet like MS Excel. The bar represents the count of each complaint and the line illustrates the cumulative complaint count percentages.
+</p>
+
+<img src="/post/2005/11/pareto-chart/pc-pc.jpg" alt="Perato Chart" class="img-center" />
+
+<p>
+With this graph, finding the vital few is simple. Locate the 80% point on the right y-axis and find the corresponding point on the x-axis. It clearly highlights that we need to address "delayed delivery" and "pizza not hot" complaint categories to take care of 80% of the customer complaints. In fact, the "pizza not hot" complaint was partially the result of "delayed delivery" problem. These two complaint categories only constitute 22% of all the complaint categories. Can we see the 80-20 rule? It is evident that by fixing only 20% (22% to be precise) of the complaint categories solve 80% (78% to be precise) of the customer complaints. This helped our pizza shop to focus on solving the right set of the problems
+</p>
+</p>
+	</main>
+	<div class="clearfix"></div>
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><a href="/post/2005/11/operational-definition/">Operational definition</a></h1>
+		</div>
+		<p>
+<p>
+Recall the quote in the "first step" section of this site, "You can manage, what you can measure; you can measure, what you can define; you can define, what you can understand". Operational definition is the first step towards effective management. It helps us build a clear understanding of a concept or a phenomenon so that it can be unambiguously measured.
+</p>
+<p>
+Let us take a very simple example to understand the need and the concept of operational definition. Let us imagine a situation that we wish to buy an all-purpose shirt with 50% cotton and 50% polyester. Would you accept a shirt whose front is made up of 100% cotton cloth and the back made of 100% polyester cloth? Surely not! Clearly we need to (operationally) define what we need.
+</p>
+<p>
+A better expression would be that we need a shirt made up of a cloth having even distribution of cotton and polyester fibers and their proportion by weight (or may be by number) is equal. So far so good, but we also need to have a mechanism to test it. In this case, we can send the shirt to a lab where randomly selected two areas (say 1 cm x 1 cm) - one from the back and one from the front are examined for the contents.
+</p>
+<p>
+The lab reports that group of two fibers of each - polyester and cotton are interwoven to make this clothe. Did we mean alternate fibers of polyester and cotton or something else? We now discover that we even need to define "even distribution".
+</p>
+<p>
+In a business management scenario, common words such as good, reliable, and accurate (etc.) can have multiple meanings unless they are (operationally) defined in a specific context.
+</p>
+<p>
+So how do we construct an operational definition? The process is explained with the help of an example in the following figure:
+</p>
+
+<img src="/post/2005/11/operational-definition/od-flowchart.jpg" alt="How to construct an operational definition" class="img-center" />
+<br />
+
+<p>
+Document the outcome of each process step and that becomes the operational definition. The operation definition must be tested before it is rolled out.
+</p>
+<div class="blocktext">
+In the words of quality guru Deming, "An operational definition is one that people can do business with.... It must be communicable, with the same meaning to vendor as to purchaser, same meaning yesterday and today..."
+</div>
+</p>
+	</main>
+	<div class="clearfix"></div>
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><a href="/post/2005/11/fishbone-diagram/">Fishbone diagram</a></h1>
+		</div>
+		<p><p>
+The fishbone diagram is a graphical method for finding the root causes of an effect. The effect can be either a negative one, such as a process defect or an undue process variation; or a positive one, such as a desired process outcome. Kaoru Ishikawa, a famous Japanese consultant developed this method in the 1960s. It is also known as "Cause-and-Effect Diagram" or "Ishikawa Diagram". The balance chapter details the steps required to construct a fishbone diagram. The example effect to illustrate the concept is "high petrol consumption in a car".
+</p>
+
+<h2 class="h2small">Step I</h2>
+<p>
+Identify the process effect to be analysed. Develop an Operational Definition to ensure that it is clearly understood. Write the effect in a box on the right side and draw a horizontal arrow from left to right that touches the box as illustrated in the figure below.
+</p>
+
+<img src="/post/2005/11/fishbone-diagram/fd-step-i.jpg" alt="Step I" class="img-center" />
+<br />
+
+<h2 class="h2small">Step II</h2>
+<p>
+Identify the main categories of causes resulting in the effect under consideration. These categories can easily be selected from the applicable six key process elements. These process elements are people, environment, material, method, machinery, and measurement. Add selected categories in the diagram as illustrated in the following figure.
+</p>
+
+<img src="/post/2005/11/fishbone-diagram/fd-step-ii.jpg" alt="Step II" class="img-center" />
+<br />
+
+<h2 class="h2small">Step III</h2>
+<p>
+Identify as many causes under each category and add them to the corresponding category. Detail each cause further (recursively) to the lowest level possible.
+</p>
+
+<img src="/post/2005/11/fishbone-diagram/fd-step-iii.jpg" alt="Step III" class="img-center" />
+<br />
+
+
+<p>
+Analyse this diagram to identify the causes that require deeper investigation. As fishbone diagram identify only potential causes, it may be a good idea to use a Pareto Chart to determine the cause(s) to focus on first.
+</p>
+</p>
+	</main>
+	<div class="clearfix"></div>
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><a href="/post/2005/11/brainstorming/">Brainstorming</a></h1>
+		</div>
+		<p><p>
+Brainstorming is a technique to systematically generate ideas usually to handle a challenging situation, from a group of people by nurturing free-thinking. There are several such opportunities in any organisation, e.g. Improving productivity, increasing sales, finding new business development areas, launching new products or defining new processes.
+</p>
+<p>
+While there may be well defined techniques or processes to handle these situations, but brainstorming is a critical activity in all of these processes. Techniques such as Affinity, Nominal group technique, Cause and Effect Diagram, Failure mode effect analysis, 5 whys, Fault tree analysis, Decision matrix, and Risk analysis require brainstorming as an integral part of their execution. The list is endless!
+</p>
+<p>
+Brainstorming required for generating inputs for the above techniques is complex as compared to the free flow ideation that one usually associates with the term brainstorming.  An example of the kind of brainstorming required here can be observed in a 5-why analysis, where brainstorming occurs for every why in a hierarchical manner until a root cause is discovered.
+</p>
+<p>
+Here are few example of situations, where brainstorming can be applied as an effective technique:
+</p>
+<ol class="normal-li">
+<li> Process design or re-engineering using SIPOC, and Process Map.</li>
+<li> Root cause determination by leveraging techniques like Fishbone Diagram, 5 Whys, and Fault tree analysis.</li>
+<li> Developing robust concepts, design, and processes using FMEA.</li>
+<li> Project Management using Project Planning &amp; Scheduling and  Risk Analysis.</li>
+</ol>
+<p>
+Brainstorming session must be orchestrated by a facilitator. The number of participants in a session must be limited to a manageable number - typically between 5 and 15. There are few rules for a successful brainstorming, which should be enforced by the facilitator. These rules are listed below.
+</p>
+<ol class="normal-li">
+<li>Focus on generating a large number of ideas</li>
+<li>Active involvement of every participant in the process</li>
+<li>Encourage out-of-the-box thinking and creativity</li>
+<li>Promote criticism free environment - encourage all types of ideas including wild or seemingly ridiculous ideas while keeping the purpose of the brainstorming in mind</li>
+<li>Combine ideas to create newer ideas</li>
+<li>Setup a reasonable time limit based on the challenge in hand</li>
+</ol>
+
+<h2 class="h2small">How to conduct brainstorming?</h2>
+<ol class="normal-li">
+<li>Select and block a (lively) room free from interruptions and distractions for brainstorming.</li>
+<li>Identify and invite the participants. The invite must clearly state the purpose of brainstorming.</li>
+<li>Before the start, ensure that the room is equipped with basic essentials like blackboard, flipcharts, pens, and large size post-its, etc.</li>
+<li>Initiate the session by clearly explaining the purpose, possibly already written and highlighted on the board. Also set the basic rules for the session. Set some time towards the end of the session for organizing the ideas generated.</li>
+<li>Invite people to come up with ideas. One of the participants may be designated to record each idea or alternatively each participant may be requested to pen his/her idea on a post-it to speed up the process. Maintain a lively environment, monotony must be avoided at every cost.</li>
+<li>Ensure that the rules of a successful brainstorming are followed properly.</li>
+<li>Towards the end, focus on organizing ideas and eliminating the duplicate ones. If the number of ideas generated is sufficiently large, affinity diagram may be used to organize the ideas.</li>
+<li>Close the session with a note collectively appreciating each ones contribution.</li>
+</ol>
+
+<p>
+Armed with this idea bank, we are now ready to shortlist ideas which subsequently can be evaluated for implementation.
+</p>
+<p class="related">EXPLORE: <a href="http://www.discover6sigma.org/post/2014/01/voting-prz/">Decision Making using Voting: How to use Voting to shortlist Ideas</a></p>
+<div class="blocktext">
+Today, it is possible to conduct brainstorming session online using web where participants across the globe can effectively collaborate and contribute.
+</div>
+</p>
+	</main>
+	<div class="clearfix"></div>
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><a href="/post/2005/11/benchmarking/">Benchmarking</a></h1>
+		</div>
+		<p><p>
+Benchmarking is a standard by which something can be measured or judged. This term was first used by surveyors. They set a benchmark by marking a point of known vertical elevation. Therefore benchmark becomes a point of reference for a measurement.
+</p>
+<p>
+We benchmark everyday. We compare our performance, lifestyle, or a game of golf with friends and peers.
+</p>
+<p>
+What is benchmarking in a business environment? It involves making comparisons with other businesses, so that we can develop an objective assessment of our business. It helps us to a) identify areas for breakthrough improvements, b) establish higher targets, and c) new priorities.
+</p>
+<p>
+Note benchmarking is not simple comparison and subsequent blind copy of what seems to be the best. We must carefully analyze the outcome of benchmarking and focus on what adds maximum value in our business context. There are three types of benchmarking.
+</p>
+
+<h2 class="h2small">Internal Benchmarking</h2>
+<p>
+It compares (critical-to-business) processes or products across the organization on key critical-to-quality parameters such as turn-around-time or cost.
+</p>
+
+<h2 class="h2small">Functional Benchmarking</h2>
+<p>
+It compares similar functions or processes with industry leaders in that area.
+</p>
+
+<h2 class="h2small">Competitive Benchmarking</h2>
+<p>
+It focuses on direct competitors in terms of their products, services, processes, and customers.
+</p>
+<p>
+The following flowchart summarizes the benchmarking processes.
+</p>
+
+<img src="/post/2005/11/benchmarking/be-flowchart.jpg" alt="Benchmarking Processes" class="img-center" />
+<br />
+
+<p>
+Some of the simple and common candidates for benchmarking are customer satisfaction, critical-to-business processes, products, profitability, and value addition per employee. The list is endless. We need to shortlist what is critical to our business success.
+</p>
+<div class="blocktext">
+Benchmarking is one of the first key steps in any Six Sigma DMAIC or DFSS project.
+</div>
+</p>
+	</main>
+	<div class="clearfix"></div>
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><a href="/post/2005/10/why-6-sigma/">Why 6 Sigma?</a></h1>
+		</div>
+		<p><p>
+Simply because Six Sigma
+</p>
+<ol class="normal-li">
+<li>Delivers business excellence;</li>
+<li>Improves profits;</li>
+<li>Delights customers;</li>
+<li>Increases entry barrier for competition.</li>
+</ol>
+
+
+<p>
+The benefits from Six Sigma are indeed significant. Here are some leading business examples that highlight the benefits.
+</p>
+
+<h2 class="h2small">GE</h2>
+<p>
+With adaptation of Six Sigma in 1996, the year 1997 became a year of change. In GE's annual report, the letter to the shareholders &amp; employee started with a note, "In 1997, your Company had a great year - a record year". Six Sigma contributed almost US$300 million to the GE profits:
+</p>
+<img src="/post/2005/10/why-6-sigma/w6s-6satge97ar.jpg" alt="GE Annual Report 1997 - Six Sigma Costs and Benefits" class ="img-center" />
+<br />
+<p>
+Six Sigma fuelled an unthinkable growth at GE as evident from the subsequent year's annual report - "We have invested more than a billion dollars in the effort, and the financial returns have now entered the exponential phase - more than three quarters of a billion dollars in savings beyond our investment in 1998, with a billion and a half in sight for 1999".
+</p>
+
+
+<h2 class="h2small">DuPont</h2>
+<p>
+Annual report of year 2004 of DuPont states, "Six Sigma continues to play a major role in achieving all of our business objectives, both productivity and growth. We are now finishing our sixth year of Six Sigma at DuPont. At the outset, we focused on cost improvement, mainly at our manufacturing sites. We now have Black Belts leading projects in every function and region, and over 25 percent of our projects are aimed at growing revenue. Six Sigma has become the way we work at DuPont and is a key approach to improving execution as we enter 2005".
+</p>
+
+
+<h2 class="h2small">3M</h2>
+<p>
+The section on Management's Discussion and Analysis of Financial Condition and Results of Operations in 3M's 2004 annual reports highlights, "Operating income in 2004 increased by 23.3% versus 2003, as all seven business segments posted increases. The combination of solid sales growth and positive benefits from 3M's 2004 corporate initiatives drove the operating income increase. Cost reduction projects related to these initiatives - Six Sigma, Global Sourcing Effectiveness, 3M Acceleration and eProductivity - contributed over $400 million in aggregate operating income benefits in 2004".
+</p>
+
+<p>
+Their Display &amp; Graphics Business states, "Operating income rose 27.8 percent and operating profit margins increased to 33.2 percent, powered by a combination of double digit sales growth and benefits from Six Sigma and 3M's other corporate initiatives".
+</p>
+</p>
+	</main>
+	<div class="clearfix"></div>
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><a href="/post/2005/10/variation-defect/">Variation & Defect</a></h1>
+		</div>
+		<p><h2 class="h2small">Variation</h2>
+<p>
+Variation is everywhere. It probably touches our lives more closely than any other thing! Only the degree of variation may vary.
+</p>
+<p>
+In automotive parts industry, every cylinder produced has a different diameter, usually within a tolerance limits around a nominal diameter. Traffic conditions on road vary every day. In a shopping mall, number of people changes every day. Response time in telebanking varies during the day. Variation even drives physics - quantum physics. In the words of the living legend of physics, Stephen Hawking, "Quantum mechanics does not predict a single definite result for an observation. Instead, it predicts a number of different possible outcomes and tells us how likely each of these is. Quantum mechanics therefore introduces an unavoidable element of unpredictability or randomness into science." Let us take a simple example to understand variation further.
+</p>
+<p>
+What time do we reach work in the morning? In a 9 to 5 office environment, do we reach at dot 9AM everyday? Some day it may take a little longer and we reach at 9:10AM, whereas on another day it takes a little shorter to reach and we arrive at 8:50AM. In general, we know that we get to office between 8:50AM to 9:10AM. So there is a variation of 20 minutes! This variation may occur due to traffic signals, and traffic conditions. But we know that the variation is contained with in 20 minutes and seems "natural" or "common". A closer look reveals that this variation does not have a specific reason and is random within 20 minutes range.
+</p>
+<p>
+Now imagine, we begin to get flat tyre often. This results into further a delay of 20 to 25 minutes every day leading to increase in variation. We finally discover that it is happening due to worn-out tyres. Upon changing the tyres, we are back to our natural variation of 20 minutes because we have removed the "special" or "assignable" cause of variation.
+</p>
+<p>
+Only way to reduce the natural variation is to change or improve our process of traveling to office. Possibilities are to choose a different route with more predictable traffic conditions, or switch to a 2 wheeler or bicycle to nullify heavy and unpredictable traffic conditions.
+</p>
+
+<h4>Formal Picture</h4>
+<p>
+Variation is present in the output(s) of every process. The degree of variation or the distribution pattern of the output is a measure of process capability or maturity. The six key process elements - people, environment, material, method, machinery, and measurement impact variation. It can be classified in 2 categories - common or natural and special or assignable.
+</p>
+<p>
+The natural variation always occurs and it can not be traced to a specific cause. It is random within a predictable range or in other words, it follows a distribution pattern (we have detailed discussion on distribution later). The natural variation reduction requires fundamental change in the process.
+</p>
+<p>
+The special variation occurs due to an assignable cause outside the natural variation. It can easily be traced to a specific cause, usually relating to the 6 key process elements. Once detected, its removal is a relatively simple exercise.
+</p>
+<p>
+At this stage, it may be a good idea to revisit our example of pizza shop in section on "Introduction to Six Sigma".
+</p>
+<div class="blocktext">
+Understanding variation is fundamental to business excellence. As quality guru W. E. Deming says, "If I had to reduce my message for management to just a few words, I'd say it all had to do with reducing variation."
+</div>
+
+<h2 class="h2small">Defect</h2>
+<p>
+In our context, a defect is an imperfection of deficiency in a product or a service detected (or perceived) by the customer. In other words, defect occurs when variation in a product or service goes beyond the acceptable limits. We can identify or detect a defect in a product/service only and only if we have a measurable benchmark or target.
+</p>
+
+<p>
+Let us go back to our pizza shop example in "Introduction to Six Sigma". Imagine the situation without a 30 minutes delivery target. There was absolutely no way to determine how much of delay is really a delay! Customer perception of delayed delivery would possibly have been a function of his/her hunger level; and management would have had no idea to how to handle such defects.
+</p>
+<div class="blocktext">
+The target must be set up on the basis of industry/competitor benchmarks and to exceed customer expectations.
+</div>
+</p>
+	</main>
+	<div class="clearfix"></div>
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><a href="/post/2005/10/processes-are-everywhere/">Processes are everywhere</a></h1>
+		</div>
+		<p><p>
+Processes exist everywhere, from cosmos to planets to living beings. We can view every piece of work that we do as a process. But what is a process? Common dictionary meaning of process is "series of actions, changes, or functions bringing about a result".
+</p>
+<p>
+Examples of processes are plenty - process of obtaining housing loan, car insurance claim process, fractional distillation process to produce petroleum products, creation of black holes is a cosmic process, and finally creation of cosmos by God is a divine process!
+</p>
+<p>
+On a formal note, it is something that accepts one or more inputs from its suppliers, transforms them into one or more outputs for its customers. The transformation, carried out using a defined sequence of activities, usually adds value to inputs to produce outputs.
+</p>
+
+<img src="/post/2005/10/processes-are-everywhere/pae-sipoc.jpg" alt="SIPOC" class="img-center" />
+<br />
+
+<p>
+The inputs are called as X's and the outputs are referred as Y's. The process can be imagined as a transformation function "f" of input variables "X". A mathematical view of the above picture is given below:
+</p>
+
+<img src="/post/2005/10/processes-are-everywhere/pae-yeqfx.jpg" alt="Y = f(X)" class="img-center" />
+<br />
+
+<p>`Y=f(x)`</p>
+
+<p>
+Businesses are also collection of processes that are involved in the final goal of delivering a product or service to the customer. Managing business processes efficiently is a critical success factor for businesses.
+</p>
+<p>
+Most business managers' focus is only on process Y's. While Y's are important, to focus on X's and the "f" is equally essential. Remember, if the process turn-around-time to produce output (Y's) from inputs (Xs) is high then irrecoverable damage may be done by the time we observe unacceptable variation in outputs.
+</p>
+<p>
+The successful process management requires constant monitoring and control of Y's and X's. In order to monitor, precise measurement of X's and Y's is necessary. The goal is to control X's and Y's within the prescribed limits.
+</p>
+<p>
+Let us recall our Pizza Shop. The management always reviewed pizza sales volumes and profitability over time and felt happy to see the growth. Alarm bells rang when they saw in dip in sales volume. After analysis, it was revealed that the customers started to switch to other shops due to delayed pizza delivery. Clearly damage is already done - lost customer base. Now we can clearly see the importance of focusing on right set of X's and Y's.
+</p>
+<p>
+At this stage it is important to recall that "Six Sigma" is about managing business processes by handling variation and reducing defects in processes.
+</p>
+<p>
+As discussed, variation is present in the output(s) of every process (therefore, even inputs will have variation). The degree of variation or the distribution pattern of the output is a measure of process performance or maturity. This variation is classified in two categories - common or natural and special or assignable.
+</p>
+
+<h2 class="h2small">Process Performance</h2>
+<p>
+The performance of a process is defined as the inherent variability of a process in the absence of any special or assignable causes. It is a statistical indicator of how well a process is functioning i.e. running within its specified limits.
+</p>
+<p>
+We will now take an example to understand the concept of process performance. Imagine we wish to setup a process for manufacturing washers (thin disk with a hole in the middle; used to support the load of a threaded fastener) having an inner diameter of 1.0 cm (read target or mean). And a maximum acceptable variation is &plusmn;0.1cm. Any variation beyond acceptable limits is considered as defect. This means a washer having an inner diameter of 1.11cm will be marked as defective.
+</p>
+<p>
+Formally put, the inner diameter specifications are 1.0&plusmn;0.1cm. This means that
+</p>
+<ol class="normal-li">
+<li>Specified tolerance or acceptable variation is 0.2cm (the spread of tolerance).</li>
+<li>Lower specification limit (referred as LSL) is 0.9cm (1.0-0.1).</li>
+<li>Upper specification limit (referred as USL) is 1.1cm (1.0+0.1).</li>
+<li>The target (or mean) diameter is 1.0cm.</li>
+</ol>
+<p>
+Clearly, our manufacturing process will be a capable one provided it has a mean equal to the target (i.e. 1.0cm) and a variation less than the specified tolerance or acceptable variation (i.e. 0.2cm). In addition, there should not be any special cause of variation i.e. it should be under control.
+</p>
+<p>
+There are 4 common mathematical expressions to compute process performance under different contexts:
+</p>
+
+<img src="/post/2005/10/processes-are-everywhere/pae-ppks.png" alt="Mathematical Expressions to Compute Process Performance" class="img-center" />
+<br />
+
+<p>`P_p = (USL - LSL)/(6 sigma)`</p>
+<p>`P_(pu) = (USL - mu)/(3 sigma)`</p>
+<p>`P_(pl) = (mu - LSL)/(3 sigma)`</p>
+<p>`P_(pk) = min [ (mu - LSL)/(3 sigma), (USL - mu)/(3 sigma) ]`</p>
+
+<p>
+For a capable process, these should be equal or more than 1.0. Commonly recommended value is 1.33 or more.
+</p>
+<p>
+If <b>Pp</b> is equal to "1.0" then only "0.26%" washers will be defective, provided their inner diameter follows the normal distribution. Wondering why? Simple, just refer to our discussion on Introduction to Six Sigma. This states, "One of the characteristics of this (normal) distribution is that 68% of area (i.e. the data points) falls within the area of -1&sigma; and +1&sigma; on either side of the mean. Similarly, 2&sigma; on either side will cover approximately 95.5% area. 3&sigma; on either side from mean covers almost 99.7% (99.74% to be a little more precise) area". With <b>Pp</b> as 1.0, only (100-99.74)% i.e. 0.26% washers will have inner diameter beyond USL or LSL.
+</p>
+
+<p>
+<b>Pp</b> is a good measure when the process is centered in the middle of USL and LSL. <b>Ppu</b> is used when process only has an upper specification limit - our 30 minutes pizza delivery is a good example for this. <b>Ppl</b> is used when process has only lower specification limit. <b>Ppk</b> is a good measure when the process is not exactly centered in the middle of USL and LSL.
+</p>
+</p>
+	</main>
+	<div class="clearfix"></div>
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><a href="/post/2005/10/introduction-to-six-sigma/">Introduction to Six Sigma</a></h1>
+		</div>
+		<p><p>
+Six Sigma is usually related to the magic number of 3.4 defects per million opportunities. People often view Six Sigma as yet another rigorous statistical quality control mechanism.
+</p>
+<p>
+Pioneered at Motorola in the mid-1980s, Six Sigma was initially targeted to quantify the defects occurred during manufacturing processes, and to reduce those defects to a very small level. Motorola claimed to have saved several million dollars. Another very popular success was at GE. Six Sigma contributed over US $ 300 million to GE's 1997 operating income.
+</p>
+<p>
+Today Six Sigma is delivering business excellence, higher customer satisfaction, and superior profits by dramatically improving every process in an enterprise, whether financial, operational or production. Six Sigma has become a darling of a wide spectrum of industries, from health care to insurance to telecommunications to software.
+</p>
+
+<h2 class="h2small">What is 6 Sigma?</h2>
+<p>
+It is important to recall that every customer always values consistent and predicable services and/or products with near zero defects. Therefore they experience the variation and not the mean. Mean is their expectation, and our target.
+</p>
+<p>
+If we can measure process variations that cause defects i.e. unacceptable deviation from the mean or target, we can work towards systematically managing the variation to eliminate defects.
+</p>
+<p>
+Six Sigma is a methodology focused on creating breakthrough improvements by managing variation and reducing defects in processes across the enterprise.
+</p>
+<p>
+Sigma is a Greek symbol represented by "&sigma;".
+</p>
+<p>
+Why is Six Sigma called Six Sigma, and not Four or Five Sigma or Eight Alpha (another Greek symbol)? Sigma is a statistical term that measures process deviation from the process mean or target. Mean is also referred to as average in common language. The figure of six was arrived statistically by looking at the current average maturity of most business enterprises. We would like to revise this figure to 8 or may be 9, provided the world becomes a more orderly and predictable (even with increasing entropy or chaos) place to live in!
+</p>
+<p>
+There is a detailed discussion on keywords "breakthrough improvement" and "variation" apart from the "methodology" in later sections.
+</p>
+<h4>Example</h4>
+<p>
+Consider a pizza delivery shop that guarantees the order delivery within 30 minutes from the time of accepting an order. In the event of a delivery time miss, the customer is refunded 100% money. How often do we notice timely delivery from a thirty-minute pizza delivery shop? In contrast, we always take note of delayed deliveries, or that shop’s variation. This pizza shop will have to make 99.9997% deliveries within 30 mins to be called a six sigma shop.
+</p>
+<p>
+It is evident that the "delivery time" is a critical-to-quality parameter from the customer perspective and has a significant impact on profits. In addition, it is an entry barrier for the competition. Such a parameter is called a CTQ and its definition in context of our pizza shop is given below:
+</p>
+<p>
+CTQ Name: Timely Pizza delivery<br />
+CTQ Measure: Time in Minutes<br />
+CTQ Specification: Delivery within 30 minutes from the order acceptance time<br />
+</p>
+<p>
+Now we can easily define a defect:
+</p>
+<p>
+Defect: Delivery that takes longer than 30 minutes<br />
+Unit: Order<br />
+Opportunity: 1 per order i.e. only "1" defect can occur in "1" order<br />
+</p>
+<p>
+The Six Sigma conversion graph illustrating the relationship between sigma values and defects/million opportunities is given below:
+</p>
+<img src="/post/2005/10/introduction-to-six-sigma/itss-6sigmatbl.jpg" class="img-center" alt="Six Sigma Conversion Graph " />
+<br />
+<p>
+This graph is on a logarithmic scale. Notice the increasing rate of improvement. For example, 1 sigma to 3 sigma is only 10 times improvement; 3 sigma to 4 sigma is a big 10 times improvement; whereas 5 sigma to 6 sigma is a whooping 1825 times change. That is why it is essential to achieve breakthrough improvements to reach such a level of maturity. Six Sigma provides a methodology to achieve this.
+</p>
+<h2 class="h2small">How does 6 Sigma work?</h2>
+<p>
+The driving force behind any Six Sigma project comes from its primary focus - "bringing breakthrough improvements in a systematic manner by managing variation and reducing defects". This requires us to ask tougher questions, raise the bar significantly, and force people to think out of the box and to be innovative. The objective is to stretch, and stretch mentally not physically. To make this journey successful there is a methodology(s) to support Six Sigma implementations.
+</p>
+<p>
+There are two potential scenarios - First, there is already an existing process(s) that is working "reasonably" well; and second there is no process at all. A bad process is as good as no process.
+</p>
+<p>
+The first scenario focuses on significant process improvements and requires use of DMAIC:
+</p>
+<ol class="normal-li">
+<li><b>Define</b> process goals in terms of key critical parameters (i.e. critical to quality or critical to production) on the basis of customer requirements or Voice Of Customer (VOC)</li>
+<li><b>Measure</b> the current process performance in context of goals</li>
+<li><b>Analyze</b> the current scenario in terms of causes of variations and defects</li>
+<li><b>Improve</b> the process by systematically reducing variation and eliminating defects</li>
+<li><b>Control</b> future performance of the process</li>
+</ol>
+<p>
+The second focuses on process design using Design For Six Sigma (DFSS) approach. DFSS typically requires IDOV:
+</p>
+<ol class="normal-li">
+<li><b>Identify</b> process goals in terms of critical parameters, industry &amp; competitor benchmarks, VOC</li>
+<li><b>Design</b> involves enumeration of potential solutions and selection of the best</li>
+<li><b>Optimize</b> performance by using advanced statistical modeling and simulation techniques and design refinements</li>
+<li><b>Validate</b> that design works in accordance to the process goals</li>
+</ol>
+<p>
+Note, sometimes a DMAIC project may turn into a DFSS project because the process in question requires complete re-design to bring about the desired degree of improvement. Such a discovery usually occurs during improvement phase of DMAIC.
+</p>
+<p>
+It is extremely important to remember that Six Sigma is not just about product quality where only three products in a million are defective. It is about what is important or critical to the customer, whether internal or external. It is focuses on value in context of the customer and the market. For example, Polaroid had a sale of over US$ 2 billion in 1988 and was doing very well on stock exchange. It embraced Six Sigma and became a Six Sigma company some time around 1997. In late 2001, they filed for bankruptcy. This is because Polaroid only focused on improving the quality of their products and failed to assess the needs of their customers.
+</p>
+
+<p>
+Today Six Sigma focus has moved from simple "defect reduction" to "cost reduction" to "value creation", as pointed out by Mikel Harry. The objective is not to achieve the magic number of 3.4 DMPO but to beat your nearest competition by just 0.5 sigma in overall business excellence. Recall that 1 sigma improvement can mean over 1800X improvement - a huge barrier for competition to overcome.
+</p>
+</p>
+	</main>
+	<div class="clearfix"></div>
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><a href="/post/2005/10/few-words-on-quality/">Few words on quality</a></h1>
+		</div>
+		<p><p>
+We often talk about quality in our daily lives - quality of products, or quality
+of services. Let us take a quick yet deeper look at the meaning. Some of the popular dictionary meanings of quality are:
+</p>
+
+<ol class="normal-li">
+<li>A distinguishing characteristic</li>
+<li>Degree of excellence</li>
+</ol>
+
+<p>
+We can look for many more meanings and definitions on web by searching on google for keyword "define: quality".
+</p>
+<p>
+The important keywords are "distinguishing" and "excellence" and their interpretation are contextual and vary from situation to situation. However, there are 3 common characteristics of quality:
+</p>
+<img src="/post/2005/10/few-words-on-quality/afwoq-qltychar.jpg" alt="3 common characteristics of quality" class="img-center" />
+<p>
+We, as customers, do not look for quality in isolation. It is always a combination of quality and cost. In other words the "value" of product or service. Value may be defined as ratio of quality to cost, where quality is proportional to the product of its 3 essential characteristics (defined above).
+</p>
+<div class="blocktext">
+Therefore, businesses have to constantly strive to provide higher "measurable" value to their customers.
+</div>
+</p>
+	</main>
+	<div class="clearfix"></div>
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><a href="/post/2005/10/about-breakthrough/">About breakthrough</a></h1>
+		</div>
+		<p><p>
+Breakthrough improvements require breaking rules, experimenting, innovating, and inventing. Truly, it is all about thinking differently; as Deepak Chopra says, "winners don't do different things, they do things differently". This requires significant amount of mental stretching. Therefore, we need to constantly leverage our wisdom, experience, and knowledge.
+</p>
+<p>
+To gain simple practical insight, let us pause and conduct an experiment. For this experiment, we need an A4 size paper and a pencil or pen. We will now carry out some very simple tasks and note down the time to complete each task. This time could even be a few seconds or a few minutes. Here are the tasks:
+</p>
+<ol class="normal-li">
+<li>Draw a circle and divide it into 2 equal parts</li>
+<li>Draw another circle and divide it into 4 equal parts</li>
+<li>Draw a triangle and divide it into 3 equal parts</li>
+<li>Draw a square and divide it into 4 equal parts</li>
+<li>Draw a square and divide it into 5 equal parts</li>
+</ol>
+<p>
+Notice the time difference between the last task and the remaining tasks. Most people take much longer to complete the last task. The outcome of this experiment clearly indicates that the biggest obstacle in out of the box thinking is being in the box i.e. mental fixedness. We always tend to solve problems with solutions that we have worked out in the past.
+</p>
+<p>
+With this background, have a close look at the following picture:
+</p>
+<img src="/post/2005/10/about-breakthrough/ab-prob.jpg" alt="Breakthrough Example Problem" class="img-center" />
+<br />
+<p>
+This is made from a single A4 sheet of paper without cutting it into multiple pieces and using any adhesives. Does it look impossible? No, it is not! What it needs is some innovative thinking and little bit of experimentation.
+</p>
+<div class="blocktext">
+Surely, we now agree with Walt Disney's famous saying, "It's always fun to do the impossible". It is all about aiming at impossible and achieving it.
+</div>
+</p>
+	</main>
+	<div class="clearfix"></div>
+	<main>
+		<div class="col-md-10 col-md-offset-1">
+			<h1><a href="/post/2005/09/basic-probability-theory/">Basic Probability Theory</a></h1>
+		</div>
+		<p><h2 class="h2small">What is Probability?</h2>
+<p>
+Probability is the chance of something happening. For example, this chance could be getting a heads when we toss a coin. Here something is "getting a heads". Probability is expressed as a fractional value between "0" and "1". A "0" probability means something can never happen whereas a "1" probability indicates something always happens.
+</p>
+<p>
+Probability theory has a very close relationship with statistics and therefore with six sigma. It has been used in areas like gambling, physics, business management, quality management, to our every day lives.
+</p>
+<p>
+Statistical thermodynamics helps in modeling molecular forces and their behavior where probability facilitates understanding of entropy - something that describes the tendency of matter toward disorder.
+</p>
+<p>
+In business management, for example, insurance industry uses probability theory to determine premium rates. It is indeed an important decision making tool.
+</p>
+<p>
+Basic Terminology Lets introduce a few formal terms to develop understanding of probability theory. When we toss a coin or roll a die, it is called an experiment. An event is one or more possible outcomes of an experiment. In coin toss experiment there are 2 possible outcomes - heads and tails (assuming the coin will never stand on its circumferential edge!). Similarly, in a roll a die experiment there are 6 possible outcomes. Such a collection of all possible outcomes of an experiment is called sample space. Mathematical notation of toss a coin experiment is given below:
+</p>
+<p>`S = {head, tail} ... ... ... ... (bbb(I))`</p>
+
+<h3>Basic Definitions</h3>
+
+<h4>Probability of an event</h4>
+<p>
+Probability theory defines the probability of an event occurrence as
+</p>
+<p>`\P\r\o\b\a\b\i\l\i\t\y\ \o\f\ \a\n\ \e\v\e\n\t\ P(E) = \N\u\m\b\e\r\ \o\f\ \e\v\e\n\t\ \o\u\t\c\o\m\e\s\ (nE) -: \T\o\t\a\l\ \n\u\m\b\e\r\ \o\f\ \o\u\t\c\o\m\e\s\ \i\n\ \t\h\e\ \s\a\m\p\l\e\ \s\p\a\c\e\ (N) ... ... ... ... (bbb(II))`</p>
+<p>
+Therefore if we roll a die, probability of getting a six is
+</p>
+<p>`P(6) = 1/6 or 0.167`</p>
+<p>
+Because there is only "1" outcome of one roll of die that will produce a "6" and the sample space S = {1, 2, 3, 4, 5, 6} has "6" possible outcomes.
+</p>
+
+<h4>Mutually Exclusive Events</h4>
+<p>
+In an experiment, events are said to be mutually exclusive if the occurrence of each one of them precludes the occurrence of all the others; or in other words if one and only one of them can occur at a time. Consider our roll a die example again. On a single die roll, 1 and 2 and 3 and 4 and 5 and 6 are mutually exclusive because one and only one number from the sample space can appear face up.
+</p>
+
+<h4>Collectively Exhaustive Events</h4>
+<p>
+Events are collectively exhaustive if they constitute the entire set of possibilities from the sample space, and no other outcomes are possible. For example, {heads, tails} is a collectively exhaustive set of outcomes for a toss a coin experiment.
+</p>
+
+<h4>Independent Events</h4>
+<p>
+Events are independent if the occurrence of one does not affect the occurrence of any other subsequent event. If we roll a die twice, it results in independent events as in the first roll getting a specific number face up does not in any manner affects which number will come face up on the second roll.
+</p>
+
+<h4>Dependent Events</h4>
+<p>
+Events are dependent when occurrence of one event affects the occurrence of any other subsequent event. For example, if have a deck of cards and we draw 2 cards one after another and compute probability of getting 2 clubs, without replacing the card drawn first, it will make the second event dependent on the first.
+</p>
+
+<h3>Rules of Probability</h3>
+
+<h4>Addition Rule for Mutually Exclusive Events</h4>
+<p>
+Let us say that there are A, and B mutually exclusive events with individual probabilities as P(A) = n A/N, P(B) = n B/N, then the probability of occurrence of either A or B is the sum of their individual probability of occurrence:
+</p>
+<p>`P(A or B) = P(A) + P(B) ... ... ... ... (bbb(III))`</p>
+<p>`= (n A + n B)/N`</p>
+
+<h4>Multiplication Rule for Independent Events</h4>
+<p>
+Let us say there are A and B independent events then the possibility of A and B occurring together is the product of their individual probabilities:
+</p>
+<p>`P(AB) or P(A and B) = P(A) xx P(B) ... ... ... ... (bbb(IV))`</p>
+<p>`= (n A/N) xx (n B/N)`</p>
+
+<h4>Addition Rule for Non-mutually Exclusive Events</h4>
+<p>
+Let us say that there are A, and B events that are not mutually exclusive with individual probabilities as P(A) = n A/N, P(B) = n B/N, then the probability of occurrence of either A or B is given as:
+</p>
+<p>`P(A or B) = P(A) + P(B) - P(AB) ... ... ... ... (bbb(V))`</p>
+<p>
+The subtraction of P(AB) is to avoid double counting. To get a better understanding, consider an example - drawing a jack or a club from a deck of cards. In this experiment, we can draw either a club or a jack or a jack of club. The both individual probabilities P(J) and P(C) include "1" count of event JC i.e. there is a double counting of that event in the sum. And that is why, we need to subtract P(JC) from the sum P(J) + P(C).
+</p>
+<p>
+<b>Note</b>: If A precludes B or vice versa, then clearly P(AB) is equal to "0" converting the above equation into a normal addition rule for mutually exclusive events.
+</p>
+<p>
+Another way to build better understanding is to compute the probability of not drawing a jack or a club and then subtract it from 1 to arrive at the desired probability:
+</p>
+<p>`1 - (1 - P(J)) xx (1 - P(C)) = P(J) + P(C) - P(JC)`</p>
+<p>
+Notice, this is identical to equation (V) above.
+</p>
+
+<h4>Counting Events - Combination &amp; Permutation</h4>
+<p>
+To understand the concept let us begin with questions. What is the probability of a specific sequence of four coin tosses, "heads-tails-heads-heads"? And what is the probability of observing 3 "heads" and 1 "tails" in any order? Clearly the answer to the first question is (1/2) x (1/2) x (1/2) x (1/2) = 1/16 because we are talking about a specific combination. Whereas in the second case there are 4 possible ways in which we can get 3 "head" and 1 "tails" i.e. "heads-heads-heads-tails", "heads- heads-tails- heads", "heads-tails- heads- heads", and "tails- heads- heads- heads". Therefore the probability becomes 4/16 = 1/4.
+</p>
+<p>
+Permutation and combination help you to count events using simple mathematical formulas.
+</p>
+
+<h4>Permutation</h4>
+<p>
+Permutation formula allows you to count all possible different sequence of "n" objects:
+</p>
+<p>`n xx (n - 1) xx (n - 2) xx ... 3 xx 2 xx 1 = n! ... ... ... ... (bbb(VI))`</p>
+<p>
+<b>Note</b>: n! is read as n factorial.
+</p>
+<p>
+To understand this, let us take an example - how many different sequences can we create from letters "A", "B", "C", and "D"? The first letter of a sequence can be any one of the four. After drawing one, the second letter of the sequence can be any of the remaining three letters. The third letter can be any of the remaining two letters, and the fourth must be the one remaining letter. Therefore, the count is
+</p>
+<p>`4 xx 3 xx 2 xx 1 = 4! = 24`</p>
+<p>
+The generalized way of obtaining a count of "ordered subsets" of "k" objects from a set of "n" objects is given by:
+</p>
+<p>`nPk = (n!)/((n - k)!) ... ... ... ... (bbb(VII))`</p>
+<p>
+Going back to our previous example, this time let us enumerate sequences for 2 letters from the set of 4 letters:
+</p>
+<p>`Count = 4P2 = (4!)/((4-2)!) = (4 xx 3 xx 2 xx 1)/(2 xx 1) = 12`</p>
+<p>
+The list of these 12 sequences is AB, AC, AD, BA, BC, BD, CA, CB, CD, DA, DB, DC.
+</p>
+
+<h4>Combination</h4>
+<p>
+It is all about ways of choosing, choosing "n" objects from a set of "k" objects. Imagine if we choose 2 letter combinations from the set of 4 letters in the last example. Notice, in the list of 12 sequences listed above AB and BA, AC and CA, AD and DA, BC and CB, BD and DB, CD and DC pairs are identical provided we ignore the sequence. Our interest is in choosing and not in all possible sequence. Therefore, we can choose in 6 different ways. These are AB, AC, AD, BC, BD, and CD.
+</p>
+<p>
+To sum up formally, the number of ways of choosing "n unordered" objects from "k" objects is given by:
+</p>
+<p>`nCk = (n!)/(k! xx (n - k)!) ... ... ... ... (bbb(VIII))`</p>
+<p>
+We can now easily compute the value, calculated imperially in the current example, using the above formula as 6.
+</p>
+<p>
+Armed with this knowledge, let us go back to our original question that we asked in the beginning of "counting events". Let us look at the question number 1. The probability is:
+</p>
+<p>`P(HTHH) = P(H) xx P(T) xx P(H) xx P(H)`</p>
+<p>`= (1/2) xx (1/2) xx (1/2) xx (1/2) = 1/16`</p>
+
+<p>
+We now move forward to the question number 2. Here the event in question is 3 heads and 1 tails in any sequence. The number of event outcomes is:
+</p>
+<p>`nE = (4!)/(3! xx 1!) = 4`</p>
+
+<p>
+The sample space remains unchanged 16 (= 2 ** 4). Therefore, the probability is 4/16 or 1/4.
+</p>
+</p>
+	</main>
+	<div class="clearfix"></div>
+
+<div class="col-md-10 col-md-offset-1">
+  <p>Page 3 of 3</p>
+
+    <p><a href="/learn/page/2/">Previous page</a></p>
+</div>
+
+
+
+<div class="col-md-10 col-md-offset-1">
+</div>
+
+</div >
+</div >
+
+	<footer>
+	<div class="container">
+		<div class="row">
+			<section class="col-md-10 col-md-offset-1">
+				<p>
+					<a href="/terms/">Terms of Use</a> |
+					<a href="/privacy/">Privacy Policy</a> |
+					<a href="http://graype.in">About</a>
+					<br />
+					&copy; GRAYPE Systems (P) Limited
+				</p>
+			</section>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>
