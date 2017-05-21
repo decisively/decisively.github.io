@@ -7,17 +7,18 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
-	<link href="http://fonts.googleapis.com/css?family=Roboto:400,700,900|Roboto+Condensed:400,700|Roboto+Slab:400,300,700" rel="stylesheet" type="text/css">
-
 	<!-- Use title if it's in the page YAML frontmatter -->
 	<title><%= current_page.data.title || "Decisively - Simplify Analytics &amp; Decision Making" %></title>
 
 	<%= stylesheet_link_tag 'bootstrap.min.css' %>
-	<%= stylesheet_link_tag 'style.css' %>
+	<%= stylesheet_link_tag 'master.css' %>
 	<%= javascript_include_tag 'jquery.min.js' %>
 	<%= javascript_include_tag 'bootstrap.min.js' %>
 
-	<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"></script>
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=AM_CHTML"></script>
+
+	<script src="https://use.typekit.net/cwc1qce.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 
 </head>
 
